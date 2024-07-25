@@ -58,10 +58,6 @@ use crate::{
     window::{Window, WindowBuilder},
 };
 use fxhash::{FxHashMap, FxHashSet};
-use i3m_sound::{
-    buffer::{loader::SoundBufferLoader, SoundBuffer},
-    renderer::hrtf::{HrirSphereLoader, HrirSphereResourceData},
-};
 #[cfg(not(target_arch = "wasm32"))]
 use glutin::{
     config::ConfigTemplateBuilder,
@@ -74,6 +70,10 @@ use glutin::{
 };
 #[cfg(not(target_arch = "wasm32"))]
 use glutin_winit::{DisplayBuilder, GlWindow};
+use i3m_sound::{
+    buffer::{loader::SoundBufferLoader, SoundBuffer},
+    renderer::hrtf::{HrirSphereLoader, HrirSphereResourceData},
+};
 #[cfg(not(target_arch = "wasm32"))]
 use raw_window_handle::HasRawWindowHandle;
 
@@ -250,7 +250,7 @@ struct SceneLoadingOptions {
 ///     pub fn new(scene_path: Option<&str>, context: PluginContext) -> Self {
 ///         context
 ///             .async_scene_loader
-///             .request(scene_path.unwrap_or("data/scene.rgs"));
+///             .request(scene_path.unwrap_or("data/scene.i3m"));
 ///
 ///         Self {
 ///             scene: Handle::NONE,

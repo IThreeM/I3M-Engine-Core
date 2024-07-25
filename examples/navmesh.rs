@@ -61,7 +61,7 @@ async fn create_scene(resource_manager: ResourceManager) -> GameScene {
         ));
 
     resource_manager
-        .request::<Model>("examples/data/navmesh_scene.rgs")
+        .request::<Model>("examples/data/navmesh_scene.i3m")
         .await
         .unwrap()
         .instantiate(&mut scene);

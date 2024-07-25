@@ -243,7 +243,7 @@ pub fn make_scene_file_filter() -> Filter {
     Filter::new(|p: &Path| {
         p.is_dir()
             || p.extension().map_or(false, |ext| {
-                matches!(ext.to_string_lossy().as_ref(), "rgs" | "ui")
+                matches!(ext.to_string_lossy().as_ref(), "i3m" | "ui")
             })
     })
 }
@@ -1903,7 +1903,7 @@ impl Editor {
         }
 
         if let Some(ext) = scene_path.extension() {
-            if ext == "rgs" {
+            if ext == "i3m" {
                 let engine = &mut self.engine;
                 let result = {
                     block_on(SceneLoader::from_file(

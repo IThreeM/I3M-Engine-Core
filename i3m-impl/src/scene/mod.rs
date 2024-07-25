@@ -511,7 +511,7 @@ impl Scene {
     /// scene.save("Scene", &mut visitor).unwrap();
     ///
     /// // Write the data to a file.
-    /// visitor.save_binary("path/to/a/scene.rgs").unwrap();
+    /// visitor.save_binary("path/to/a/scene.i3m").unwrap();
     /// ```
     pub fn save(&mut self, region_name: &str, visitor: &mut Visitor) -> VisitResult {
         if visitor.is_reading() {

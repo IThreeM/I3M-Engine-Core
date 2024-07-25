@@ -29,7 +29,7 @@ pub struct ModelLoader {
 
 impl ResourceLoader for ModelLoader {
     fn extensions(&self) -> &[&str] {
-        &["rgs", "fbx"]
+        &["i3m", "fbx"]
     }
 
     fn data_type_uuid(&self) -> Uuid {

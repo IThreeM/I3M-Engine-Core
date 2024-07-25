@@ -8,6 +8,7 @@ use crate::{
     audio::AudioBusSelection,
     camera::{CameraController, PickingOptions},
     command::{make_command, Command, CommandGroup, CommandStack},
+    highlight::HighlightRenderPass,
     i3m::{
         asset::manager::ResourceManager,
         core::{
@@ -56,7 +57,6 @@ use crate::{
             Scene, SceneContainer,
         },
     },
-    highlight::HighlightRenderPass,
     inspector::{
         editors::handle::HandlePropertyEditorMessage,
         handlers::node::SceneNodePropertyChangedHandler,
@@ -728,7 +728,7 @@ impl SceneController for GameScene {
     }
 
     fn extension(&self) -> &str {
-        "rgs"
+        "i3m"
     }
 
     fn save(

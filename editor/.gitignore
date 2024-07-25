@@ -4,7 +4,7 @@
 .idea
 /*.log
 /*.txt
-*.rgs
+*.i3m
 /data
 history.bin
 /settings.ron

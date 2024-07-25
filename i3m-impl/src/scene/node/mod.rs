@@ -763,8 +763,8 @@ mod test {
             fs::create_dir_all("test_output").unwrap();
         }
 
-        let root_asset_path = Path::new("test_output/root.rgs");
-        let derived_asset_path = Path::new("test_output/derived.rgs");
+        let root_asset_path = Path::new("test_output/root.i3m");
+        let derived_asset_path = Path::new("test_output/derived.i3m");
 
         // Create root scene and save it.
         {

@@ -102,7 +102,7 @@ impl AssetItem {
         if self
             .path
             .extension()
-            .map_or(false, |ext| ext == "rgs" || ext == "ui")
+            .map_or(false, |ext| ext == "i3m" || ext == "ui")
         {
             sender.send(Message::LoadScene(self.path.clone()));
         } else if self.path.extension().map_or(false, |ext| ext == "material") {

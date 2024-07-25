@@ -141,7 +141,7 @@ impl Plugin for Game {
     fn init(&mut self, scene_path: Option<&str>, context: PluginContext) {
         context
             .async_scene_loader
-            .request(scene_path.unwrap_or("data/scene.rgs"));
+            .request(scene_path.unwrap_or("data/scene.i3m"));
     }
 
     fn on_deinit(&mut self, _context: PluginContext) {
@@ -395,7 +395,7 @@ fn main() {{
     let mut editor = Editor::new(
         Some(StartupData {{
             working_directory: Default::default(),
-            scenes: vec!["data/scene.rgs".into()],
+            scenes: vec!["data/scene.i3m".into()],
         }}),
     );
 
@@ -612,10 +612,10 @@ fn init_data(base_path: &Path, style: &str) -> Result<(), String> {
     let data_path = base_path.join("data");
     create_dir_all(&data_path).map_err(|e| e.to_string())?;
 
-    let scene_path = data_path.join("scene.rgs");
+    let scene_path = data_path.join("scene.i3m");
     match style {
-        "2d" => write_file_binary(scene_path, include_bytes!("2d.rgs")),
-        "3d" => write_file_binary(scene_path, include_bytes!("3d.rgs")),
+        "2d" => write_file_binary(scene_path, include_bytes!("2d.i3m")),
+        "3d" => write_file_binary(scene_path, include_bytes!("3d.i3m")),
         _ => Err(format!("Unknown style: {}. Use either `2d` or `3d`", style)),
     }
 }

@@ -731,7 +731,7 @@ impl Model {
             }
             // Scene can be used directly as model resource. Such scenes can be created in
             // I3M-Engine-Core.
-            "rgs" => (
+            "i3m" => (
                 SceneLoader::from_file(
                     path.as_ref(),
                     io,
