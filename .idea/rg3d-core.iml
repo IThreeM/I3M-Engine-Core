@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../rg3d-core/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../rg3d-core/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../rg3d-core/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rg3d-core/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rg3d-physics/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rg3d-sound/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rg3d-sound/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rg3d-ui/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rg3d-property/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/examples/wasm/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rg3d-core-derive/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rg3d-core-derive/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/rg3d-resource/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/editor/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-core-derive/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-core-derive/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-core/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-resource/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-sound/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-sound/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-ui/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/examples/scripting/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/executor/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/editor-standalone/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/template/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-scripts/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-animation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-prefab/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-graph/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-math/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/editor-dylib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-dylib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-bridge/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox-impl/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fyrox/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/project-manager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/template-core/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+      <excludeFolder url="file://$MODULE_DIR$/examples/wasm/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

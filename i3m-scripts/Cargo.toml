@@ -1,0 +1,17 @@
+[package]
+name = "fyrox-scripts"
+version = "0.3.0"
+authors = ["Dedan Okware <softengdedan@gmail.com>"]
+edition = "2021"
+license = "MIT"
+description = "Standard scripts for the Fyrox engine"
+keywords = ["asset", "resource"]
+categories = ["game-development"]
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE"]
+homepage = "https://ithreem.com"
+documentation = "https://docs.rs/fyrox-scripts"
+repository = "https://github.com/IThreeM/I3M-Engine-Core"
+rust-version = "1.72"
+
+[dependencies]
+fyrox = { version = "0.34.0", path = "../fyrox" }

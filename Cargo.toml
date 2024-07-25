@@ -1,0 +1,33 @@
+[workspace]
+members = [
+    "i3m-core-derive",
+    "i3m-core",
+    "fyrox-sound",
+    "fyrox-ui",
+    "fyrox-resource",
+    "fyrox-scripts",
+    "fyrox-animation",
+	"editor",
+    "editor-standalone",
+	"template-core",
+	"template",
+    "fyrox-graph",
+    "fyrox-math",
+    "fyrox-dylib",
+    "fyrox",
+    "fyrox-impl"
+, "project-manager"]
+resolver = "2"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+debug = true
+
+[profile.github-ci]
+inherits = "dev"
+strip = "symbols"
+debug = false
+opt-level = 3

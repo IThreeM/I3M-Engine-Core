@@ -1,0 +1,26 @@
+[package]
+name = "fyrox"
+version = "0.34.1"
+authors = ["Dedan Okware <softengdedan@gmail.com>", "Fyrox Engine Contributors"]
+edition = "2021"
+license = "MIT"
+description = "Feature-rich, easy-to-use, 2D/3D game engine with a scene editor. Like Godot, but in Rust."
+keywords = ["sound", "game", "engine", "3d", "gui"]
+categories = ["game-engines", "graphics", "gui", "rendering", "wasm"]
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
+homepage = "https://ithreem.com"
+documentation = "https://docs.rs/fyrox"
+repository = "https://github.com/IThreeM/I3M-Engine-Core"
+readme = "README.md"
+rust-version = "1.72"
+
+[features]
+default = ["fyrox-impl"]
+dylib = ["fyrox-dylib"]
+gltf = ["fyrox-impl/gltf", "fyrox-dylib/gltf"]
+mesh_analysis = ["fyrox-impl/mesh_analysis", "fyrox-dylib/mesh_analysis"]
+gltf_blend_shapes = ["fyrox-impl/gltf_blend_shapes", "fyrox-dylib/gltf_blend_shapes"]
+
+[dependencies]
+fyrox-impl = { version = "0.34.1", path = "../fyrox-impl", optional = true }
+fyrox-dylib = { version = "0.1.0", path = "../fyrox-dylib", optional = true }

@@ -1,0 +1,26 @@
+[package]
+name = "fyrox-dylib"
+version = "0.1.0"
+edition = "2021"
+authors = ["Dedan Okware <softengdedan@gmail.com>", "Fyrox Engine Contributors"]
+license = "MIT"
+description = "Dynamic library for Fyrox Game Engine"
+keywords = ["sound", "game", "engine", "3d", "gui"]
+categories = ["game-engines", "graphics", "gui", "rendering", "wasm"]
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
+homepage = "https://ithreem.com"
+documentation = "https://docs.rs/fyrox-dylib"
+repository = "https://github.com/IThreeM/I3M-Engine-Core"
+readme = "README.md"
+rust-version = "1.72"
+
+[lib]
+crate-type = ["dylib"]
+
+[features]
+gltf = ["fyrox-impl/gltf"]
+mesh_analysis = ["fyrox-impl/mesh_analysis"]
+gltf_blend_shapes = ["fyrox-impl/gltf_blend_shapes"]
+
+[dependencies]
+fyrox-impl = { path = "../fyrox-impl", version = "0.34.0" }

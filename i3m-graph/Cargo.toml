@@ -1,0 +1,19 @@
+[package]
+name = "fyrox-graph"
+version = "0.1.0"
+authors = ["Dedan Okware <softengdedan@gmail.com>"]
+edition = "2021"
+license = "MIT"
+description = "Graph management crate for the Fyrox engine"
+keywords = ["graph", "prefab"]
+categories = ["game-development"]
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE"]
+homepage = "https://ithreem.com"
+documentation = "https://docs.rs/fyrox-graph"
+repository = "https://github.com/IThreeM/I3M-Engine-Core"
+rust-version = "1.72"
+
+[dependencies]
+i3m-core = { path = "../i3m-core", version = "0.28.1" }
+fyrox-resource = { path = "../fyrox-resource", version = "0.12.0" }
+fxhash = "0.2.1"

@@ -1,0 +1,22 @@
+[package]
+name = "fyrox-math"
+version = "0.2.0"
+authors = ["Dedan Okware <softengdedan@gmail.com>"]
+edition = "2021"
+license = "MIT"
+description = "Math utils for the Fyrox engine"
+keywords = ["octree", "plane", "ray", "aabb", "frustum"]
+categories = ["game-development"]
+include = ["/src/**/*", "/Cargo.toml", "/LICENSE"]
+homepage = "https://ithreem.com"
+documentation = "https://docs.rs/fyrox-math"
+repository = "https://github.com/IThreeM/I3M-Engine-Core"
+rust-version = "1.72"
+
+[dependencies]
+rectutils = "0.2.0"
+nalgebra = { version = "0.32.3", features = ["bytemuck"] }
+arrayvec = "0.7.4"
+num-traits = "0.2.18"
+uuid = { version = "1", features = ["v4"] }
+bytemuck = { version = "1.16.1", features = ["derive"]}
