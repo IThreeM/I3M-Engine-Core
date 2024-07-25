@@ -1,6 +1,6 @@
-# Fyrox Engine Template Generator
+# IThreeM Engine Template Generator
 
-This tiny utility handles project and script generation for Fyrox Game Engine.
+This tiny utility handles project and script generation for IThreeM Game Engine.
 
 ## Installation
 

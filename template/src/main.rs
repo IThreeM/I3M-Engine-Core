@@ -1,4 +1,4 @@
-//! Fyrox Project Template Generator command line interface.
+//! IThreeM Project Template Generator command line interface.
 
 use clap::{Parser, Subcommand};
 use std::path::Path;
@@ -39,7 +39,7 @@ enum Commands {
     Upgrade {
         #[clap(short, long)]
         version: String,
-        /// If set, specifies path to the engine to `../Fyrox/*` folder. Could be useful for development
+        /// If set, specifies path to the engine to `../IThreeM/*` folder. Could be useful for development
         /// purposes. This option works only if `version` is set to `latest`.
         #[clap(long, default_value = "false")]
         local: bool,
@@ -83,7 +83,7 @@ fn main() {
         Commands::Upgrade { version, local } => {
             i3m_template_core::upgrade_project(Path::new("./"), &version, local).unwrap();
 
-            println!("Fyrox version was successfully set to '{}'!", version);
+            println!("IThreeM version was successfully set to '{}'!", version);
         }
     }
 }

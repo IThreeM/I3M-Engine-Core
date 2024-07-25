@@ -2,23 +2,23 @@
 
 ** WORK IN PROGRESS **
 
-This document describes high-level architecture and basic concepts of Fyrox. It should help you to understand
+This document describes high-level architecture and basic concepts of IThreeM. It should help you to understand
 basics of the engine's architecture and find a right place for your modifications.
 
 ## Overview
 
-Fyrox is a monolithic game engine with very few replaceable parts. This means that Fyrox itself has relatively
+IThreeM is a monolithic game engine with very few replaceable parts. This means that IThreeM itself has relatively
 strong coupling between modules. However, some of its parts can be used as standalone crates - core, UI and
 sound are independent of the engine. Internal coupling is one-way in most of the places, this means that, for
 instance, a renderer **is** dependent on a scene, but scene does **not** know anything about the renderer.
 This fact makes changes in the engine very easy even for beginners.
 
-Fyrox consists of the four crates - i3m-core, i3m-sound, i3m-ui, and Fyrox itself. i3m-core, i3m-sound and
+IThreeM consists of the four crates - i3m-core, i3m-sound, i3m-ui, and IThreeM itself. i3m-core, i3m-sound and
 i3m-ui are **standalone** crates and can be used separately, the only place where these three are meet is the
-Fyrox. Previously each crate had a separate repository, but then I decided to put everything in single repository
+IThreeM. Previously each crate had a separate repository, but then I decided to put everything in single repository
 because it was too much of a pain to build any project that uses the engine.
 
-Another important fact is that Fyrox **does not** use ECS, instead it uses generational arenas (pools in Fyrox's
+Another important fact is that IThreeM **does not** use ECS, instead it uses generational arenas (pools in IThreeM's
 terminology) for efficient memory management (fast allocation/deallocation, CPU cache efficiency). This means
 that you are working with good old structures which are placed in contiguous memory block (pool). Once an
 object was placed in a pool, you get a handle to the object which can be used to access (borrow) the object
@@ -34,14 +34,14 @@ It contains linear algebra, accelerating structures, color-space functions, etc.
 
 ### Renderer
 
-Fyrox uses a combination of deferred + forward renderers. The deferred renderer is used to render opaque objects,
+IThreeM uses a combination of deferred + forward renderers. The deferred renderer is used to render opaque objects,
 when the forward renderer is used to render transparent objects. The renderer provides lots of very common
 graphical effects. The renderer is suitable for most of the needs, however it is not flexible enough yet and
 there is no way of using custom shaders yet.
 
 ### User Interface
 
-Fyrox uses custom user interface library. It is node-based, has very powerful layout system, uses messages
+IThreeM uses custom user interface library. It is node-based, has very powerful layout system, uses messages
 to communicate between widgets, supports styling. The library has 30+ widgets (including docking manager,
 windows, file browsers, etc). Please keep in mind that the library does not render anything, instead it
 just prepares a set of drawing commands which can be used with any kind of renderer - a software (GDI for
@@ -49,7 +49,7 @@ instance) or a hardware (OpenGL, DirectX, Vulkan, Metal, etc.).
 
 ### Sound
 
-Fyrox uses software sound engine [i3m-sound](https://github.com/IThreeM/I3M-Engine-Core/tree/master/i3m-sound).
+IThreeM uses software sound engine [i3m-sound](https://github.com/IThreeM/I3M-Engine-Core/tree/master/i3m-sound).
 The sound engine provides support for binaural sound rendering using HRTF, which gives excellent sound
 spatialization.
 
@@ -66,7 +66,7 @@ document, here is the table of contents for your comfort:
     - [buffer](#buffermodrs)
     - [decoder](#decodermodrs)
     - [device](#devicemodrs)
-- [Fyrox](#i3m)
+- [IThreeM](#i3m)
 
 ### i3m-core
 
@@ -314,7 +314,7 @@ provides support for binaural sound rendering using HRTF, which gives excellent 
 
 #### device/dummy.rs
 
-### Fyrox
+### IThreeM
 
 The engine itself. It has: a renderer, resource manager, animations, scenes, and various utilities like
 lightmapper, uv-mapper, navigation mesh, logger, pathfinder.

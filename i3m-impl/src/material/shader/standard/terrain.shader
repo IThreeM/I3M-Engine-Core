@@ -118,7 +118,7 @@
                 uniform sampler2D heightMapTexture;
                 uniform vec4 nodeUvOffsets;
 
-                // Define uniforms with reserved names. Fyrox will automatically provide
+                // Define uniforms with reserved names. IThreeM will automatically provide
                 // required data to these uniforms.
                 uniform mat4 i3m_worldMatrix;
                 uniform mat4 i3m_worldViewProjection;
@@ -173,7 +173,7 @@
                 uniform float parallaxCenter;
                 uniform float parallaxScale;
 
-                // Define uniforms with reserved names. Fyrox will automatically provide
+                // Define uniforms with reserved names. IThreeM will automatically provide
                 // required data to these uniforms.
                 uniform vec3 i3m_cameraPosition;
                 uniform bool i3m_usePOM;

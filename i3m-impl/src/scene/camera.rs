@@ -314,7 +314,7 @@ impl Default for Exposure {
 ///
 /// ## Multiple cameras
 ///
-/// Fyrox supports multiple cameras per scene, it means that you can create split screen games, make
+/// IThreeM supports multiple cameras per scene, it means that you can create split screen games, make
 /// picture-in-picture insertions in your main camera view and any other combinations you need.
 ///
 /// ## Performance

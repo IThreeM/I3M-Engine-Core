@@ -76,7 +76,7 @@
            fragment_shader:
                r#"
                 // Original code: https://asliceofrendering.com/scene%20helper/2020/01/05/InfiniteGrid/
-                // Fixed and adapted for Fyrox.
+                // Fixed and adapted for IThreeM.
 
                 uniform vec4 diffuseColor;
                 uniform vec4 xAxisColor;

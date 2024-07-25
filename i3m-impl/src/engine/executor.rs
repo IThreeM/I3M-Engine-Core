@@ -98,7 +98,7 @@ impl Executor {
     pub fn new() -> Self {
         let mut window_attributes = WindowAttributes::default();
         window_attributes.resizable = true;
-        window_attributes.title = "Fyrox Game".to_string();
+        window_attributes.title = "IThreeM Game".to_string();
 
         Self::from_params(
             EventLoop::new().unwrap(),

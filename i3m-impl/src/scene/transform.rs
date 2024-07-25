@@ -6,25 +6,25 @@
 //!
 //! # Complexity
 //!
-//! Fyrox uses a complex transform model inherited from the [FBX transform formulae](http://download.autodesk.com/us/fbx/20112/FBX_SDK_HELP/index.html?url=WS1a9193826455f5ff1f92379812724681e696651.htm,topicNumber=d0e7429):
+//! IThreeM uses a complex transform model inherited from the [FBX transform formulae](http://download.autodesk.com/us/fbx/20112/FBX_SDK_HELP/index.html?url=WS1a9193826455f5ff1f92379812724681e696651.htm,topicNumber=d0e7429):
 //!
 //! `Transform = T * Roff * Rp * Rpre * R * Rpost * Rp⁻¹ * Soff * Sp * S * Sp⁻¹`
 //!
-//! where  
-//! `T`     - Translation  
-//! `Roff`  - Rotation offset  
-//! `Rp`    - Rotation pivot  
-//! `Rpre`  - Pre-rotation  
-//! `R`     - Rotation  
-//! `Rpost` - Post-rotation  
-//! `Rp⁻¹`  - Inverse of the rotation pivot  
-//! `Soff`  - Scaling offset  
-//! `Sp`    - Scaling pivot  
-//! `S`     - Scaling  
-//! `Sp⁻¹`  - Inverse of the scaling pivot  
+//! where
+//! `T`     - Translation
+//! `Roff`  - Rotation offset
+//! `Rp`    - Rotation pivot
+//! `Rpre`  - Pre-rotation
+//! `R`     - Rotation
+//! `Rpost` - Post-rotation
+//! `Rp⁻¹`  - Inverse of the rotation pivot
+//! `Soff`  - Scaling offset
+//! `Sp`    - Scaling pivot
+//! `S`     - Scaling
+//! `Sp⁻¹`  - Inverse of the scaling pivot
 //!
 //! It is very flexible, however it can be slow to computate. To solve possible
-//! performance issues, Fyrox tries to precache every possible component. This means
+//! performance issues, IThreeM tries to precache every possible component. This means
 //! that we use lazy evaluation: you can setup all the required properties, and the actual
 //! calculations will be delayed until you try to get the matrix from the transform. This makes
 //! calculations faster, but increases the required amount of memory.

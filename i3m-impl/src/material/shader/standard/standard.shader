@@ -93,7 +93,7 @@
                 layout(location = 5) in vec4 boneIndices;
                 layout(location = 6) in vec2 vertexSecondTexCoord;
 
-                // Define uniforms with reserved names. Fyrox will automatically provide
+                // Define uniforms with reserved names. IThreeM will automatically provide
                 // required data to these uniforms.
                 uniform mat4 i3m_worldMatrix;
                 uniform mat4 i3m_worldViewProjection;
@@ -197,7 +197,7 @@
                 uniform float parallaxCenter;
                 uniform float parallaxScale;
 
-                // Define uniforms with reserved names. Fyrox will automatically provide
+                // Define uniforms with reserved names. IThreeM will automatically provide
                 // required data to these uniforms.
                 uniform vec3 i3m_cameraPosition;
                 uniform bool i3m_usePOM;

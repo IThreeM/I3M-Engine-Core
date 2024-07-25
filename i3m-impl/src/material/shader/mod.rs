@@ -148,7 +148,7 @@
 //!
 //! ## Built-in properties
 //!
-//! There are number of built-in properties, that Fyrox will try to assign automatically if they're defined
+//! There are number of built-in properties, that IThreeM will try to assign automatically if they're defined
 //! in your shader:
 //!
 //! | Name                       | Type         | Description                                                                                                       |
@@ -216,7 +216,7 @@
 //!
 //! # Standard shader
 //!
-//! By default Fyrox uses standard material for rendering, it covers 95% of uses cases and it is very
+//! By default IThreeM uses standard material for rendering, it covers 95% of uses cases and it is very
 //! flexible. To get standard shader instance, use [`ShaderResource::standard`]
 //!
 //! ```no_run

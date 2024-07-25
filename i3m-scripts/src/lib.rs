@@ -26,5 +26,5 @@ pub mod camera;
 /// # }
 /// ```
 pub fn register(container: &ScriptConstructorContainer) {
-    container.add::<FlyingCameraController>("Fyrox Flying Camera Controller");
+    container.add::<FlyingCameraController>("IThreeM Flying Camera Controller");
 }

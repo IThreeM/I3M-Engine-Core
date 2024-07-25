@@ -1,4 +1,4 @@
-//! Core data structures and algorithms used throughout Fyrox.
+//! Core data structures and algorithms used throughout IThreeM.
 //!
 //! Some of them can be useful separately outside the engine.
 

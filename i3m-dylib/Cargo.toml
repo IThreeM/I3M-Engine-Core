@@ -2,9 +2,9 @@
 name = "i3m-dylib"
 version = "0.1.0"
 edition = "2021"
-authors = ["Dedan Okware <softengdedan@gmail.com>", "Fyrox Engine Contributors"]
+authors = ["Dedan Okware <softengdedan@gmail.com>", "IThreeM Engine Contributors"]
 license = "MIT"
-description = "Dynamic library for Fyrox Game Engine"
+description = "Dynamic library for IThreeM Game Engine"
 keywords = ["sound", "game", "engine", "3d", "gui"]
 categories = ["game-engines", "graphics", "gui", "rendering", "wasm"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]

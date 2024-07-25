@@ -10,11 +10,11 @@ use crate::scene::animation::Animation;
 use crate::scene::graph::Graph;
 use crate::scene::mesh::Mesh;
 use crate::scene::node::Node;
-use i3m_graph::BaseSceneGraph;
 use gltf::animation::util::ReadOutputs;
 use gltf::animation::Channel;
 use gltf::animation::{Interpolation, Property};
 use gltf::Buffer;
+use i3m_graph::BaseSceneGraph;
 
 use super::iter::*;
 use super::simplify::*;
@@ -245,7 +245,7 @@ fn remove_fixed_targets(anims: &mut [ImportedAnimation], graph: &Graph) {
 
 /// Extract a list of Animations from the give glTF document, if that document contains any.
 /// The resulting list of animations is not guaranteed to be the same length as the list of animations
-/// in the document. If any error is encountered in translating an animation from glTF to Fyrox,
+/// in the document. If any error is encountered in translating an animation from glTF to IThreeM,
 /// that animation will be excluded from the resulting list and an error message will be logged.
 ///
 /// * `doc`: The document in which to find the animations.

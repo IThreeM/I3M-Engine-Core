@@ -35,7 +35,7 @@ jobs:
 
       - name: Install linux deps
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        # Note that for running your Fyrox game on CI, you might need additinal deps like libxkbcommon-x11 and OpenGL
+        # Note that for running your IThreeM game on CI, you might need additinal deps like libxkbcommon-x11 and OpenGL
         # and you might need to run it using xvfb-run even in headless mode.
         run: |
           sudo apt-get update # Run update first or install might start failing eventually.

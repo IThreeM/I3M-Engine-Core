@@ -69,7 +69,7 @@ i3m-ui uses a bit unusual way of styling - you have to replace entire sub-graphs
 
 ## Screenshots
 
-![editor](https://raw.githubusercontent.com/FyroxEngine/Fyrox/master/pics/editor.png)
+![editor](https://raw.githubusercontent.com/FyroxEngine/IThreeM/master/pics/editor.png)
 ![absm editor](https://ithreem.com/assets/absm_editor_full.png)
 ![sound](https://ithreem.com/assets/reverb_properties.png)
 

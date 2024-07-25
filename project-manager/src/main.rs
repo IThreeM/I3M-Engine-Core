@@ -1,4 +1,4 @@
-//! Project manager is used to create, import, rename, delete, run and edit projects built with Fyrox.
+//! Project manager is used to create, import, rename, delete, run and edit projects built with IThreeM.
 
 mod build;
 mod project;
@@ -57,7 +57,7 @@ fn main() {
     let mut window_attributes = WindowAttributes::default();
     window_attributes.inner_size = Some(PhysicalSize::new(520, 562).into());
     window_attributes.resizable = true;
-    window_attributes.title = "Fyrox Project Manager".to_string();
+    window_attributes.title = "IThreeM Project Manager".to_string();
 
     let serialization_context = Arc::new(SerializationContext::new());
     let task_pool = Arc::new(TaskPool::new());

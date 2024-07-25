@@ -1,25 +1,25 @@
 <div align="center">
   <a href="https://ithreem.com/">
-    <img src="pics/logo.png" width="128" height="128" alt="Fyrox" />
+    <img src="pics/logo.png" width="128" height="128" alt="IThreeM" />
   </a>
-  <h1>Fyrox - a modern Rust game engine</h1>
+  <h1>IThreeM - a modern Rust game engine</h1>
 </div>
 
 [![License (MIT)](https://img.shields.io/crates/l/i3m)](https://github.com/IThreeM/I3M-Engine-Core/blob/master/LICENSE.md)
 [![CI Status](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/ci.yml/badge.svg)](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/ci.yml)
 [![audit](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/audit.yml/badge.svg)](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/audit.yml)
-[![Dependency status](https://deps.rs/repo/github/FyroxEngine/Fyrox/status.svg)](https://deps.rs/repo/github/FyroxEngine/Fyrox)
+[![Dependency status](https://deps.rs/repo/github/FyroxEngine/IThreeM/status.svg)](https://deps.rs/repo/github/FyroxEngine/IThreeM)
 [![Crates.io](https://img.shields.io/crates/v/i3m)](https://crates.io/crates/i3m)
-[![docs.rs](https://img.shields.io/badge/docs-website-blue)](https://docs.rs/Fyrox/)
+[![docs.rs](https://img.shields.io/badge/docs-website-blue)](https://docs.rs/IThreeM/)
 [![Discord](https://img.shields.io/discord/756573453561102427)](https://discord.gg/xENF5Uh)
-[![Lines of code](https://tokei.rs/b1/github/FyroxEngine/Fyrox)](https://github.com/IThreeM/I3M-Engine-Core)
+[![Lines of code](https://tokei.rs/b1/github/FyroxEngine/IThreeM)](https://github.com/IThreeM/I3M-Engine-Core)
 
 A feature-rich, production-ready, general purpose 2D/3D game engine written in Rust with a scene editor.
 _Formerly known as rg3d_
 
 ## [Learning materials](https://i3m-book.github.io/)
 
-[Read the official Fyrox book here.](https://i3m-book.github.io/) It contains comprehensive information about many aspects of the engine, starting
+[Read the official IThreeM book here.](https://i3m-book.github.io/) It contains comprehensive information about many aspects of the engine, starting
 by "how to build" and ending by various tutorials.
 
 ## Community

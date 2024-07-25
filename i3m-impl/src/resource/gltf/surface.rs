@@ -34,7 +34,7 @@ pub enum SurfaceDataError {
     MissingBoneWeight,
     /// The mesh vertex data in the glTF files does not include bone index values.
     MissingBoneIndex,
-    /// Bone indices in glTF format can be stored as u8 or u16, but Fyrox only supports
+    /// Bone indices in glTF format can be stored as u8 or u16, but IThreeM only supports
     /// bone indices in u8. This error is produced if an index is found which does not fit
     /// into u8.
     InvalidBoneIndex,

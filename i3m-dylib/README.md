@@ -1,3 +1,3 @@
 # i3m-dylib
 
-Dynamic library for Fyrox Game Engine.
+Dynamic library for IThreeM Game Engine.

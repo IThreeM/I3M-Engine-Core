@@ -1,5 +1,5 @@
 //! A collection of [PropertyEditorDefinition] objects for a wide variety of types,
-//! including standard Rust types and Fyrox core types.
+//! including standard Rust types and IThreeM core types.
 
 use crate::inspector::editors::path::PathPropertyEditorDefinition;
 use crate::{
@@ -376,7 +376,7 @@ impl PropertyEditorDefinitionContainer {
         Self::default()
     }
 
-    /// A container with property editors for Fyrox core types and Rust standard types.
+    /// A container with property editors for IThreeM core types and Rust standard types.
     pub fn with_default_editors() -> Self {
         let container = Self::default();
 

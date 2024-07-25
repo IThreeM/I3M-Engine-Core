@@ -1,7 +1,7 @@
 [package]
 name = "i3m-impl"
 version = "0.34.1"
-authors = ["Dedan Okware <softengdedan@gmail.com>", "Fyrox Engine Contributors"]
+authors = ["Dedan Okware <softengdedan@gmail.com>", "IThreeM Engine Contributors"]
 edition = "2021"
 license = "MIT"
 description = "Feature-rich, easy-to-use, 2D/3D game engine with a scene editor. Like Godot, but in Rust."

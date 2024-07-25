@@ -1,4 +1,4 @@
-//! Fyrox Project Template Generator.
+//! IThreeM Project Template Generator.
 
 use convert_case::{Case, Casing};
 use regex::Regex;
@@ -780,16 +780,16 @@ pub fn upgrade_project(root_path: &Path, version: &str, local: bool) -> Result<(
                         if version == "latest" {
                             if local {
                                 let mut engine_table = table();
-                                engine_table["path"] = value("../Fyrox/i3m");
+                                engine_table["path"] = value("../IThreeM/i3m");
                                 dependencies["i3m"] = engine_table;
 
                                 let mut editor_table = table();
-                                editor_table["path"] = value("../Fyrox/editor");
+                                editor_table["path"] = value("../IThreeM/editor");
                                 dependencies["I3M-Engine-Core_base"] = editor_table;
 
                                 if dependencies.contains_key("i3m_scripts") {
                                     let mut scripts_table = table();
-                                    scripts_table["path"] = value("../Fyrox/i3m-scripts");
+                                    scripts_table["path"] = value("../IThreeM/i3m-scripts");
                                     dependencies["i3m_scripts"] = scripts_table;
                                 }
                             } else {
