@@ -1,5 +1,5 @@
 [package]
-name = "i3m-template-core"
+name = "I3M-CLI-core"
 version = "0.11.0"
 edition = "2021"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]

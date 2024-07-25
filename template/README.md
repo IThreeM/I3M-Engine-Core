@@ -7,12 +7,12 @@ This tiny utility handles project and script generation for IThreeM Game Engine.
 Install it via `cargo install`:
 
 ```shell
-cargo install i3m-template
+cargo install I3M-CLI
 ```
 
 ## Generating New Project
 
-`i3m-template init [--name <name> --style <style>]`
+`I3M-CLI init [--name <name> --style <style>]`
 
 - `name` - a name of new project (default is `my_game`)
 - `style` - defines a default scene type, either `2d` or `3d` (default is `3d`)
@@ -38,7 +38,7 @@ There is nothing special in generated project, so you can tweak them as you wish
 
 ## Adding New Scripts
 
-`i3m-template script [--name <name>]`
+`I3M-CLI script [--name <name>]`
 
 - `name` - a name of your script (default is `MyScript`)
 

@@ -40,7 +40,7 @@
       <sourceFolder url="file://$MODULE_DIR$/i3m-bridge/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/i3m-impl/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/i3m/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/project-manager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/I3M-Project-Manager/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/template-core/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/examples/wasm/target" />

@@ -501,7 +501,7 @@ max_sdk_version = 29
 
 [package.metadata.android.signing.release]
 path = "release.keystore"
-keystore_password = "i3m-template"
+keystore_password = "I3M-CLI"
 
 [lib]
 crate-type = ["cdylib"]
