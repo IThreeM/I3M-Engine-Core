@@ -16,8 +16,8 @@ use crate::{
     window::{WindowBuilder, WindowMessage, WindowTitle},
     BuildContext, Control, Thickness, UiNode, UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
 use std::{
     ops::{Deref, DerefMut},
     path::Path,
@@ -46,7 +46,7 @@ impl PathEditorMessage {
 /// An instance of the editor could be created like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, path::PathEditorBuilder, widget::WidgetBuilder, BuildContext, UiNode,
 /// # };
 /// # use std::path::PathBuf;

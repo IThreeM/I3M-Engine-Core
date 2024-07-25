@@ -8,7 +8,7 @@ use crate::{
     audio::AudioBusSelection,
     camera::{CameraController, PickingOptions},
     command::{make_command, Command, CommandGroup, CommandStack},
-    fyrox::{
+    i3m::{
         asset::manager::ResourceManager,
         core::{
             algebra::{Matrix4, Vector2, Vector3},
@@ -77,7 +77,7 @@ use crate::{
     world::graph::selection::GraphSelection,
     Message, Settings,
 };
-use fyrox::asset::untyped::ResourceKind;
+use i3m::asset::untyped::ResourceKind;
 use std::{
     any::Any,
     cell::RefCell,

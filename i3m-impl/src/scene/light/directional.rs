@@ -26,8 +26,8 @@ use crate::{
         node::{Node, NodeTrait},
     },
 };
-use fyrox_core::uuid_provider;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::uuid_provider;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 

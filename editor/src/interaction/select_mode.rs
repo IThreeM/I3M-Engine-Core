@@ -1,8 +1,8 @@
-use crate::fyrox::core::uuid::{uuid, Uuid};
-use crate::fyrox::core::TypeUuidProvider;
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::gui::BuildContext;
-use crate::fyrox::{
+use crate::i3m::core::uuid::{uuid, Uuid};
+use crate::i3m::core::TypeUuidProvider;
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::gui::BuildContext;
+use crate::i3m::{
     core::{algebra::Vector2, pool::Handle},
     gui::{message::MessageDirection, widget::WidgetMessage, UiNode},
     scene::node::Node,

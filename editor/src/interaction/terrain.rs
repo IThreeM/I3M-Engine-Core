@@ -1,10 +1,10 @@
-use fyrox::scene::terrain::brushstroke::{BrushSender, BrushThreadMessage, UndoData};
+use i3m::scene::terrain::brushstroke::{BrushSender, BrushThreadMessage, UndoData};
 
-use crate::fyrox::core::uuid::{uuid, Uuid};
-use crate::fyrox::core::TypeUuidProvider;
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::gui::{HorizontalAlignment, Thickness, VerticalAlignment};
-use crate::fyrox::{
+use crate::i3m::core::uuid::{uuid, Uuid};
+use crate::i3m::core::TypeUuidProvider;
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::gui::{HorizontalAlignment, Thickness, VerticalAlignment};
+use crate::i3m::{
     core::{
         algebra::{Matrix2, Matrix4, Vector2, Vector3},
         arrayvec::ArrayVec,
@@ -54,7 +54,7 @@ use crate::{
     settings::Settings,
     MSG_SYNC_FLAG,
 };
-use fyrox::asset::untyped::ResourceKind;
+use i3m::asset::untyped::ResourceKind;
 use std::sync::mpsc::channel;
 use std::sync::Arc;
 

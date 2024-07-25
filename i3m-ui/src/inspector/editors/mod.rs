@@ -84,8 +84,8 @@ use crate::{
     UiNode, UserInterface, VerticalAlignment,
 };
 use fxhash::FxHashMap;
-use fyrox_animation::machine::Parameter;
-use fyrox_core::sstorage::ImmutableString;
+use i3m_animation::machine::Parameter;
+use i3m_core::sstorage::ImmutableString;
 use std::fmt::Formatter;
 use std::{
     any::{Any, TypeId},
@@ -210,7 +210,7 @@ pub struct PropertyEditorTranslationContext<'b, 'c> {
     /// For example, the EditorEnvironment can be used by
     /// [I3M-Engine-Core_base::inspector::editors::script::ScriptPropertyEditor](https://docs.rs/I3M-Engine-Core_base/latest/I3M-Engine-Core_base/inspector/editors/script/struct.ScriptPropertyEditor.html)
     /// to translate the UUID of a script into an actual
-    /// [fyrox::script::Script](https://docs.rs/fyrox/latest/fyrox/script/struct.Script.html)
+    /// [i3m::script::Script](https://docs.rs/i3m/latest/i3m/script/struct.Script.html)
     /// when it receives a
     /// [ScriptPropertyEditorMessage::Value](https://docs.rs/I3M-Engine-Core_base/latest/I3M-Engine-Core_base/inspector/editors/script/enum.ScriptPropertyEditorMessage.html#variant.Value).
     pub environment: Option<Arc<dyn InspectorEnvironment>>,

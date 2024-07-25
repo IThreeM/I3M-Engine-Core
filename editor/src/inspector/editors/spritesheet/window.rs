@@ -1,5 +1,5 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::{
     core::{
         algebra::Vector2, color::Color, parking_lot::Mutex, pool::Handle, reflect::prelude::*,
         type_traits::prelude::*, uuid_provider, visitor::prelude::*,

@@ -17,7 +17,7 @@ use crate::{
     BuildContext, Control, MessageDirection, MouseButton, Orientation, Thickness, UiNode,
     UserInterface, WidgetMessage,
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::{
     fmt::Debug,
     mem,

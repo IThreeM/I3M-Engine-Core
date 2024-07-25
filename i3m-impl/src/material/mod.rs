@@ -22,8 +22,8 @@ use crate::{
     resource::texture::{Texture, TextureResource},
 };
 use fxhash::FxHashMap;
-use fyrox_resource::state::ResourceState;
-use fyrox_resource::untyped::ResourceKind;
+use i3m_resource::state::ResourceState;
+use i3m_resource::untyped::ResourceKind;
 use lazy_static::lazy_static;
 use std::error::Error;
 use std::{
@@ -336,13 +336,13 @@ impl Default for PropertyValue {
 /// method to create a material with standard shader:
 ///
 /// ```no_run
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     material::shader::{ShaderResource, SamplerFallback},
 /// #     asset::manager::ResourceManager,
 /// #     material::{Material, PropertyValue},
 /// #     core::sstorage::ImmutableString,
 /// # };
-/// # use fyrox_impl::resource::texture::Texture;
+/// # use i3m_impl::resource::texture::Texture;
 ///
 /// fn create_brick_material(resource_manager: ResourceManager) -> Material {
 ///     let mut material = Material::standard();
@@ -370,12 +370,12 @@ impl Default for PropertyValue {
 /// and then create the material and populate it with a set of property values.
 ///
 /// ```no_run
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     asset::manager::ResourceManager,
 /// #     material::{Material, PropertyValue},
 /// #     core::{sstorage::ImmutableString, algebra::Vector3}
 /// # };
-/// # use fyrox_impl::material::shader::Shader;
+/// # use i3m_impl::material::shader::Shader;
 ///
 /// async fn create_grass_material(resource_manager: ResourceManager) -> Material {
 ///     let shader = resource_manager.request::<Shader>("my_grass_shader.ron").await.unwrap();
@@ -578,13 +578,13 @@ impl Material {
     /// # Example
     ///
     /// ```no_run
-    /// # use fyrox_impl::{
+    /// # use i3m_impl::{
     /// #     material::shader::{ShaderResource, SamplerFallback},
     /// #     asset::manager::ResourceManager,
     /// #     material::{Material, PropertyValue},
     /// #     core::sstorage::ImmutableString
     /// # };
-    /// # use fyrox_impl::resource::texture::Texture;
+    /// # use i3m_impl::resource::texture::Texture;
     ///
     /// fn create_brick_material(resource_manager: ResourceManager) -> Material {
     ///     let mut material = Material::standard();
@@ -640,12 +640,12 @@ impl Material {
     /// # Example
     ///
     /// ```no_run
-    /// # use fyrox_impl::{
+    /// # use i3m_impl::{
     /// #     asset::manager::ResourceManager,
     /// #     material::{Material, PropertyValue},
     /// #     core::{sstorage::ImmutableString, algebra::Vector3}
     /// # };
-    /// # use fyrox_impl::material::shader::Shader;
+    /// # use i3m_impl::material::shader::Shader;
     ///
     /// async fn create_grass_material(resource_manager: ResourceManager) -> Material {
     ///     let shader = resource_manager.request::<Shader>("my_grass_shader.ron").await.unwrap();
@@ -711,8 +711,8 @@ impl Material {
     /// # Examples
     ///
     /// ```no_run
-    /// # use fyrox_impl::core::sstorage::ImmutableString;
-    /// # use fyrox_impl::material::Material;
+    /// # use i3m_impl::core::sstorage::ImmutableString;
+    /// # use i3m_impl::material::Material;
     ///
     /// let mut material = Material::standard();
     ///
@@ -734,9 +734,9 @@ impl Material {
     /// # Example
     ///
     /// ```no_run
-    /// # use fyrox_impl::material::{Material, PropertyValue};
-    /// # use fyrox_impl::core::color::Color;
-    /// # use fyrox_impl::core::sstorage::ImmutableString;
+    /// # use i3m_impl::material::{Material, PropertyValue};
+    /// # use i3m_impl::core::color::Color;
+    /// # use i3m_impl::core::sstorage::ImmutableString;
     ///
     /// let mut material = Material::standard();
     ///
@@ -944,7 +944,7 @@ pub trait MaterialResourceExtension {
     ///
     /// You must use this method to create materials, if you want hot reloading to be reliable and
     /// prevent random crashes. Unlike [`Resource::new_ok`], this method ensures that correct vtable
-    /// is used.  
+    /// is used.
     fn new(material: Material) -> Self;
 
     /// Creates a deep copy of the material resource.

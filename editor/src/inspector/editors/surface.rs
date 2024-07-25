@@ -1,6 +1,6 @@
 use crate::{
     asset::item::AssetItem,
-    fyrox::{
+    i3m::{
         asset::manager::ResourceManager,
         core::{
             futures::executor::block_on, make_relative_path, pool::Handle, reflect::prelude::*,

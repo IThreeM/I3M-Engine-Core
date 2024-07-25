@@ -11,8 +11,8 @@ use crate::{
     machine::{AnimationPoseSource, ParameterContainer, PoseNode},
     Animation, AnimationContainer, AnimationPose, EntityId,
 };
-use fyrox_core::uuid::{uuid, Uuid};
-use fyrox_core::{NameProvider, TypeUuidProvider};
+use i3m_core::uuid::{uuid, Uuid};
+use i3m_core::{NameProvider, TypeUuidProvider};
 use std::{
     cell::Ref,
     ops::{Deref, DerefMut},

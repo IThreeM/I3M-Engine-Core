@@ -1,7 +1,7 @@
 pub mod graph;
 pub mod widget;
 
-use crate::fyrox::{core::type_traits::prelude::*, gui::UserInterface};
+use crate::i3m::{core::type_traits::prelude::*, gui::UserInterface};
 use crate::{
     command::CommandContext, message::MessageSender, scene::Selection,
     ui_scene::clipboard::Clipboard,

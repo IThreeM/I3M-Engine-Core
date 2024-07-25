@@ -1,5 +1,5 @@
-use crate::fyrox::asset::state::ResourceState;
-use crate::fyrox::{
+use crate::i3m::asset::state::ResourceState;
+use crate::i3m::{
     asset::{
         graph::{ResourceDependencyGraph, ResourceGraphNode},
         untyped::UntypedResource,

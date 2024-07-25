@@ -9,7 +9,7 @@ pub mod tileset;
 
 use crate::{
     command::SetPropertyCommand,
-    fyrox::{
+    i3m::{
         core::{
             algebra::{Vector2, Vector3},
             color::Color,
@@ -47,7 +47,7 @@ use crate::{
     settings::Settings,
     Editor, Message,
 };
-use fyrox::core::algebra::Matrix4;
+use i3m::core::algebra::Matrix4;
 use std::sync::Arc;
 
 fn make_button(

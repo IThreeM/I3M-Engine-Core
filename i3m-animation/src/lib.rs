@@ -15,7 +15,7 @@ use crate::{
     track::Track,
 };
 use core::ImmutableString;
-use fyrox_core::{NameProvider, TypeUuidProvider};
+use i3m_core::{NameProvider, TypeUuidProvider};
 use std::hash::Hash;
 use std::{
     collections::VecDeque,
@@ -23,9 +23,9 @@ use std::{
     ops::{Index, IndexMut, Range},
 };
 
-pub use fyrox_core as core;
-use fyrox_core::pool::ErasedHandle;
-use fyrox_core::uuid::uuid;
+pub use i3m_core as core;
+use i3m_core::pool::ErasedHandle;
+use i3m_core::uuid::uuid;
 
 pub use pose::{AnimationPose, NodePose};
 pub use signal::{AnimationEvent, AnimationSignal};
@@ -116,7 +116,7 @@ pub mod value;
 /// a guide **only** if you need to create procedural animations:
 ///
 /// ```rust
-/// use fyrox_animation::{
+/// use i3m_animation::{
 ///     container::{TrackDataContainer, TrackValueKind},
 ///     track::Track,
 ///     value::ValueBinding,
@@ -126,7 +126,7 @@ pub mod value;
 ///         pool::Handle,
 ///     },
 /// };
-/// use fyrox_core::pool::ErasedHandle;
+/// use i3m_core::pool::ErasedHandle;
 ///
 /// fn create_animation(target: ErasedHandle) -> Animation<ErasedHandle> {
 ///     let mut frames_container = TrackDataContainer::new(TrackValueKind::Vector3);

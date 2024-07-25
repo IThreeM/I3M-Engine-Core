@@ -44,7 +44,7 @@ without a need to create a project and test there.
 
 Common rules for documentation contributions:
 
-- **Write everything in English** - official API documentation and [the book](https://fyrox-book.github.io/) written in
+- **Write everything in English** - official API documentation and [the book](https://i3m-book.github.io/) written in
 English. If you want to create a translation for the book, you should create your own repository.
 - **Add code examples** - code snippets helps other developers to quickly understand how to use a function/method.
 - **Use spell checker** - keep the docs clean and readable.

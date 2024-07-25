@@ -1,5 +1,5 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::{
     core::{
         algebra::Vector2, make_pretty_type_name, parking_lot::Mutex, pool::Handle,
         reflect::prelude::*, sstorage::ImmutableString, type_traits::prelude::*, uuid_provider,
@@ -368,7 +368,7 @@ impl PropertySelectorBuilder {
                 .with_child(
                     BorderBuilder::new(
                         WidgetBuilder::new()
-                            .with_background(fyrox::gui::BRUSH_DARK)
+                            .with_background(i3m::gui::BRUSH_DARK)
                             .on_row(1)
                             .on_column(0)
                             .with_child(

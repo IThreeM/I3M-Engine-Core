@@ -40,11 +40,11 @@ impl GraphEventBroadcaster {
     ///
     /// ```rust
     /// # use std::sync::mpsc::channel;
-    /// # use fyrox_impl::scene::base::BaseBuilder;
-    /// # use fyrox_impl::scene::graph::event::GraphEvent;
-    /// # use fyrox_impl::scene::graph::Graph;
-    /// # use fyrox_impl::scene::pivot::PivotBuilder;
-    /// # use fyrox_impl::graph::BaseSceneGraph;
+    /// # use i3m_impl::scene::base::BaseBuilder;
+    /// # use i3m_impl::scene::graph::event::GraphEvent;
+    /// # use i3m_impl::scene::graph::Graph;
+    /// # use i3m_impl::scene::pivot::PivotBuilder;
+    /// # use i3m_impl::graph::BaseSceneGraph;
     ///
     /// let mut graph = Graph::new();
     ///

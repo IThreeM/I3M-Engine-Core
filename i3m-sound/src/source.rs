@@ -10,11 +10,11 @@
 //!
 //! ```no_run
 //! use std::sync::{Arc, Mutex};
-//! use fyrox_sound::buffer::SoundBufferResource;
-//! use fyrox_sound::pool::Handle;
-//! use fyrox_sound::source::{SoundSource, Status};
-//! use fyrox_sound::source::SoundSourceBuilder;
-//! use fyrox_sound::context::SoundContext;
+//! use i3m_sound::buffer::SoundBufferResource;
+//! use i3m_sound::pool::Handle;
+//! use i3m_sound::source::{SoundSource, Status};
+//! use i3m_sound::source::SoundSourceBuilder;
+//! use i3m_sound::context::SoundContext;
 //!
 //! fn make_source(context: &mut SoundContext, buffer: SoundBufferResource) -> Handle<SoundSource> {
 //!     let source = SoundSourceBuilder::new()
@@ -35,7 +35,7 @@ use crate::{
     error::SoundError,
     listener::Listener,
 };
-use fyrox_core::{
+use i3m_core::{
     algebra::Vector3,
     reflect::prelude::*,
     uuid_provider,
@@ -685,9 +685,9 @@ impl Drop for SoundSource {
 ///
 /// ```no_run
 /// use std::sync::{Arc, Mutex};
-/// use fyrox_sound::buffer::SoundBufferResource;
-/// use fyrox_sound::source::{SoundSourceBuilder};
-/// use fyrox_sound::source::{Status, SoundSource};
+/// use i3m_sound::buffer::SoundBufferResource;
+/// use i3m_sound::source::{SoundSourceBuilder};
+/// use i3m_sound::source::{Status, SoundSource};
 ///
 /// fn make_sound_source(buffer: SoundBufferResource) -> SoundSource {
 ///     SoundSourceBuilder::new()

@@ -15,7 +15,7 @@ use crate::{
     BuildContext, Control, RestrictionEntry, Thickness, UiNode, UserInterface, BRUSH_DARKEST,
     BRUSH_PRIMARY,
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages for [`Popup`] widget.
@@ -135,7 +135,7 @@ impl Placement {
 /// A simple popup with a button could be created using the following code:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     button::ButtonBuilder, core::pool::Handle, popup::PopupBuilder, widget::WidgetBuilder,
 /// #     BuildContext, UiNode,
 /// # };
@@ -154,7 +154,7 @@ impl Placement {
 /// otherwise you won't see it:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     button::ButtonBuilder,
 /// #     core::pool::Handle,
 /// #     message::MessageDirection,
@@ -184,7 +184,7 @@ impl Placement {
 /// open above some other widget with specific alignment (right, left, center, etc.).
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     button::ButtonBuilder,
 /// #     core::pool::Handle,
 /// #     message::MessageDirection,
@@ -217,7 +217,7 @@ impl Placement {
 /// is used to display content of the list. In this case you could specify the placement target like this:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     button::ButtonBuilder,
 /// #     core::pool::Handle,
 /// #     message::MessageDirection,
@@ -259,7 +259,7 @@ impl Placement {
 /// can be turned off:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     button::ButtonBuilder, core::pool::Handle, popup::PopupBuilder, widget::WidgetBuilder,
 /// #     BuildContext, UiNode,
 /// # };

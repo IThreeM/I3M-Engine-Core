@@ -7,12 +7,12 @@ This tiny utility handles project and script generation for Fyrox Game Engine.
 Install it via `cargo install`:
 
 ```shell
-cargo install fyrox-template
+cargo install i3m-template
 ```
 
 ## Generating New Project
 
-`fyrox-template init [--name <name> --style <style>]`
+`i3m-template init [--name <name> --style <style>]`
 
 - `name` - a name of new project (default is `my_game`)
 - `style` - defines a default scene type, either `2d` or `3d` (default is `3d`)
@@ -38,7 +38,7 @@ There is nothing special in generated project, so you can tweak them as you wish
 
 ## Adding New Scripts
 
-`fyrox-template script [--name <name>]`
+`i3m-template script [--name <name>]`
 
 - `name` - a name of your script (default is `MyScript`)
 

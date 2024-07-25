@@ -708,8 +708,8 @@ mod test {
 
     use super::*;
 
-    use fyrox_core::uuid::{uuid, Uuid};
-    use fyrox_core::{
+    use i3m_core::uuid::{uuid, Uuid};
+    use i3m_core::{
         reflect::{FieldInfo, Reflect},
         visitor::{Visit, VisitResult, Visitor},
         TypeUuidProvider,

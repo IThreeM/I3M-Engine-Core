@@ -1,6 +1,6 @@
 use crate::command::{Command, CommandGroup};
-use crate::fyrox::graph::{BaseSceneGraph, SceneGraphNode};
-use crate::fyrox::{
+use crate::i3m::graph::{BaseSceneGraph, SceneGraphNode};
+use crate::i3m::{
     asset::{manager::ResourceManager, untyped::UntypedResource},
     core::{
         algebra::Vector3,

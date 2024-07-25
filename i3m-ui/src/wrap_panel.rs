@@ -14,9 +14,9 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, Orientation, UiNode, UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
+use i3m_graph::BaseSceneGraph;
 use std::{
     cell::RefCell,
     ops::{Deref, DerefMut, Range},
@@ -45,7 +45,7 @@ impl WrapPanelMessage {
 /// Use `WrapPanelBuilder` to create new wrap panel instance:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     widget::WidgetBuilder, wrap_panel::WrapPanelBuilder, BuildContext, Orientation, UiNode,
 /// # };

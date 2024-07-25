@@ -1,7 +1,7 @@
-use crate::fyrox::core::color::Color;
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::gui::draw::{CommandTexture, Draw};
-use crate::fyrox::{
+use crate::i3m::core::color::Color;
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::gui::draw::{CommandTexture, Draw};
+use crate::i3m::{
     asset::untyped::UntypedResource,
     core::{
         algebra::Vector2, pool::ErasedHandle, pool::Handle, reflect::prelude::*,
@@ -305,7 +305,7 @@ impl SceneItemBuilder {
                         WidgetBuilder::new()
                             .with_foreground(
                                 self.text_brush
-                                    .unwrap_or(Brush::Solid(fyrox::gui::COLOR_FOREGROUND)),
+                                    .unwrap_or(Brush::Solid(i3m::gui::COLOR_FOREGROUND)),
                             )
                             .with_margin(Thickness::left(1.0))
                             .on_column(1)

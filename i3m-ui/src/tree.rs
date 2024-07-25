@@ -22,8 +22,8 @@ use crate::{
     BuildContext, Control, MouseButton, Thickness, UiNode, UserInterface, VerticalAlignment,
     BRUSH_DARK, BRUSH_DIM_BLUE,
 };
-use fyrox_core::uuid_provider;
-use fyrox_graph::{BaseSceneGraph, SceneGraph, SceneGraphNode};
+use i3m_core::uuid_provider;
+use i3m_graph::{BaseSceneGraph, SceneGraph, SceneGraphNode};
 use std::collections::VecDeque;
 use std::ops::{Deref, DerefMut};
 
@@ -158,7 +158,7 @@ impl TreeRootMessage {
 /// A simple tree with one root and two children items could be created like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     text::TextBuilder,
 /// #     tree::{TreeBuilder, TreeRootBuilder},

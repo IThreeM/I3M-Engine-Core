@@ -17,7 +17,7 @@ mod triangle2d;
 use crate::{
     camera::PickingOptions,
     command::SetPropertyCommand,
-    fyrox::{
+    i3m::{
         asset::untyped::ResourceKind,
         core::{
             algebra::{UnitQuaternion, Vector2, Vector3},
@@ -58,7 +58,7 @@ use crate::{
     settings::Settings,
     Editor, Message,
 };
-use fyrox::scene::sprite::Sprite;
+use i3m::scene::sprite::Sprite;
 
 fn try_get_collider_shape(collider: Handle<Node>, scene: &Scene) -> Option<ColliderShape> {
     scene
@@ -203,7 +203,7 @@ fn make_shape_gizmo(
 ) -> Box<dyn ShapeGizmoTrait> {
     if let Some(collider) = scene.graph.try_get_of_type::<Collider>(collider) {
         let shape = collider.shape().clone();
-        use fyrox::scene::collider::ColliderShape;
+        use i3m::scene::collider::ColliderShape;
         match shape {
             ColliderShape::Ball(_) => Box::new(BallShapeGizmo::new(root, visible, scene)),
             ColliderShape::Cylinder(_) => Box::new(CylinderShapeGizmo::new(visible, root, scene)),

@@ -30,7 +30,7 @@ use crate::core::{
 use crate::fxhash::FxHashMap;
 use crate::resource::texture::{Texture, TextureResource};
 use crate::scene::node::Node;
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 use std::collections::VecDeque;
 use std::sync::mpsc::{Receiver, SendError, Sender};
 

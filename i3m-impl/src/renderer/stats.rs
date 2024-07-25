@@ -1,5 +1,5 @@
 use crate::renderer::framework::geometry_buffer::DrawCallStatistics;
-use fyrox_core::instant;
+use i3m_core::instant;
 use std::fmt::{Display, Formatter};
 use std::ops::AddAssign;
 

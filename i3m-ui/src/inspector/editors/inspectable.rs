@@ -13,9 +13,9 @@ use crate::{
     message::{MessageDirection, UiMessage},
     widget::WidgetBuilder,
 };
-use fyrox_core::pool::Handle;
-use fyrox_core::PhantomDataSendSync;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::pool::Handle;
+use i3m_core::PhantomDataSendSync;
+use i3m_graph::BaseSceneGraph;
 use std::{
     any::TypeId,
     fmt::{Debug, Formatter},

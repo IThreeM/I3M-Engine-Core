@@ -7,7 +7,7 @@ use crate::{
     widget::Widget,
     UiNode, UserInterface,
 };
-use fyrox_core::{ComponentProvider, TypeUuidProvider};
+use i3m_core::{ComponentProvider, TypeUuidProvider};
 use std::{
     any::Any,
     ops::{Deref, DerefMut},
@@ -73,7 +73,7 @@ pub trait Control:
     /// ## Example
     ///
     /// ```rust
-    /// # use fyrox_ui::{
+    /// # use i3m_ui::{
     /// #     core::algebra::Vector2, define_widget_deref, message::UiMessage, Control, UserInterface,
     /// #     core::{visitor::prelude::*, reflect::prelude::*, type_traits::prelude::*,},
     /// #     widget::Widget,
@@ -82,8 +82,8 @@ pub trait Control:
     /// #     any::{Any, TypeId},
     /// #     ops::{Deref, DerefMut},
     /// # };
-    /// # use fyrox_core::uuid_provider;
-    /// # use fyrox_graph::BaseSceneGraph;
+    /// # use i3m_core::uuid_provider;
+    /// # use i3m_graph::BaseSceneGraph;
     /// #
     /// #[derive(Clone, Visit, Reflect, Debug, ComponentProvider)]
     /// struct MyWidget {
@@ -144,7 +144,7 @@ pub trait Control:
     /// ## Example
     ///
     /// ```rust
-    /// # use fyrox_ui::{
+    /// # use i3m_ui::{
     /// #     core::{algebra::Vector2, math::Rect},
     /// #     core::{visitor::prelude::*, reflect::prelude::*, type_traits::prelude::*,},
     /// #     define_widget_deref,
@@ -155,7 +155,7 @@ pub trait Control:
     /// #     any::{Any, TypeId},
     /// #     ops::{Deref, DerefMut},
     /// # };
-    /// # use fyrox_core::uuid_provider;
+    /// # use i3m_core::uuid_provider;
     /// #
     /// #[derive(Clone, Visit, Reflect, Debug, ComponentProvider)]
     /// struct MyWidget {
@@ -203,7 +203,7 @@ pub trait Control:
     /// ## Example
     ///
     /// ```rust
-    /// # use fyrox_ui::{
+    /// # use i3m_ui::{
     /// #     define_widget_deref,
     /// #     draw::{CommandTexture, Draw, DrawingContext},
     /// #     core::{visitor::prelude::*, reflect::prelude::*, type_traits::prelude::*,},
@@ -214,7 +214,7 @@ pub trait Control:
     /// #     any::{Any, TypeId},
     /// #     ops::{Deref, DerefMut},
     /// # };
-    /// # use fyrox_core::uuid_provider;
+    /// # use i3m_core::uuid_provider;
     /// #
     /// #[derive(Clone, Visit, Reflect, Debug, ComponentProvider)]
     /// struct MyWidget {

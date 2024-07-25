@@ -2,7 +2,7 @@ mod ascii;
 pub mod attribute;
 mod binary;
 
-use fyrox_resource::io::ResourceIo;
+use i3m_resource::io::ResourceIo;
 
 use crate::{
     core::{

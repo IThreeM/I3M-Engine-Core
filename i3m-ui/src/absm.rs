@@ -12,8 +12,8 @@ use crate::{
     widget::{Widget, WidgetBuilder, WidgetMessage},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_animation::machine::Parameter;
-use fyrox_graph::{SceneGraph, SceneGraphNode};
+use i3m_animation::machine::Parameter;
+use i3m_graph::{SceneGraph, SceneGraphNode};
 use std::ops::{Deref, DerefMut};
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 

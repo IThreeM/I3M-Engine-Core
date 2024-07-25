@@ -5,8 +5,8 @@ use crate::{
     machine::{Parameter, ParameterContainer, State},
     Animation, AnimationContainer, EntityId,
 };
-use fyrox_core::uuid::{uuid, Uuid};
-use fyrox_core::{NameProvider, TypeUuidProvider};
+use i3m_core::uuid::{uuid, Uuid};
+use i3m_core::{NameProvider, TypeUuidProvider};
 use std::any::{type_name, Any, TypeId};
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 
@@ -288,12 +288,12 @@ impl<T: EntityId> Reflect for NotNode<T> {
 /// # Examples
 ///
 /// ```rust
-/// use fyrox_animation::AnimationContainer;
-/// use fyrox_animation::machine::{
+/// use i3m_animation::AnimationContainer;
+/// use i3m_animation::machine::{
 ///     transition::{AndNode, LogicNode, NotNode},
 ///     Parameter, ParameterContainer,
 /// };
-/// use fyrox_core::pool::ErasedHandle;
+/// use i3m_core::pool::ErasedHandle;
 ///
 /// let mut parameters = ParameterContainer::default();
 /// parameters.add("Run", Parameter::Rule(false));

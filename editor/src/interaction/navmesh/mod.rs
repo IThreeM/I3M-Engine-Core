@@ -1,6 +1,6 @@
 use crate::command::{Command, CommandGroup};
-use crate::fyrox::graph::SceneGraph;
-use crate::fyrox::{
+use crate::i3m::graph::SceneGraph;
+use crate::i3m::{
     core::{
         algebra::{Vector2, Vector3},
         color::Color,
@@ -537,14 +537,14 @@ impl InteractionMode for EditNavmeshMode {
                     let oe = navmesh.vertices()[opposite_edge.b as usize];
                     let ne = vertices[1];
 
-                    scene.drawing_context.add_line(fyrox::scene::debug::Line {
+                    scene.drawing_context.add_line(i3m::scene::debug::Line {
                         begin: nb,
                         end: ne,
                         color: Color::RED,
                     });
 
                     for &(begin, end) in &[(ob, oe), (ob, nb), (nb, oe), (oe, ne)] {
-                        scene.drawing_context.add_line(fyrox::scene::debug::Line {
+                        scene.drawing_context.add_line(i3m::scene::debug::Line {
                             begin,
                             end,
                             color: Color::GREEN,

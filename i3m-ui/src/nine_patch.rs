@@ -1,4 +1,4 @@
-use fyrox_core::{scope_profile, uuid_provider};
+use i3m_core::{scope_profile, uuid_provider};
 
 use crate::{
     brush::Brush,
@@ -11,9 +11,9 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_core::variable::InheritableVariable;
-use fyrox_graph::BaseSceneGraph;
-use fyrox_resource::untyped::UntypedResource;
+use i3m_core::variable::InheritableVariable;
+use i3m_graph::BaseSceneGraph;
+use i3m_resource::untyped::UntypedResource;
 use std::ops::{Deref, DerefMut};
 
 /// Automatically arranges children by rows and columns

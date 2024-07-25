@@ -10,7 +10,7 @@ use crate::{
         vertex::StaticVertex,
     },
 };
-use fyrox_resource::untyped::ResourceKind;
+use i3m_resource::untyped::ResourceKind;
 
 /// The [SurfaceSharedData](crate::scene::mesh::surface::SurfaceResource) of a grid mesh for use
 /// in rendering a terrain.

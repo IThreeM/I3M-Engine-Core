@@ -1,6 +1,6 @@
 use crate::{
     asset::open_in_explorer,
-    fyrox::{
+    i3m::{
         asset::{manager::ResourceManager, untyped::UntypedResource, Resource, TypedResourceData},
         core::{
             algebra::Vector2, color::Color, futures::executor::block_on, make_relative_path,

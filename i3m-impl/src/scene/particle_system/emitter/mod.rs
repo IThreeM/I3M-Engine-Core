@@ -11,7 +11,7 @@ use crate::{
         Particle, ParticleSystemRng,
     },
 };
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 use std::ops::{Deref, DerefMut};
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 

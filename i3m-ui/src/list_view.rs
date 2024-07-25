@@ -1,5 +1,5 @@
 //! List view is used to display lists with arbitrary items. It supports single-selection and by default, it stacks the items
-//! vertically.  
+//! vertically.
 
 #![warn(missing_docs)]
 
@@ -19,7 +19,7 @@ use crate::{
     widget::{Widget, WidgetBuilder, WidgetMessage},
     BuildContext, Control, Thickness, UiNode, UserInterface, BRUSH_DARK, BRUSH_LIGHT,
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages that can be used to modify/fetch the state of a [`ListView`] widget at runtime.
@@ -61,14 +61,14 @@ impl ListViewMessage {
 }
 
 /// List view is used to display lists with arbitrary items. It supports single-selection and by default, it stacks the items
-/// vertically.  
+/// vertically.
 ///
 /// ## Example
 ///
 /// [`ListView`] can be created using [`ListViewBuilder`]:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, list_view::ListViewBuilder, text::TextBuilder, widget::WidgetBuilder,
 /// #     BuildContext, UiNode,
 /// # };
@@ -97,7 +97,7 @@ impl ListViewMessage {
 /// to create list view with selectable "tiles":
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, list_view::ListViewBuilder, text::TextBuilder, widget::WidgetBuilder,
 /// #     wrap_panel::WrapPanelBuilder, BuildContext, UiNode,
 /// # };
@@ -123,7 +123,7 @@ impl ListViewMessage {
 /// message with [`MessageDirection::ToWidget`] like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, list_view::ListViewMessage, message::MessageDirection, UiNode,
 /// #     UserInterface,
 /// # };
@@ -142,7 +142,7 @@ impl ListViewMessage {
 /// to listen to the same message but with opposite direction, like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, list_view::ListViewMessage, message::MessageDirection,
 /// #     message::UiMessage, UiNode,
 /// # };
@@ -165,7 +165,7 @@ impl ListViewMessage {
 /// and [`ListViewMessage::RemoveItem`], otherwise use [`ListViewMessage::Items`], which changes the items at once.
 ///
 /// ```rust
-/// use fyrox_ui::{
+/// use i3m_ui::{
 ///     core::pool::Handle, list_view::ListViewMessage, message::MessageDirection,
 ///     text::TextBuilder, widget::WidgetBuilder, UiNode, UserInterface,
 /// };
@@ -197,7 +197,7 @@ impl ListViewMessage {
 /// want to bring only particular item into view. It could be done by sending a [`ListViewMessage::BringItemIntoView`] message:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, list_view::ListViewMessage, message::MessageDirection, UiNode,
 /// #     UserInterface,
 /// # };

@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::{
         algebra::Point2, algebra::Vector2, pool::Handle, uuid::Uuid, uuid_provider,
         TypeUuidProvider,

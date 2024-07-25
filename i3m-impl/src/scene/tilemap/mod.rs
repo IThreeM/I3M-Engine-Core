@@ -87,7 +87,7 @@ impl Tiles {
 /// stone foundation and lays grass on top of it.
 ///
 /// ```rust
-/// use fyrox_impl::{
+/// use i3m_impl::{
 ///     asset::untyped::ResourceKind,
 ///     core::{algebra::Vector2, color::Color, math::Rect, pool::Handle},
 ///     material::{Material, MaterialResource},

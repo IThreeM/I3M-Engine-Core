@@ -25,7 +25,7 @@ use crate::{
     },
 };
 use fxhash::{FxBuildHasher, FxHashMap, FxHasher};
-use fyrox_resource::untyped::ResourceKind;
+use i3m_resource::untyped::ResourceKind;
 use std::{
     collections::hash_map::DefaultHasher,
     fmt::{Debug, Formatter},
@@ -108,7 +108,7 @@ impl PersistentIdentifier {
     }
 }
 
-/// A set of data of a surface for rendering.  
+/// A set of data of a surface for rendering.
 pub struct SurfaceInstanceData {
     /// A world matrix.
     pub world_transform: Matrix4<f32>,

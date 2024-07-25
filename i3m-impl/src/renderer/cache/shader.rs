@@ -8,7 +8,7 @@ use crate::{
     },
 };
 use fxhash::FxHashMap;
-use fyrox_core::log::Log;
+use i3m_core::log::Log;
 
 pub struct RenderPassData {
     pub program: GpuProgram,

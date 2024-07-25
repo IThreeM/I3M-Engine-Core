@@ -29,7 +29,7 @@ impl DynamicPlugin {
             let lib = libloading::Library::new(path).map_err(|e| e.to_string())?;
 
             let entry = lib
-                .get::<PluginEntryPoint>("fyrox_plugin".as_bytes())
+                .get::<PluginEntryPoint>("i3m_plugin".as_bytes())
                 .map_err(|e| e.to_string())?;
 
             Ok(Self {

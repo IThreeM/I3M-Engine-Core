@@ -5,7 +5,7 @@ use crate::{
     dsp::{filters::Biquad, filters::BiquadKind},
     effects::EffectRenderTrait,
 };
-use fyrox_core::{reflect::prelude::*, visitor::prelude::*};
+use i3m_core::{reflect::prelude::*, visitor::prelude::*};
 
 macro_rules! define_filter_effect {
     ($(#[$attr:meta])* $name:ident, $kind:expr) => {

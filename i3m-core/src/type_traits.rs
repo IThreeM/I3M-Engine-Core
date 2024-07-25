@@ -1,5 +1,5 @@
-pub use fyrox_core_derive::ComponentProvider;
-pub use fyrox_core_derive::TypeUuidProvider;
+pub use i3m_core_derive::ComponentProvider;
+pub use i3m_core_derive::TypeUuidProvider;
 use std::any::{Any, TypeId};
 use std::path::PathBuf;
 use uuid::Uuid;

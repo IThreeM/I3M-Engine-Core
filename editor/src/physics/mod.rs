@@ -1,6 +1,6 @@
 use crate::command::{Command, CommandGroup, SetPropertyCommand};
-use crate::fyrox::graph::{BaseSceneGraph, SceneGraph};
-use crate::fyrox::{
+use crate::i3m::graph::{BaseSceneGraph, SceneGraph};
+use crate::i3m::{
     core::{algebra::Vector3, pool::Handle, reflect::Reflect},
     engine::Engine,
     gui::{

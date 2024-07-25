@@ -1,4 +1,4 @@
-use fyrox::{
+use i3m::{
     asset::untyped::UntypedResource,
     core::pool::Handle,
     gui::{

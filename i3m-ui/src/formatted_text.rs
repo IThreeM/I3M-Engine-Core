@@ -4,8 +4,8 @@ use crate::{
     font::{Font, FontGlyph, FontResource},
     HorizontalAlignment, VerticalAlignment,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
 use std::ops::Range;
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 

@@ -1,7 +1,7 @@
 //! Animation selector for `Handle<Animation>` fields.
 
-use crate::fyrox::generic_animation::EntityId;
-use crate::fyrox::{
+use crate::i3m::generic_animation::EntityId;
+use crate::i3m::{
     core::pool::Handle,
     gui::{
         button::{ButtonBuilder, ButtonMessage},

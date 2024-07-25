@@ -1,6 +1,6 @@
-use crate::fyrox::graph::SceneGraph;
-use crate::fyrox::gui::HorizontalAlignment;
-use crate::fyrox::{
+use crate::i3m::graph::SceneGraph;
+use crate::i3m::gui::HorizontalAlignment;
+use crate::i3m::{
     core::pool::Handle,
     engine::Engine,
     gui::{

@@ -1,8 +1,8 @@
-use fyrox_core::algebra::Point3;
-use fyrox_resource::io::FsResourceIo;
-use fyrox_sound::buffer::SoundBufferResourceExtension;
-use fyrox_sound::renderer::hrtf::{HrirSphereResource, HrirSphereResourceExt};
-use fyrox_sound::{
+use i3m_core::algebra::Point3;
+use i3m_resource::io::FsResourceIo;
+use i3m_sound::buffer::SoundBufferResourceExtension;
+use i3m_sound::renderer::hrtf::{HrirSphereResource, HrirSphereResourceExt};
+use i3m_sound::{
     algebra::{UnitQuaternion, Vector3},
     buffer::{DataSource, SoundBufferResource},
     context::{self, SoundContext},

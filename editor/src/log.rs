@@ -1,5 +1,5 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::{
     core::{
         log::{LogMessage, MessageKind},
         pool::Handle,
@@ -28,7 +28,7 @@ use crate::{
     gui::{make_dropdown_list_option, make_image_button_with_tooltip},
     load_image, Brush, Color, DropdownListBuilder, Engine,
 };
-use fyrox::gui::menu::ContextMenuBuilder;
+use i3m::gui::menu::ContextMenuBuilder;
 use std::sync::mpsc::Receiver;
 
 struct ContextMenu {

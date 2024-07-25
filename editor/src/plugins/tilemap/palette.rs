@@ -1,7 +1,7 @@
 use crate::plugins::tilemap::tileset::TileSetTileView;
 use crate::{
     absm::selectable::{Selectable, SelectableMessage},
-    fyrox::{
+    i3m::{
         core::{
             algebra::{Matrix3, Point2, Vector2},
             color::Color,
@@ -26,7 +26,7 @@ use crate::{
         },
     },
 };
-use fyrox::scene::tilemap::tileset::TileDefinitionHandle;
+use i3m::scene::tilemap::tileset::TileDefinitionHandle;
 use std::ops::{Deref, DerefMut};
 
 #[derive(Debug, PartialEq, Clone)]

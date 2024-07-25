@@ -3,7 +3,7 @@ use crate::{
     settings::{Project, Settings},
     utils::make_dropdown_list_option,
 };
-use fyrox::{
+use i3m::{
     core::pool::Handle,
     gui::{
         button::ButtonMessage,
@@ -246,7 +246,7 @@ impl ProjectWizard {
     ) -> bool {
         if let Some(ButtonMessage::Click) = message.data() {
             if message.destination() == self.create {
-                let _ = fyrox_template_core::init_project(
+                let _ = i3m_template_core::init_project(
                     &self.path,
                     &self.name,
                     self.style.as_str(),

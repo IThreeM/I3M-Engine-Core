@@ -1,5 +1,5 @@
 use crate::{
-    fyrox::{
+    i3m::{
         asset::{untyped::UntypedResource, Resource},
         core::{
             parking_lot::Mutex,
@@ -97,8 +97,8 @@ use crate::{
     },
     message::MessageSender,
 };
-use fyrox::scene::tilemap::brush::{TileMapBrush, TileMapBrushResource};
-use fyrox::scene::tilemap::tileset::TileCollider;
+use i3m::scene::tilemap::brush::{TileMapBrush, TileMapBrushResource};
+use i3m::scene::tilemap::tileset::TileCollider;
 
 pub mod animation;
 pub mod font;
@@ -133,7 +133,7 @@ fn register_absm_property_editors<T>(container: &PropertyEditorDefinitionContain
 where
     T: 'static,
 {
-    use crate::fyrox::generic_animation::machine::{
+    use crate::i3m::generic_animation::machine::{
         node::{
             blendspace::{BlendSpace, BlendSpacePoint},
             BasePoseNode,
@@ -255,7 +255,7 @@ pub fn make_property_editors_container(sender: MessageSender) -> PropertyEditorD
     container.insert(InheritablePropertyEditorDefinition::<Option<LodGroup>>::new());
 
     {
-        use crate::fyrox::scene::animation::spritesheet::prelude::*;
+        use crate::i3m::scene::animation::spritesheet::prelude::*;
         container.register_inheritable_enum::<Status, _>();
         container.register_inheritable_inspectable::<LodGroup>();
         container.register_inheritable_inspectable::<SpriteSheetAnimation>();

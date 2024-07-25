@@ -11,7 +11,7 @@ use crate::{
         track::TrackList,
     },
     command::{Command, CommandGroup},
-    fyrox::{
+    i3m::{
         asset::manager::ResourceManager,
         core::{
             algebra::Vector2, log::Log, math::Rect, pool::ErasedHandle, pool::Handle, uuid::Uuid,
@@ -36,9 +36,9 @@ use crate::{
     scene::{commands::ChangeSelectionCommand, Selection},
     send_sync_message, Message,
 };
-use fyrox::core::color::Color;
-use fyrox::core::math::curve::Curve;
-use fyrox::gui::brush::Brush;
+use i3m::core::color::Color;
+use i3m::core::math::curve::Curve;
+use i3m::gui::brush::Brush;
 use std::any::{Any, TypeId};
 
 pub mod command;

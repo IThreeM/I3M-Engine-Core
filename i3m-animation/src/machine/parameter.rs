@@ -2,7 +2,7 @@
 
 use crate::core::{algebra::Vector2, reflect::prelude::*, visitor::prelude::*};
 use fxhash::FxHashMap;
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 use std::{
     cell::{Cell, RefCell},
     ops::{Deref, DerefMut},

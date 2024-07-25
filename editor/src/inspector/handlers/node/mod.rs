@@ -1,6 +1,6 @@
 use crate::command::make_command;
-use crate::fyrox::core::reflect::Reflect;
-use crate::fyrox::{
+use crate::i3m::core::reflect::Reflect;
+use crate::i3m::{
     core::pool::Handle,
     gui::inspector::{CollectionChanged, FieldKind, PropertyChanged},
     scene::{node::Node, terrain::Terrain},

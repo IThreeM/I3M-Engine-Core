@@ -3,7 +3,7 @@
 //! # Overview
 //!
 //! Context is a sort of "sound scene" - an isolated storage for a set of sound sources, effects, filters, etc.
-//! fyrox-sound can manage multiple contexts at the same time. Main usage for multiple contexts is a typical
+//! i3m-sound can manage multiple contexts at the same time. Main usage for multiple contexts is a typical
 //! situation in games where you have multiple scenes: a scene for main menu, a scene for game level, a scene
 //! for inventory and so on. With this approach of multiple contexts it is very easy to manage such scenes:
 //! for example your main menu have a complex scene with some sounds and you decide to load a game level -
@@ -17,7 +17,7 @@ use crate::{
     renderer::{render_source_default, Renderer},
     source::{SoundSource, Status},
 };
-use fyrox_core::{
+use i3m_core::{
     pool::{Handle, Pool},
     reflect::prelude::*,
     uuid_provider,
@@ -255,7 +255,7 @@ impl State {
     }
 
     pub(crate) fn render(&mut self, output_device_buffer: &mut [(f32, f32)]) {
-        let last_time = fyrox_core::instant::Instant::now();
+        let last_time = i3m_core::instant::Instant::now();
 
         if !self.paused {
             self.sources.retain(|source| {
@@ -300,7 +300,7 @@ impl State {
             self.bus_graph.end_render(output_device_buffer);
         }
 
-        self.render_duration = fyrox_core::instant::Instant::now() - last_time;
+        self.render_duration = i3m_core::instant::Instant::now() - last_time;
     }
 }
 
@@ -339,7 +339,7 @@ impl SoundContext {
     /// This method internally locks a mutex, so if you'll try to do something like this:
     ///
     /// ```no_run
-    /// # use fyrox_sound::context::SoundContext;
+    /// # use i3m_sound::context::SoundContext;
     /// # let ctx = SoundContext::new();
     /// let state = ctx.state();
     /// // Do something

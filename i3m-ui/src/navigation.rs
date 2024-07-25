@@ -13,14 +13,14 @@ use crate::{
     widget::{Widget, WidgetBuilder, WidgetMessage},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_graph::{BaseSceneGraph, SceneGraph};
+use i3m_graph::{BaseSceneGraph, SceneGraph};
 use std::ops::{Deref, DerefMut};
 
 /// A widget, that handles keyboard navigation on its descendant widgets using Tab key. It should
 /// be used as a root widget for an hierarchy, that should support Tab key navigation:
 ///
 /// ```rust
-/// use fyrox_ui::{
+/// use i3m_ui::{
 ///     button::ButtonBuilder, navigation::NavigationLayerBuilder, stack_panel::StackPanelBuilder,
 ///     text::TextBuilder, widget::WidgetBuilder, BuildContext,
 /// };

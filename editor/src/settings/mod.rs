@@ -1,6 +1,6 @@
 use crate::settings::build::{BuildCommand, BuildProfile, EnvironmentVariable};
 use crate::{
-    fyrox::{
+    i3m::{
         core::{log::Log, pool::Handle, reflect::prelude::*, scope_profile},
         gui::{
             button::{ButtonBuilder, ButtonMessage},
@@ -43,7 +43,7 @@ use crate::{
     },
     Engine, MSG_SYNC_FLAG,
 };
-use fyrox::gui::inspector::editors::collection::VecCollectionPropertyEditorDefinition;
+use i3m::gui::inspector::editors::collection::VecCollectionPropertyEditorDefinition;
 use ron::ser::PrettyConfig;
 use serde::{Deserialize, Serialize};
 use std::sync::mpsc::Sender;

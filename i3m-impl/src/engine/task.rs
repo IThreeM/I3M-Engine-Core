@@ -77,9 +77,9 @@ impl TaskPoolHandler {
     /// ## Example
     ///
     /// ```rust ,no_run
-    /// # use fyrox_impl::plugin::{Plugin, PluginContext};
-    /// # use fyrox_impl::core::visitor::prelude::*;
-    /// # use fyrox_impl::core::reflect::prelude::*;
+    /// # use i3m_impl::plugin::{Plugin, PluginContext};
+    /// # use i3m_impl::core::visitor::prelude::*;
+    /// # use i3m_impl::core::reflect::prelude::*;
     /// # use std::{fs::File, io::Read};
     ///
     /// #[derive(Visit, Reflect, Debug)]
@@ -149,12 +149,12 @@ impl TaskPoolHandler {
     /// ## Examples
     ///
     /// ```rust ,no_run
-    /// # use fyrox_impl::{
+    /// # use i3m_impl::{
     /// #     core::{reflect::prelude::*, uuid::Uuid, visitor::prelude::*, impl_component_provider},
     /// #     resource::model::{Model, ModelResourceExtension},
     /// #     script::{ScriptContext, ScriptTrait},
     /// # };
-    /// # use fyrox_core::uuid_provider;
+    /// # use i3m_core::uuid_provider;
     /// #
     /// #[derive(Reflect, Visit, Default, Debug, Clone)]
     /// struct MyScript;

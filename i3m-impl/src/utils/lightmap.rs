@@ -693,7 +693,7 @@ mod test {
         },
         utils::lightmap::{Lightmap, LightmapInputData},
     };
-    use fyrox_resource::untyped::ResourceKind;
+    use i3m_resource::untyped::ResourceKind;
     use std::path::Path;
 
     #[test]

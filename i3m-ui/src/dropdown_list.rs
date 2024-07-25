@@ -19,7 +19,7 @@ use crate::{
     widget::{Widget, WidgetBuilder, WidgetMessage},
     BuildContext, Control, Thickness, UiNode, UserInterface, BRUSH_DARKER, BRUSH_LIGHT,
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::{
     ops::{Deref, DerefMut},
     sync::mpsc::Sender,
@@ -71,7 +71,7 @@ impl DropdownListMessage {
 /// A dropdown list with two text items with the last one selected, could be created like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, dropdown_list::DropdownListBuilder, text::TextBuilder,
 /// #     widget::WidgetBuilder, BuildContext, UiNode,
 /// # };
@@ -96,7 +96,7 @@ impl DropdownListMessage {
 /// of the most convenient way of doing this is to use Decorator widget:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     border::BorderBuilder, core::pool::Handle, decorator::DecoratorBuilder,
 /// #     dropdown_list::DropdownListBuilder, text::TextBuilder, widget::WidgetBuilder, BuildContext,
 /// #     UiNode,
@@ -127,7 +127,7 @@ impl DropdownListMessage {
 /// selection changes, use the following code:
 ///
 /// ```rust
-/// use fyrox_ui::{
+/// use i3m_ui::{
 ///     core::pool::Handle,
 ///     dropdown_list::DropdownListMessage,
 ///     message::{MessageDirection, UiMessage},
@@ -163,7 +163,7 @@ impl DropdownListMessage {
 /// ## Opening and Closing
 ///
 /// A dropdown list could be opened and closed manually using [`DropdownListMessage::Open`] and
-/// [`DropdownListMessage::Close`] messages.  
+/// [`DropdownListMessage::Close`] messages.
 #[derive(Default, Clone, Debug, Visit, Reflect, ComponentProvider)]
 pub struct DropdownList {
     /// Base widget of the dropdown list.

@@ -29,8 +29,8 @@ use crate::{
         Scene,
     },
 };
-use fyrox_core::uuid_provider;
-use fyrox_graph::{BaseSceneGraph, SceneGraph};
+use i3m_core::uuid_provider;
+use i3m_graph::{BaseSceneGraph, SceneGraph};
 use rapier3d::{dynamics, prelude::RigidBodyHandle};
 use std::{
     cell::Cell,
@@ -342,7 +342,7 @@ impl RigidBody {
         self.y_rotation_locked.set_value_and_mark_modified(state)
     }
 
-    /// Returns true if rotation around Y axis is locked, false - otherwise.    
+    /// Returns true if rotation around Y axis is locked, false - otherwise.
     pub fn is_y_rotation_locked(&self) -> bool {
         *self.y_rotation_locked
     }
@@ -352,7 +352,7 @@ impl RigidBody {
         self.z_rotation_locked.set_value_and_mark_modified(state)
     }
 
-    /// Returns true if rotation around Z axis is locked, false - otherwise.    
+    /// Returns true if rotation around Z axis is locked, false - otherwise.
     pub fn is_z_rotation_locked(&self) -> bool {
         *self.z_rotation_locked
     }
@@ -369,7 +369,7 @@ impl RigidBody {
         self.translation_locked.set_value_and_mark_modified(state)
     }
 
-    /// Returns true if translation is locked, false - otherwise.    
+    /// Returns true if translation is locked, false - otherwise.
     pub fn is_translation_locked(&self) -> bool {
         *self.translation_locked
     }

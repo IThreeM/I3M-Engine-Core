@@ -103,11 +103,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-fyrox = {{workspace = true}}
+i3m = {{workspace = true}}
 
 [features]
-default = ["fyrox/default"]
-dylib-engine = ["fyrox/dylib"]
+default = ["i3m/default"]
+dylib-engine = ["i3m/dylib"]
 "#,
         ),
     )?;
@@ -116,7 +116,7 @@ dylib-engine = ["fyrox/dylib"]
     write_file(
         base_path.join("game/src/lib.rs"),
         r#"//! Game project.
-use fyrox::{
+use i3m::{
     core::pool::Handle, core::visitor::prelude::*, core::reflect::prelude::*,
     event::Event,
     gui::message::UiMessage,
@@ -126,7 +126,7 @@ use fyrox::{
 use std::path::Path;
 
 // Re-export the engine.
-pub use fyrox;
+pub use i3m;
 
 #[derive(Default, Visit, Reflect, Debug)]
 pub struct Game {
@@ -206,12 +206,12 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-fyrox = {{ workspace = true }}
+i3m = {{ workspace = true }}
 {name} = {{ path = "../game", optional = true }}
 
 [features]
 default = ["{name}"]
-dylib = ["fyrox/dylib"]
+dylib = ["i3m/dylib"]
 "#,
         ),
     )?;
@@ -221,7 +221,7 @@ dylib = ["fyrox/dylib"]
         base_path.join("executor/src/main.rs"),
         format!(
             r#"//! Executor with your game connected to it as a plugin.
-use fyrox::engine::executor::Executor;
+use i3m::engine::executor::Executor;
 
 fn main() {{
     let mut executor = Executor::new();
@@ -272,7 +272,7 @@ edition = "2021"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-fyrox = {{workspace = true}}
+i3m = {{workspace = true}}
 {name} = {{ path = "../game" }}"#,
         ),
     )?;
@@ -282,9 +282,9 @@ fyrox = {{workspace = true}}
         base_path.join("executor-wasm/src/lib.rs"),
         format!(
             r#"//! Executor with your game connected to it as a plugin.
-use fyrox::engine::executor::Executor;
+use i3m::engine::executor::Executor;
 use {name}::Game;
-use fyrox::core::wasm_bindgen::{{self, prelude::*}};
+use i3m::core::wasm_bindgen::{{self, prelude::*}};
 
 #[wasm_bindgen]
 extern "C" {{
@@ -373,7 +373,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-fyrox = {{ workspace = true }}
+i3m = {{ workspace = true }}
 I3M-Engine-Core_base = {{ workspace = true }}
 {name} = {{ path = "../game", optional = true }}
 
@@ -388,7 +388,7 @@ dylib = ["I3M-Engine-Core_base/dylib_engine"]
         base_path.join("editor/src/main.rs"),
         format!(
             r#"//! Editor with your game connected to it as a plugin.
-use I3M-Engine-Core_base::{{fyrox::event_loop::EventLoop, Editor, StartupData}};
+use I3M-Engine-Core_base::{{i3m::event_loop::EventLoop, Editor, StartupData}};
 
 fn main() {{
     let event_loop = EventLoop::new().unwrap();
@@ -460,10 +460,10 @@ dylib-engine = ["{name}/dylib-engine"]
         base_path.join("game-dylib/src/lib.rs"),
         format!(
             r#"//! Wrapper for hot-reloadable plugin.
-use {name}::{{fyrox::plugin::Plugin, Game}};
+use {name}::{{i3m::plugin::Plugin, Game}};
 
 #[no_mangle]
-pub fn fyrox_plugin() -> Box<dyn Plugin> {{
+pub fn i3m_plugin() -> Box<dyn Plugin> {{
     Box::new(Game::default())
 }}
 "#,
@@ -501,13 +501,13 @@ max_sdk_version = 29
 
 [package.metadata.android.signing.release]
 path = "release.keystore"
-keystore_password = "fyrox-template"
+keystore_password = "i3m-template"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-fyrox = {{ workspace = true }}
+i3m = {{ workspace = true }}
 {} = {{ path = "../game" }}"#,
             name,
         ),
@@ -518,14 +518,14 @@ fyrox = {{ workspace = true }}
         base_path.join("executor-android/src/lib.rs"),
         format!(
             r#"//! Android executor with your game connected to it as a plugin.
-use fyrox::{{
+use i3m::{{
     core::io, engine::executor::Executor, event_loop::EventLoopBuilder,
     platform::android::EventLoopBuilderExtAndroid,
 }};
 use {name}::Game;
 
 #[no_mangle]
-fn android_main(app: fyrox::platform::android::activity::AndroidApp) {{
+fn android_main(app: i3m::platform::android::activity::AndroidApp) {{
     io::ANDROID_APP
         .set(app.clone())
         .expect("ANDROID_APP cannot be set twice.");
@@ -569,7 +569,7 @@ fn init_workspace(base_path: &Path, vcs: &str) -> Result<(), String> {
 members = ["editor", "executor", "executor-wasm", "executor-android", "game", "game-dylib"]
 resolver = "2"
 
-[workspace.dependencies.fyrox]
+[workspace.dependencies.i3m]
 version = "{CURRENT_ENGINE_VERSION}"
 default-features = false
 [workspace.dependencies.I3M-Engine-Core_base]
@@ -641,7 +641,7 @@ pub fn init_script(root_path: &Path, raw_name: &str) -> Result<(), String> {
         file_name,
         format!(
             r#"
-use fyrox::{{
+use i3m::{{
     core::{{visitor::prelude::*, reflect::prelude::*, type_traits::prelude::*}},
     event::Event, script::{{ScriptContext, ScriptDeinitContext, ScriptTrait}},
 }};
@@ -780,41 +780,41 @@ pub fn upgrade_project(root_path: &Path, version: &str, local: bool) -> Result<(
                         if version == "latest" {
                             if local {
                                 let mut engine_table = table();
-                                engine_table["path"] = value("../Fyrox/fyrox");
-                                dependencies["fyrox"] = engine_table;
+                                engine_table["path"] = value("../Fyrox/i3m");
+                                dependencies["i3m"] = engine_table;
 
                                 let mut editor_table = table();
                                 editor_table["path"] = value("../Fyrox/editor");
                                 dependencies["I3M-Engine-Core_base"] = editor_table;
 
-                                if dependencies.contains_key("fyrox_scripts") {
+                                if dependencies.contains_key("i3m_scripts") {
                                     let mut scripts_table = table();
-                                    scripts_table["path"] = value("../Fyrox/fyrox-scripts");
-                                    dependencies["fyrox_scripts"] = scripts_table;
+                                    scripts_table["path"] = value("../Fyrox/i3m-scripts");
+                                    dependencies["i3m_scripts"] = scripts_table;
                                 }
                             } else {
-                                dependencies["fyrox"] = value(CURRENT_ENGINE_VERSION);
+                                dependencies["i3m"] = value(CURRENT_ENGINE_VERSION);
                                 dependencies["I3M-Engine-Core_base"] =
                                     value(CURRENT_EDITOR_VERSION);
-                                if dependencies.contains_key("fyrox_scripts") {
-                                    dependencies["fyrox_scripts"] = value(CURRENT_SCRIPTS_VERSION);
+                                if dependencies.contains_key("i3m_scripts") {
+                                    dependencies["i3m_scripts"] = value(CURRENT_SCRIPTS_VERSION);
                                 }
                             }
                         } else if version == "nightly" {
                             let mut table = table();
                             table["git"] = value("https://github.com/IThreeM/I3M-Engine-Core");
 
-                            dependencies["fyrox"] = table.clone();
+                            dependencies["i3m"] = table.clone();
                             dependencies["I3M-Engine-Core_base"] = table.clone();
                         } else {
-                            dependencies["fyrox"] = value(version);
+                            dependencies["i3m"] = value(version);
                             if let Some((editor_version, scripts_version)) =
                                 editor_versions.get(version)
                             {
                                 dependencies["I3M-Engine-Core_base"] = value(editor_version);
                                 if let Some(scripts_version) = scripts_version {
-                                    if dependencies.contains_key("fyrox_scripts") {
-                                        dependencies["fyrox_scripts"] = value(scripts_version);
+                                    if dependencies.contains_key("i3m_scripts") {
+                                        dependencies["i3m_scripts"] = value(scripts_version);
                                     }
                                 }
                             } else {

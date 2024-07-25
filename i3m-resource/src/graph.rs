@@ -97,7 +97,7 @@ impl ResourceDependencyGraph {
 mod test {
     use std::path::PathBuf;
 
-    use fyrox_core::uuid::Uuid;
+    use i3m_core::uuid::Uuid;
 
     use super::*;
 

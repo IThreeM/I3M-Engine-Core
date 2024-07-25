@@ -2,7 +2,7 @@ use crate::absm::{
     selectable::{Selectable, SelectableMessage},
     BORDER_COLOR, NORMAL_BACKGROUND, SELECTED_BACKGROUND,
 };
-use crate::fyrox::{
+use crate::i3m::{
     core::{
         color::Color, pool::Handle, reflect::prelude::*, type_traits::prelude::*, uuid::uuid,
         visitor::prelude::*,

@@ -1,5 +1,5 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::{
     core::{
         algebra::{Matrix4, UnitQuaternion, Vector2, Vector3},
         color::Color,
@@ -25,7 +25,7 @@ use crate::{
     scene::{GameScene, Selection},
     set_mesh_diffuse_color, Engine,
 };
-use fyrox::asset::untyped::ResourceKind;
+use i3m::asset::untyped::ResourceKind;
 
 pub struct MoveGizmo {
     pub origin: Handle<Node>,

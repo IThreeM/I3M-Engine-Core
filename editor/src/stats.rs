@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::pool::Handle,
     engine::{Engine, GraphicsContext},
     gui::{
@@ -10,7 +10,7 @@ use crate::fyrox::{
         BuildContext, HorizontalAlignment, Thickness, UiNode, UserInterface, VerticalAlignment,
     },
 };
-use fyrox::scene::Scene;
+use i3m::scene::Scene;
 
 pub struct StatisticsWindow {
     pub window: Handle<UiNode>,

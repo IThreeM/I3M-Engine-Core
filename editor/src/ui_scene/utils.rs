@@ -1,5 +1,5 @@
-use crate::fyrox::graph::SceneGraphNode;
-use crate::fyrox::{
+use crate::i3m::graph::SceneGraphNode;
+use crate::i3m::{
     asset::{manager::ResourceManager, untyped::UntypedResource},
     core::{
         futures::executor::block_on, make_pretty_type_name, make_relative_path, pool::ErasedHandle,

@@ -16,8 +16,8 @@ use crate::{
     widget::{Widget, WidgetBuilder, WidgetMessage},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
 use serde::{Deserialize, Serialize};
 use std::{
     fmt::{Display, Formatter},
@@ -128,7 +128,7 @@ impl HotKeyEditorMessage {
 /// The following example creates a new hot key editor with a `Ctrl+C` hot key as default value:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     key::{HotKey, HotKeyEditorBuilder},
 /// #     message::{KeyCode, KeyboardModifiers},
@@ -354,7 +354,7 @@ impl KeyBindingEditorMessage {
 /// The following example creates a new key binding editor with a `W` key binding as a value.
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     key::{KeyBinding, KeyBindingEditorBuilder},
 /// #     message::KeyCode,

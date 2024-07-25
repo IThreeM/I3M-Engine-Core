@@ -9,7 +9,7 @@ use crate::{
     core::{uuid::Uuid, TypeUuidProvider},
     material::Material,
 };
-use fyrox_resource::state::LoadError;
+use i3m_resource::state::LoadError;
 use std::{path::PathBuf, sync::Arc};
 
 /// Default implementation for material loading.

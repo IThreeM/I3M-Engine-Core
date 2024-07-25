@@ -8,7 +8,7 @@ use crate::{
     core::{uuid::Uuid, TypeUuidProvider},
     material::shader::Shader,
 };
-use fyrox_resource::state::LoadError;
+use i3m_resource::state::LoadError;
 use std::{path::PathBuf, sync::Arc};
 
 /// Default implementation for shader loading.

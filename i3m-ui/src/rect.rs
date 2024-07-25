@@ -17,7 +17,7 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, Thickness, UiNode, UserInterface, VerticalAlignment,
 };
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::variable::InheritableVariable;
 use std::{
     fmt::Debug,
     ops::{Deref, DerefMut},
@@ -48,7 +48,7 @@ impl<T: NumericType> RectEditorMessage<T> {
 /// Rect editor can be created using [`RectEditorBuilder`], like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{math::Rect, pool::Handle},
 /// #     rect::RectEditorBuilder,
 /// #     widget::WidgetBuilder,
@@ -67,7 +67,7 @@ impl<T: NumericType> RectEditorMessage<T> {
 /// To change the value of a rect editor, use [`RectEditorMessage::Value`] message:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{math::Rect, pool::Handle},
 /// #     message::MessageDirection,
 /// #     rect::RectEditorMessage,
@@ -86,7 +86,7 @@ impl<T: NumericType> RectEditorMessage<T> {
 /// To "catch" the moment when the value of a rect editor has changed, listen to the same message, but check its direction:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     message::{MessageDirection, UiMessage},
 /// #     rect::RectEditorMessage,

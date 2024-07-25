@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::{
         pool::Handle, reflect::prelude::*, type_traits::prelude::*, uuid_provider,
         visitor::prelude::*,

@@ -20,7 +20,7 @@ use std::ops::{Deref, DerefMut};
 /// thick border around a button widget:
 ///
 /// ```rust
-/// use fyrox_ui::{
+/// use i3m_ui::{
 ///     UserInterface,
 ///     widget::WidgetBuilder,
 ///     border::BorderBuilder,
@@ -53,7 +53,7 @@ use std::ops::{Deref, DerefMut};
 /// the border. Below is an example of a blue border and a red background with white text inside.
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     brush::Brush,
 /// #     core::color::Color,
 /// #     widget::WidgetBuilder,

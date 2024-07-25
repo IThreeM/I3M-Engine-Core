@@ -118,7 +118,7 @@ pub fn replace_slashes<P: AsRef<Path>>(path: P) -> PathBuf {
 ///
 /// ```rust
 /// # use std::path::Path;
-/// # use fyrox_core::append_extension;
+/// # use i3m_core::append_extension;
 /// let path = Path::new("foo.bar");
 /// let new_path = append_extension(path, "baz");
 /// assert_eq!(new_path, Path::new("foo.bar.baz"))

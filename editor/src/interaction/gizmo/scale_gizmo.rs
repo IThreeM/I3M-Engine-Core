@@ -1,5 +1,5 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::{
     core::{
         algebra::{Matrix4, UnitQuaternion, Vector2, Vector3},
         color::Color,
@@ -21,7 +21,7 @@ use crate::{
     make_color_material, scene::GameScene, set_mesh_diffuse_color,
     world::graph::selection::GraphSelection, Engine,
 };
-use fyrox::asset::untyped::ResourceKind;
+use i3m::asset::untyped::ResourceKind;
 
 pub enum ScaleGizmoMode {
     None,

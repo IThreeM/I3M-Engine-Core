@@ -21,7 +21,7 @@ use crate::{
     BuildContext, Control, HorizontalAlignment, RestrictionEntry, Thickness, UiNode, UserInterface,
     VerticalAlignment, BRUSH_BRIGHT, BRUSH_DARKER, BRUSH_LIGHT, BRUSH_LIGHTEST,
 };
-use fyrox_graph::{BaseSceneGraph, SceneGraph};
+use i3m_graph::{BaseSceneGraph, SceneGraph};
 use std::{
     cell::RefCell,
     ops::{Deref, DerefMut},
@@ -109,7 +109,7 @@ pub enum WindowMessage {
 
     /// Safe border size defines "part" of a window that should always be on screen when dragged.
     /// It is used to prevent moving window outside of main application window bounds, to still
-    /// be able to drag it.  
+    /// be able to drag it.
     SafeBorderSize(Option<Vector2<f32>>),
 }
 
@@ -196,7 +196,7 @@ impl WindowMessage {
 /// As with other UI elements, you create and configure the window using the WindowBuilder.
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{pool::Handle, algebra::Vector2},
 /// #     window::{WindowBuilder, WindowTitle},
 /// #     text::TextBuilder,

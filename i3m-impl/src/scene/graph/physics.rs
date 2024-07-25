@@ -61,7 +61,7 @@ use std::{
 };
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 
-use fyrox_graph::{BaseSceneGraph, SceneGraphNode};
+use i3m_graph::{BaseSceneGraph, SceneGraphNode};
 pub use rapier3d::geometry::shape::*;
 
 /// Shape-dependent identifier.

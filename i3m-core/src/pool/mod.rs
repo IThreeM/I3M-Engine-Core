@@ -613,7 +613,7 @@ where
     /// # Example
     ///
     /// ```
-    /// use fyrox_core::pool::Pool;
+    /// use i3m_core::pool::Pool;
     /// let mut pool = Pool::<u32>::new();
     /// let a = pool.spawn(1);
     /// let a = pool.borrow_mut(a);
@@ -686,7 +686,7 @@ where
     /// # Example
     ///
     /// ```
-    /// use fyrox_core::pool::Pool;
+    /// use i3m_core::pool::Pool;
     /// let mut pool = Pool::<u32>::new();
     /// let a = pool.spawn(1);
     /// let b = pool.spawn(2);
@@ -716,7 +716,7 @@ where
     /// # Example
     ///
     /// ```
-    /// use fyrox_core::pool::Pool;
+    /// use i3m_core::pool::Pool;
     /// let mut pool = Pool::<u32>::new();
     /// let a = pool.spawn(1);
     /// let b = pool.spawn(2);
@@ -757,7 +757,7 @@ where
     /// # Example
     ///
     /// ```
-    /// use fyrox_core::pool::Pool;
+    /// use i3m_core::pool::Pool;
     /// let mut pool = Pool::<u32>::new();
     /// let a = pool.spawn(1);
     /// let b = pool.spawn(2);
@@ -1016,7 +1016,7 @@ where
     /// # Example
     ///
     /// ```
-    /// use fyrox_core::pool::Pool;
+    /// use i3m_core::pool::Pool;
     /// let mut pool = Pool::<u32>::new();
     /// pool.spawn(123);
     /// pool.spawn(321);
@@ -1079,7 +1079,7 @@ where
     /// # Example
     ///
     /// ```
-    /// use fyrox_core::pool::Pool;
+    /// use i3m_core::pool::Pool;
     /// let mut pool = Pool::<u32>::new();
     /// let handle = pool.spawn(123);
     /// assert_eq!(pool.is_valid_handle(handle), true)
@@ -1098,7 +1098,7 @@ where
     /// # Example
     ///
     /// ```
-    /// use fyrox_core::pool::Pool;
+    /// use i3m_core::pool::Pool;
     /// let mut pool = Pool::<u32>::new();
     /// pool.spawn(123);
     /// pool.spawn(321);
@@ -1135,7 +1135,7 @@ where
     /// # Example
     ///
     /// ```
-    /// use fyrox_core::pool::Pool;
+    /// use i3m_core::pool::Pool;
     /// let mut pool = Pool::<u32>::new();
     /// pool.spawn(123);
     /// pool.spawn(321);

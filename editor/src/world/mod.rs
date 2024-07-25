@@ -1,6 +1,6 @@
 use crate::{
     asset::item::AssetItem,
-    fyrox::{
+    i3m::{
         asset::untyped::UntypedResource,
         core::{
             color::Color,
@@ -137,7 +137,7 @@ fn make_graph_node_item(
     .with_text_brush(if is_instance {
         Brush::Solid(Color::opaque(160, 160, 200))
     } else {
-        Brush::Solid(fyrox::gui::COLOR_FOREGROUND)
+        Brush::Solid(i3m::gui::COLOR_FOREGROUND)
     })
     .with_name(name.deref().to_owned())
     .with_entity_handle(handle)

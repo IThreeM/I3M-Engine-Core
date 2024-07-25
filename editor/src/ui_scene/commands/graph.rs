@@ -1,8 +1,8 @@
 //! Ui graph manipulation commands.
 
 use crate::command::{CommandContext, CommandTrait};
-use crate::fyrox::graph::{BaseSceneGraph, LinkScheme, SceneGraphNode};
-use crate::fyrox::{
+use crate::i3m::graph::{BaseSceneGraph, LinkScheme, SceneGraphNode};
+use crate::i3m::{
     core::pool::Handle,
     gui::{SubGraph, UiNode, UserInterface},
 };

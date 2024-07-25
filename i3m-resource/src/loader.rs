@@ -54,7 +54,7 @@ pub trait ResourceLoader: ResourceLoaderTypeTrait {
     fn supports_extension(&self, ext: &str) -> bool {
         self.extensions()
             .iter()
-            .any(|e| fyrox_core::cmp_strings_case_insensitive(e, ext))
+            .any(|e| i3m_core::cmp_strings_case_insensitive(e, ext))
     }
 
     /// Must return a type uuid of the resource data type.

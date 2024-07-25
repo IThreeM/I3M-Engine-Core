@@ -16,7 +16,7 @@ use crate::{
     widget::{Widget, WidgetBuilder, WidgetMessage},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_graph::{BaseSceneGraph, SceneGraph};
+use i3m_graph::{BaseSceneGraph, SceneGraph};
 use std::{
     cell::RefCell,
     ops::{Deref, DerefMut},

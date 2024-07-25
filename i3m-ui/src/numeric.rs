@@ -25,8 +25,8 @@ use crate::{
     BuildContext, Control, HorizontalAlignment, Thickness, UiNode, UserInterface,
     VerticalAlignment, BRUSH_DARK, BRUSH_LIGHT,
 };
-use fyrox_core::variable::InheritableVariable;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::variable::InheritableVariable;
+use i3m_graph::BaseSceneGraph;
 use std::{
     cmp::Ordering,
     fmt::{Debug, Display},
@@ -159,7 +159,7 @@ pub enum DragContext<T: NumericType> {
 /// Use [`NumericUpDownBuilder`] to create a new instance of the [`NumericUpDown`] widget:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, numeric::NumericUpDownBuilder, widget::WidgetBuilder, BuildContext,
 /// #     UiNode,
 /// # };
@@ -181,7 +181,7 @@ pub enum DragContext<T: NumericType> {
 /// messages):
 ///
 /// ```rust
-/// use fyrox_ui::{
+/// use i3m_ui::{
 ///     core::pool::Handle, numeric::NumericUpDownBuilder, widget::WidgetBuilder, BuildContext,
 ///     UiNode,
 /// };
@@ -205,7 +205,7 @@ pub enum DragContext<T: NumericType> {
 /// provides a way to set the step of the value (for increment and decrement at the same time):
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, numeric::NumericUpDownBuilder, widget::WidgetBuilder, BuildContext,
 /// #     UiNode,
 /// # };
@@ -228,7 +228,7 @@ pub enum DragContext<T: NumericType> {
 /// but you interested in only first two decimal places. In this case you can set the precision to `2`:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, numeric::NumericUpDownBuilder, widget::WidgetBuilder, BuildContext,
 /// #     UiNode,
 /// # };

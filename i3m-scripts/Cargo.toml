@@ -1,5 +1,5 @@
 [package]
-name = "fyrox-scripts"
+name = "i3m-scripts"
 version = "0.3.0"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
@@ -9,9 +9,9 @@ keywords = ["asset", "resource"]
 categories = ["game-development"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE"]
 homepage = "https://ithreem.com"
-documentation = "https://docs.rs/fyrox-scripts"
+documentation = "https://docs.rs/i3m-scripts"
 repository = "https://github.com/IThreeM/I3M-Engine-Core"
 rust-version = "1.72"
 
 [dependencies]
-fyrox = { version = "0.34.0", path = "../fyrox" }
+i3m = { version = "0.34.0", path = "../i3m" }

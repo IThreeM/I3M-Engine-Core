@@ -3,7 +3,7 @@
 #![warn(missing_docs)]
 
 use crate::core::{algebra::Vector2, color::Color, reflect::prelude::*, visitor::prelude::*};
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 
 /// Gradient point defines a point on a surface with a color.

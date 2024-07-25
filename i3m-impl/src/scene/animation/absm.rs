@@ -19,7 +19,7 @@ use crate::{
         Scene,
     },
 };
-use fyrox_graph::{BaseSceneGraph, SceneGraph};
+use i3m_graph::{BaseSceneGraph, SceneGraph};
 use std::ops::{Deref, DerefMut};
 
 /// Scene specific root motion settings.
@@ -127,7 +127,7 @@ impl LayerMaskExt for LayerMask {
 /// procedural animations), then the following example is for you.
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     core::pool::Handle,
 /// #     scene::{
 /// #         animation::{absm::prelude::*, prelude::*},
@@ -136,7 +136,7 @@ impl LayerMaskExt for LayerMask {
 /// #         node::Node,
 /// #     },
 /// # };
-/// # use fyrox_graph::SceneGraph;
+/// # use i3m_graph::SceneGraph;
 ///
 /// fn create_walk_idle_state_machine(
 ///     animation_player_handle: Handle<Node>,

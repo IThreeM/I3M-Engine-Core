@@ -59,8 +59,8 @@ use crate::{
     utils::{self, raw_mesh::RawMeshBuilder},
 };
 use fxhash::{FxHashMap, FxHashSet};
-use fyrox_resource::io::ResourceIo;
-use fyrox_resource::untyped::ResourceKind;
+use i3m_resource::io::ResourceIo;
+use i3m_resource::untyped::ResourceKind;
 use std::{cmp::Ordering, path::Path};
 
 /// Input angles in degrees

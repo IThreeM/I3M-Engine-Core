@@ -1,7 +1,7 @@
 //! Flying camera controller script is used to create flying cameras, that can be rotated via mouse and moved via keyboard keys.
 //! See [`FlyingCameraController`] docs for more info and usage examples.
 
-use fyrox::{
+use i3m::{
     core::{
         algebra::{UnitQuaternion, UnitVector3, Vector3},
         impl_component_provider,
@@ -44,7 +44,7 @@ pub struct FlyingCameraController {
     #[visit(optional)]
     pub pitch_limit: InheritableVariable<Range<f32>>,
 
-    // KeyBinding belongs to fyrox-ui which is unideal, this is only used here because it has built-in
+    // KeyBinding belongs to i3m-ui which is unideal, this is only used here because it has built-in
     // property editor, so it will be shown in the editor correctly. It might be worth to create a
     // separate property editor for this instead to be able to use KeyCode here.
     #[reflect(description = "A key, that corresponds to forward movement.")]

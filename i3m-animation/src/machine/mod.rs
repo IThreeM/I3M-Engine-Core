@@ -14,7 +14,7 @@ use crate::{
 };
 
 pub use event::Event;
-use fyrox_core::{find_by_name_mut, find_by_name_ref};
+use i3m_core::{find_by_name_mut, find_by_name_ref};
 pub use layer::MachineLayer;
 pub use mask::LayerMask;
 pub use node::{
@@ -122,14 +122,14 @@ pub mod transition;
 /// using code like so:
 ///
 /// ```no_run
-/// use fyrox_animation::{
+/// use i3m_animation::{
 ///     machine::{
 ///         Machine, State, Transition, PoseNode,
 ///         Parameter, PlayAnimation, PoseWeight, BlendAnimations, BlendPose
 ///     },
 ///     core::pool::Handle
 /// };
-/// use fyrox_core::pool::ErasedHandle;
+/// use i3m_core::pool::ErasedHandle;
 ///
 /// // Assume that these are correct handles.
 /// let idle_animation = Handle::default();
@@ -194,8 +194,8 @@ impl<T: EntityId> Machine<T> {
     /// The method returns a reference to the machine, so the calls could be chained:
     ///
     /// ```rust
-    /// use fyrox_animation::machine::{Machine, Parameter};
-    /// use fyrox_core::pool::ErasedHandle;
+    /// use i3m_animation::machine::{Machine, Parameter};
+    /// use i3m_core::pool::ErasedHandle;
     ///
     /// let mut machine = Machine::<ErasedHandle>::new();
     ///

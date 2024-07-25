@@ -39,7 +39,7 @@ use crate::{
     },
 };
 use fxhash::{FxHashMap, FxHasher};
-use fyrox_resource::untyped::ResourceKind;
+use i3m_resource::untyped::ResourceKind;
 use std::{
     cell::Cell,
     hash::{Hash, Hasher},
@@ -274,7 +274,7 @@ impl RenderDataBundleStorageTrait for BatchContainer {
 /// can do it like so:
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     core::{algebra::Matrix4, pool::Handle},
 /// #     scene::{
 /// #         base::BaseBuilder,
@@ -286,7 +286,7 @@ impl RenderDataBundleStorageTrait for BatchContainer {
 /// #         node::Node,
 /// #     },
 /// # };
-/// use fyrox_resource::untyped::ResourceKind;
+/// use i3m_resource::untyped::ResourceKind;
 /// fn create_cube_mesh(graph: &mut Graph) -> Handle<Node> {
 ///     let cube_surface_data = SurfaceData::make_cube(Matrix4::identity());
 ///

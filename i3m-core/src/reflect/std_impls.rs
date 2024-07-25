@@ -6,7 +6,7 @@ use crate::{
     sstorage::ImmutableString,
     uuid::Uuid,
 };
-use fyrox_core_derive::impl_reflect;
+use i3m_core_derive::impl_reflect;
 use std::{
     any::Any,
     cell::{Cell, RefCell},

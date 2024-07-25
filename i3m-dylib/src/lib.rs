@@ -3,22 +3,22 @@
 //! stage.
 //!
 //! The crate just re-exports everything from the engine, and you can use it as Fyrox. To use the
-//! crate all you need to do is re-define `fyrox` dependency in your project like so:
+//! crate all you need to do is re-define `i3m` dependency in your project like so:
 //!
 //! ```toml
-//! [dependencies.fyrox]
+//! [dependencies.i3m]
 //! version = "0.1.0"
-//! registry = "fyrox-dylib"
-//! package = "fyrox-dylib"
+//! registry = "i3m-dylib"
+//! package = "i3m-dylib"
 //! ```
 //!
 //! You can also use the latest version from git:
 //!
 //! ```toml
-//! [dependencies.fyrox]
+//! [dependencies.i3m]
 //! git = "https://github.com/IThreeM/I3M-Engine-Core"
-//! package = "fyrox-dylib"
+//! package = "i3m-dylib"
 //! ```
 
 // Just re-export everything.
-pub use fyrox_impl::*;
+pub use i3m_impl::*;

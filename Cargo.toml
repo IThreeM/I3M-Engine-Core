@@ -2,20 +2,20 @@
 members = [
     "i3m-core-derive",
     "i3m-core",
-    "fyrox-sound",
-    "fyrox-ui",
-    "fyrox-resource",
-    "fyrox-scripts",
-    "fyrox-animation",
+    "i3m-sound",
+    "i3m-ui",
+    "i3m-resource",
+    "i3m-scripts",
+    "i3m-animation",
 	"editor",
     "editor-standalone",
 	"template-core",
 	"template",
-    "fyrox-graph",
-    "fyrox-math",
-    "fyrox-dylib",
-    "fyrox",
-    "fyrox-impl"
+    "i3m-graph",
+    "i3m-math",
+    "i3m-dylib",
+    "i3m",
+    "i3m-impl"
 , "project-manager"]
 resolver = "2"
 

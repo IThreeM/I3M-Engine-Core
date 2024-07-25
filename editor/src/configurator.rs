@@ -1,5 +1,5 @@
-use crate::fyrox::gui::text::TextMessage;
-use crate::fyrox::{
+use crate::i3m::gui::text::TextMessage;
+use crate::i3m::{
     core::{
         algebra::Vector2,
         pool::Handle,
@@ -90,7 +90,7 @@ impl Configurator {
         // Load history.
         let mut history: Vec<HistoryEntry> = Vec::new();
         if let Ok(mut visitor) =
-            fyrox::core::futures::executor::block_on(Visitor::load_binary(HISTORY_PATH))
+            i3m::core::futures::executor::block_on(Visitor::load_binary(HISTORY_PATH))
         {
             history.visit("History", &mut visitor).unwrap();
         }

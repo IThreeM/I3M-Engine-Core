@@ -19,8 +19,8 @@ use crate::{
     },
 };
 
-// Re-export some the fyrox_sound entities.
-pub use fyrox_sound::{
+// Re-export some the i3m_sound entities.
+pub use i3m_sound::{
     buffer::{
         loader::{SoundBufferImportOptions, SoundBufferLoader},
         DataSource, SoundBuffer, SoundBufferResource, SoundBufferResourceLoadError,
@@ -37,9 +37,9 @@ pub use fyrox_sound::{
 };
 
 use crate::scene::Scene;
-use fyrox_graph::BaseSceneGraph;
-use fyrox_resource::state::ResourceState;
-use fyrox_sound::source::SoundSource;
+use i3m_graph::BaseSceneGraph;
+use i3m_resource::state::ResourceState;
+use i3m_sound::source::SoundSource;
 use std::{
     cell::Cell,
     ops::{Deref, DerefMut},
@@ -245,7 +245,7 @@ impl Sound {
         *self.panning
     }
 
-    /// Sets playback status.    
+    /// Sets playback status.
     pub fn set_status(&mut self, status: Status) -> Status {
         let prev = self.status();
         match status {

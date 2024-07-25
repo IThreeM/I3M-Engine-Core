@@ -81,14 +81,14 @@
 //!                 layout(location = 0) in vec3 vertexPosition;
 //!                 layout(location = 1) in vec2 vertexTexCoord;
 //!
-//!                 uniform mat4 fyrox_worldViewProjection;
+//!                 uniform mat4 i3m_worldViewProjection;
 //!
 //!                 out vec2 texCoord;
 //!
 //!                 void main()
 //!                 {
 //!                     texCoord = vertexTexCoord;
-//!                     gl_Position = fyrox_worldViewProjection * vertexPosition;
+//!                     gl_Position = i3m_worldViewProjection * vertexPosition;
 //!                 }
 //!                 "#;
 //!
@@ -153,22 +153,22 @@
 //!
 //! | Name                       | Type         | Description                                                                                                       |
 //! |----------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|
-//! | fyrox_worldMatrix          | `mat4`       | Local-to-world transformation.                                                                                    |
-//! | fyrox_worldViewProjection  | `mat4`       | Local-to-clip-space transform.                                                                                    |
-//! | fyrox_boneMatrices         | `sampler2D`  | Array of bone matrices packed into a texture. Use `S_FetchMatrix` built-in method to fetch a matrix by its index. |
-//! | fyrox_useSkeletalAnimation | `bool`       | Whether skinned meshes is rendering or not.                                                                       |
-//! | fyrox_cameraPosition       | `vec3`       | Position of the camera.                                                                                           |
-//! | fyrox_usePOM               | `bool`       | Whether to use parallax mapping or not.                                                                           |
-//! | fyrox_lightPosition        | `vec3`       | Light position.                                                                                                   |
-//! | fyrox_blendShapesStorage   | `sampler3D`  | 3D texture of layered blend shape storage. Use `S_FetchBlendShapeOffsets` built-in method to fetch info.          |
-//! | fyrox_blendShapesWeights   | `float[128]` | Weights of all available blend shapes.                                                                            |
-//! | fyrox_blendShapesCount     | `int`        | Total amount of blend shapes.                                                                                     |
+//! | i3m_worldMatrix          | `mat4`       | Local-to-world transformation.                                                                                    |
+//! | i3m_worldViewProjection  | `mat4`       | Local-to-clip-space transform.                                                                                    |
+//! | i3m_boneMatrices         | `sampler2D`  | Array of bone matrices packed into a texture. Use `S_FetchMatrix` built-in method to fetch a matrix by its index. |
+//! | i3m_useSkeletalAnimation | `bool`       | Whether skinned meshes is rendering or not.                                                                       |
+//! | i3m_cameraPosition       | `vec3`       | Position of the camera.                                                                                           |
+//! | i3m_usePOM               | `bool`       | Whether to use parallax mapping or not.                                                                           |
+//! | i3m_lightPosition        | `vec3`       | Light position.                                                                                                   |
+//! | i3m_blendShapesStorage   | `sampler3D`  | 3D texture of layered blend shape storage. Use `S_FetchBlendShapeOffsets` built-in method to fetch info.          |
+//! | i3m_blendShapesWeights   | `float[128]` | Weights of all available blend shapes.                                                                            |
+//! | i3m_blendShapesCount     | `int`        | Total amount of blend shapes.                                                                                     |
 //!
 //! To use any of the properties, just define a uniform with an appropriate name:
 //!
 //! ```glsl
-//! uniform mat4 fyrox_worldMatrix;
-//! uniform vec3 fyrox_cameraPosition;
+//! uniform mat4 i3m_worldMatrix;
+//! uniform vec3 i3m_cameraPosition;
 //! ```
 //!
 //! This list will be extended in future releases.
@@ -220,7 +220,7 @@
 //! flexible. To get standard shader instance, use [`ShaderResource::standard`]
 //!
 //! ```no_run
-//! # use fyrox_impl::material::shader::{ShaderResource, ShaderResourceExtension};
+//! # use i3m_impl::material::shader::{ShaderResource, ShaderResourceExtension};
 //!
 //! let standard_shader = ShaderResource::standard();
 //! ```

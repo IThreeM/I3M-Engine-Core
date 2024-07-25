@@ -44,7 +44,7 @@ impl CheckBoxMessage {
 /// To create a checkbox you should do something like this:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     check_box::CheckBoxBuilder, widget::WidgetBuilder, UiNode, UserInterface
 /// # };
@@ -64,7 +64,7 @@ impl CheckBoxMessage {
 /// Here's an example of checkbox with textual content.
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     check_box::CheckBoxBuilder, text::TextBuilder, widget::WidgetBuilder, UiNode,
 /// #     UserInterface,
@@ -90,7 +90,7 @@ impl CheckBoxMessage {
 /// the [`CheckBoxMessage::Check`] message. To do so, you can do something like this:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     check_box::CheckBoxMessage, message::UiMessage, UiNode
 /// # };
@@ -440,7 +440,7 @@ mod test {
         widget::WidgetBuilder,
         UserInterface,
     };
-    use fyrox_core::algebra::Vector2;
+    use i3m_core::algebra::Vector2;
 
     #[test]
     fn check_box() {

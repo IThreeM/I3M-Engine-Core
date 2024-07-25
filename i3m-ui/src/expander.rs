@@ -14,8 +14,8 @@ use crate::{
     widget::{Widget, WidgetBuilder, WidgetMessage},
     BuildContext, Control, UiNode, UserInterface, VerticalAlignment,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
 use std::ops::{Deref, DerefMut};
 
 /// A set messages that can be used to either alternate the state of an [`Expander`] widget, or to listen for
@@ -43,7 +43,7 @@ impl ExpanderMessage {
 /// buttons a content:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     button::ButtonBuilder, core::pool::Handle, expander::ExpanderBuilder,
 /// #     stack_panel::StackPanelBuilder, text::TextBuilder, widget::WidgetBuilder, BuildContext,
 /// #     UiNode,
@@ -85,7 +85,7 @@ impl ExpanderMessage {
 /// For example, you can set the new check box with image check marks, which will use custom graphics:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     check_box::CheckBoxBuilder, core::pool::Handle, expander::ExpanderBuilder,
 /// #     image::ImageBuilder, widget::WidgetBuilder, BuildContext, UiNode,
 /// # };
@@ -116,7 +116,7 @@ impl ExpanderMessage {
 /// Use [`ExpanderMessage::Expand`] message to catch the moment when its state changes:
 ///
 /// ```rust
-/// # use fyrox_ui::{core::pool::Handle, expander::ExpanderMessage, message::{MessageDirection, UiMessage}};
+/// # use i3m_ui::{core::pool::Handle, expander::ExpanderMessage, message::{MessageDirection, UiMessage}};
 /// fn on_ui_message(message: &UiMessage) {
 ///     let your_expander_handle = Handle::NONE;
 ///     if let Some(ExpanderMessage::Expand(expanded)) = message.data() {

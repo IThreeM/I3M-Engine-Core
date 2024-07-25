@@ -1,7 +1,7 @@
 use crate::{
     camera::{CameraController, PickingOptions},
     command::{Command, CommandGroup},
-    fyrox::{
+    i3m::{
         core::{
             algebra::{Matrix4, Point3, Vector2, Vector3},
             math::plane::Plane,

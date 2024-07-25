@@ -120,7 +120,7 @@ pub struct Tab {
 /// The following example makes a 2 tab, Tab Control containing some simple text widgets:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     BuildContext,
 /// #     widget::WidgetBuilder,
 /// #     text::TextBuilder,
@@ -133,7 +133,7 @@ pub struct Tab {
 ///                 header: TextBuilder::new(WidgetBuilder::new())
 ///                             .with_text("First")
 ///                             .build(ctx),
-///                             
+///
 ///                 content: TextBuilder::new(WidgetBuilder::new())
 ///                             .with_text("First tab's contents!")
 ///                             .build(ctx),
@@ -146,7 +146,7 @@ pub struct Tab {
 ///                 header: TextBuilder::new(WidgetBuilder::new())
 ///                             .with_text("Second")
 ///                             .build(ctx),
-///                             
+///
 ///                 content: TextBuilder::new(WidgetBuilder::new())
 ///                             .with_text("Second tab's contents!")
 ///                             .build(ctx),
@@ -178,7 +178,7 @@ pub struct Tab {
 /// code example and you will get a decent look:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     BuildContext,
 /// #     widget::WidgetBuilder,
 /// #     text::TextBuilder,

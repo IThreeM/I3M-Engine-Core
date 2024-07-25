@@ -5,11 +5,11 @@
   <h1>Fyrox - a modern Rust game engine</h1>
 </div>
 
-[![License (MIT)](https://img.shields.io/crates/l/fyrox)](https://github.com/IThreeM/I3M-Engine-Core/blob/master/LICENSE.md)
+[![License (MIT)](https://img.shields.io/crates/l/i3m)](https://github.com/IThreeM/I3M-Engine-Core/blob/master/LICENSE.md)
 [![CI Status](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/ci.yml/badge.svg)](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/ci.yml)
 [![audit](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/audit.yml/badge.svg)](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/audit.yml)
 [![Dependency status](https://deps.rs/repo/github/FyroxEngine/Fyrox/status.svg)](https://deps.rs/repo/github/FyroxEngine/Fyrox)
-[![Crates.io](https://img.shields.io/crates/v/fyrox)](https://crates.io/crates/fyrox)
+[![Crates.io](https://img.shields.io/crates/v/i3m)](https://crates.io/crates/i3m)
 [![docs.rs](https://img.shields.io/badge/docs-website-blue)](https://docs.rs/Fyrox/)
 [![Discord](https://img.shields.io/discord/756573453561102427)](https://discord.gg/xENF5Uh)
 [![Lines of code](https://tokei.rs/b1/github/FyroxEngine/Fyrox)](https://github.com/IThreeM/I3M-Engine-Core)
@@ -17,9 +17,9 @@
 A feature-rich, production-ready, general purpose 2D/3D game engine written in Rust with a scene editor.
 _Formerly known as rg3d_
 
-## [Learning materials](https://fyrox-book.github.io/)
+## [Learning materials](https://i3m-book.github.io/)
 
-[Read the official Fyrox book here.](https://fyrox-book.github.io/) It contains comprehensive information about many aspects of the engine, starting
+[Read the official Fyrox book here.](https://i3m-book.github.io/) It contains comprehensive information about many aspects of the engine, starting
 by "how to build" and ending by various tutorials.
 
 ## Community
@@ -30,11 +30,11 @@ You can always ask your question in Discord server - [Join the Discord server](h
 ## Examples
 
 You can run examples directly in your web browser, the full list of demo projects is [available here](https://ithreem.com/examples.html).
-Source code for each demo project [can be found here](https://github.com/FyroxEngine/fyrox-demo-projects).
+Source code for each demo project [can be found here](https://github.com/FyroxEngine/i3m-demo-projects).
 
 ## Support
 
-If you want to support the development of the project, click the link below. Preferrable way is to use [Boosty](https://boosty.to/fyrox) - this way the money
+If you want to support the development of the project, click the link below. Preferrable way is to use [Boosty](https://boosty.to/i3m) - this way the money
 will be available for the development immediately. Alternatively you can can use [Patreon](https://www.patreon.com/mrdimas), but in this case the money will
 be on-hold for unknown period of time ([details are here](https://github.com/IThreeM/I3M-Engine-Core/issues/363)).
 

@@ -25,7 +25,7 @@ use crate::{
     },
     scene::graph::Graph,
 };
-use fyrox_core::math::Matrix4Ext;
+use i3m_core::math::Matrix4Ext;
 use std::{cell::RefCell, rc::Rc};
 
 pub struct PointShadowMapRenderer {

@@ -1,8 +1,8 @@
-# fyrox-animation
+# i3m-animation
 
 Flexible, general-purpose, reflection-based animation system for game development.
 
-**NOTE:** even though this crate has `fyrox` prefix in its name, it can be used separately without any issues.
+**NOTE:** even though this crate has `i3m` prefix in its name, it can be used separately without any issues.
 
 ## Features
 

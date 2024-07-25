@@ -43,7 +43,7 @@ pub mod ui_scene;
 pub mod utils;
 pub mod world;
 
-pub use fyrox;
+pub use i3m;
 
 use crate::{
     absm::AbsmEditor,
@@ -56,7 +56,8 @@ use crate::{
     configurator::Configurator,
     curve_editor::CurveEditorWindow,
     export::ExportWindow,
-    fyrox::{
+    highlight::HighlightRenderPass,
+    i3m::{
         asset::{io::FsResourceIo, manager::ResourceManager, untyped::UntypedResource},
         core::{
             algebra::{Matrix3, Vector2},
@@ -112,7 +113,6 @@ use crate::{
         utils::{translate_cursor_icon, translate_event},
         window::{Icon, WindowAttributes},
     },
-    highlight::HighlightRenderPass,
     inspector::Inspector,
     interaction::{
         move_mode::MoveInteractionMode,
@@ -2625,9 +2625,9 @@ impl Editor {
     }
 
     /// Tries to add a new dynamic plugin. This method attempts to load a dynamic library by the
-    /// given path and searches for `fyrox_plugin` function. This function is called to create a
+    /// given path and searches for `i3m_plugin` function. This function is called to create a
     /// plugin instance. This method will fail if there's no dynamic library at the given path or
-    /// the `fyrox_plugin` function is not found.
+    /// the `i3m_plugin` function is not found.
     ///
     /// # Hot reloading
     ///
@@ -2782,7 +2782,7 @@ impl Editor {
                         }
                         WindowEvent::Resized(size) => {
                             if let Err(e) = self.engine.set_frame_size((*size).into()) {
-                                fyrox::core::log::Log::writeln(
+                                i3m::core::log::Log::writeln(
                                     MessageKind::Error,
                                     format!("Failed to set renderer size! Reason: {:?}", e),
                                 );

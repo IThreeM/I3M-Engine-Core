@@ -269,11 +269,11 @@ where
     /// like this:
     ///
     /// ```rust
-    /// # use fyrox_animation::{
+    /// # use i3m_animation::{
     /// #      spritesheet::{ImageParameters, SpriteSheetAnimation},
     /// #      core::math::Rect,
     /// # };
-    /// # use fyrox_core::{reflect::prelude::*, visitor::prelude::*};
+    /// # use i3m_core::{reflect::prelude::*, visitor::prelude::*};
     /// #
     /// #[derive(PartialEq, Clone, Reflect, Visit, Debug)]
     /// struct MyTexture {}
@@ -576,7 +576,7 @@ mod test {
     use crate::spritesheet::{
         signal::Signal, Event, ImageParameters, SpriteSheetAnimation, Status,
     };
-    use fyrox_core::{algebra::Vector2, math::Rect, reflect::prelude::*, visitor::prelude::*};
+    use i3m_core::{algebra::Vector2, math::Rect, reflect::prelude::*, visitor::prelude::*};
 
     #[derive(PartialEq, Clone, Reflect, Visit, Debug)]
     struct MyTexture {}

@@ -120,8 +120,8 @@
 
                 // Define uniforms with reserved names. Fyrox will automatically provide
                 // required data to these uniforms.
-                uniform mat4 fyrox_worldMatrix;
-                uniform mat4 fyrox_worldViewProjection;
+                uniform mat4 i3m_worldMatrix;
+                uniform mat4 i3m_worldViewProjection;
 
                 out vec3 position;
                 out vec3 normal;
@@ -138,14 +138,14 @@
                     float height = texture(heightMapTexture, actualTexCoords).r;
                     vec4 finalVertexPosition = vec4(vertexPosition.x, height, vertexPosition.z, 1.0);
 
-                    mat3 nm = mat3(fyrox_worldMatrix);
+                    mat3 nm = mat3(i3m_worldMatrix);
                     normal = normalize(nm * vertexNormal);
                     tangent = normalize(nm * vertexTangent.xyz);
                     binormal = normalize(vertexTangent.w * cross(normal, tangent));
                     texCoord = actualTexCoords;
-                    position = vec3(fyrox_worldMatrix * finalVertexPosition);
+                    position = vec3(i3m_worldMatrix * finalVertexPosition);
                     secondTexCoord = vertexSecondTexCoord;
-                    gl_Position = fyrox_worldViewProjection * finalVertexPosition;
+                    gl_Position = i3m_worldViewProjection * finalVertexPosition;
                 }
                 "#,
             fragment_shader:
@@ -175,8 +175,8 @@
 
                 // Define uniforms with reserved names. Fyrox will automatically provide
                 // required data to these uniforms.
-                uniform vec3 fyrox_cameraPosition;
-                uniform bool fyrox_usePOM;
+                uniform vec3 i3m_cameraPosition;
+                uniform bool i3m_usePOM;
 
                 in vec3 position;
                 in vec3 normal;
@@ -188,10 +188,10 @@
                 void main()
                 {
                     mat3 tangentSpace = mat3(tangent, binormal, normal);
-                    vec3 toFragment = normalize(position - fyrox_cameraPosition);
+                    vec3 toFragment = normalize(position - i3m_cameraPosition);
 
                     vec2 tc;
-                    if (fyrox_usePOM) {
+                    if (i3m_usePOM) {
                         vec3 toFragmentTangentSpace = normalize(transpose(tangentSpace) * toFragment);
                         tc = S_ComputeParallaxTextureCoordinates(
                             heightTexture,
@@ -269,7 +269,7 @@
                 uniform sampler2D heightMapTexture;
                 uniform vec4 nodeUvOffsets;
 
-                uniform mat4 fyrox_worldViewProjection;
+                uniform mat4 i3m_worldViewProjection;
 
                 out vec3 position;
                 out vec2 texCoord;
@@ -280,7 +280,7 @@
                     float height = texture(heightMapTexture, actualTexCoords).r;
                     vec4 finalVertexPosition = vec4(vertexPosition.x, height, vertexPosition.z, 1.0);
 
-                    gl_Position = fyrox_worldViewProjection * finalVertexPosition;
+                    gl_Position = i3m_worldViewProjection * finalVertexPosition;
                     texCoord = actualTexCoords;
                 }
                "#,
@@ -332,7 +332,7 @@
                 uniform sampler2D heightMapTexture;
                 uniform vec4 nodeUvOffsets;
 
-                uniform mat4 fyrox_worldViewProjection;
+                uniform mat4 i3m_worldViewProjection;
 
                 out vec2 texCoord;
 
@@ -342,7 +342,7 @@
                     float height = texture(heightMapTexture, actualTexCoords).r;
                     vec4 finalVertexPosition = vec4(vertexPosition.x, height, vertexPosition.z, 1.0);
 
-                    gl_Position = fyrox_worldViewProjection * finalVertexPosition;
+                    gl_Position = i3m_worldViewProjection * finalVertexPosition;
                     texCoord = actualTexCoords;
                 }
                 "#,
@@ -391,7 +391,7 @@
                 uniform sampler2D heightMapTexture;
                 uniform vec4 nodeUvOffsets;
 
-                uniform mat4 fyrox_worldViewProjection;
+                uniform mat4 i3m_worldViewProjection;
 
                 out vec2 texCoord;
 
@@ -401,7 +401,7 @@
                     float height = texture(heightMapTexture, actualTexCoords).r;
                     vec4 finalVertexPosition = vec4(vertexPosition.x, height, vertexPosition.z, 1.0);
 
-                    gl_Position = fyrox_worldViewProjection * finalVertexPosition;
+                    gl_Position = i3m_worldViewProjection * finalVertexPosition;
                     texCoord = actualTexCoords;
                 }
                 "#,
@@ -450,8 +450,8 @@
                 uniform sampler2D heightMapTexture;
                 uniform vec4 nodeUvOffsets;
 
-                uniform mat4 fyrox_worldMatrix;
-                uniform mat4 fyrox_worldViewProjection;
+                uniform mat4 i3m_worldMatrix;
+                uniform mat4 i3m_worldViewProjection;
 
                 out vec2 texCoord;
                 out vec3 worldPosition;
@@ -462,8 +462,8 @@
                     float height = texture(heightMapTexture, actualTexCoords).r;
                     vec4 finalVertexPosition = vec4(vertexPosition.x, height, vertexPosition.z, 1.0);
 
-                    gl_Position = fyrox_worldViewProjection * finalVertexPosition;
-                    worldPosition = (fyrox_worldMatrix * finalVertexPosition).xyz;
+                    gl_Position = i3m_worldViewProjection * finalVertexPosition;
+                    worldPosition = (i3m_worldMatrix * finalVertexPosition).xyz;
                     texCoord = actualTexCoords;
                 }
                 "#,
@@ -472,7 +472,7 @@
                 r#"
                 uniform sampler2D diffuseTexture;
 
-                uniform vec3 fyrox_lightPosition;
+                uniform vec3 i3m_lightPosition;
 
                 in vec2 texCoord;
                 in vec3 worldPosition;
@@ -482,7 +482,7 @@
                 void main()
                 {
                     if (texture(diffuseTexture, texCoord).a < 0.2) discard;
-                    depth = length(fyrox_lightPosition - worldPosition);
+                    depth = length(i3m_lightPosition - worldPosition);
                 }
                 "#,
         )

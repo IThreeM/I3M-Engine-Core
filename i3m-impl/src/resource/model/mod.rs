@@ -44,7 +44,7 @@ use crate::{
     },
 };
 use fxhash::FxHashMap;
-use fyrox_ui::{UiNode, UserInterface};
+use i3m_ui::{UiNode, UserInterface};
 use serde::{Deserialize, Serialize};
 use std::{
     any::Any,
@@ -214,7 +214,7 @@ pub trait AnimationSource {
         root: Handle<Self::Node>,
         graph: &Self::SceneGraph,
         self_kind: ResourceKind,
-    ) -> Vec<fyrox_animation::Animation<Handle<Self::Node>>> {
+    ) -> Vec<i3m_animation::Animation<Handle<Self::Node>>> {
         let mut retargetted_animations = Vec::new();
 
         let model_graph = self.inner_graph();
@@ -273,7 +273,7 @@ pub trait AnimationSource {
         dest_animation_player: Handle<Self::Node>,
         graph: &mut Self::SceneGraph,
         self_kind: ResourceKind,
-    ) -> Vec<Handle<fyrox_animation::Animation<Handle<Self::Node>>>> {
+    ) -> Vec<Handle<i3m_animation::Animation<Handle<Self::Node>>>> {
         let mut animation_handles = Vec::new();
 
         let animations = self.retarget_animations_directly(root, graph, self_kind);
@@ -302,7 +302,7 @@ pub trait AnimationSource {
         root: Handle<Self::Node>,
         graph: &mut Self::SceneGraph,
         self_kind: ResourceKind,
-    ) -> Vec<Handle<fyrox_animation::Animation<Handle<Self::Node>>>> {
+    ) -> Vec<Handle<i3m_animation::Animation<Handle<Self::Node>>>> {
         if let Some((animation_player, _)) = graph.find(root, &mut |n| {
             n.component_ref::<InheritableVariable<AnimationContainer<Handle<Self::Node>>>>()
                 .is_some()

@@ -7,7 +7,7 @@ use crate::{
     },
     effects::reverb::Reverb,
 };
-use fyrox_core::{reflect::prelude::*, uuid_provider, visitor::prelude::*};
+use i3m_core::{reflect::prelude::*, uuid_provider, visitor::prelude::*};
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 
 pub mod filter;

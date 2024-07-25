@@ -1,5 +1,5 @@
-use crate::fyrox::graph::{BaseSceneGraph, SceneGraphNode};
-use crate::fyrox::{
+use crate::i3m::graph::{BaseSceneGraph, SceneGraphNode};
+use crate::i3m::{
     core::pool::Handle,
     gui::{
         menu::MenuItemMessage,
@@ -22,7 +22,7 @@ use crate::{
     world::WorldViewerItemContextMenu,
     Engine, Message, MessageDirection,
 };
-use fyrox::gui::menu::ContextMenuBuilder;
+use i3m::gui::menu::ContextMenuBuilder;
 use std::path::PathBuf;
 
 pub struct WidgetContextMenu {

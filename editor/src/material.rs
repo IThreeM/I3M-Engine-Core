@@ -1,6 +1,6 @@
 use crate::{
     asset::item::AssetItem,
-    fyrox::{
+    i3m::{
         asset::untyped::ResourceKind,
         core::{
             algebra::{Matrix4, Vector2, Vector3, Vector4},

@@ -6,7 +6,7 @@ mod compat;
 use std::{env, fs::File, io::Write, path::PathBuf};
 
 use futures::executor::block_on;
-use fyrox_core::visitor::prelude::*;
+use i3m_core::visitor::prelude::*;
 
 /// Saves given `data` and overwrites `data_default` with the saved data.
 ///

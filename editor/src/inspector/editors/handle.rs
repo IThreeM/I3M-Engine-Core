@@ -1,5 +1,5 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::{
     core::{
         color::Color, pool::ErasedHandle, pool::Handle, reflect::prelude::*,
         type_traits::prelude::*, uuid_provider, visitor::prelude::*,
@@ -152,7 +152,7 @@ impl Control for HandlePropertyEditor {
                             let color = if self.value.is_none() {
                                 Color::ORANGE
                             } else {
-                                fyrox::gui::COLOR_FOREGROUND
+                                i3m::gui::COLOR_FOREGROUND
                             };
                             ui.send_message(WidgetMessage::foreground(
                                 self.text,

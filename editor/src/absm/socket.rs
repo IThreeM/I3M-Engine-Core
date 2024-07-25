@@ -1,5 +1,5 @@
-use crate::fyrox::core::pool::ErasedHandle;
-use crate::fyrox::{
+use crate::i3m::core::pool::ErasedHandle;
+use crate::i3m::{
     core::{
         algebra::Vector2, color::Color, pool::Handle, reflect::prelude::*, type_traits::prelude::*,
         uuid_provider, visitor::prelude::*,

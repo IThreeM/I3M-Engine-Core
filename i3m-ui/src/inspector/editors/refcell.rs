@@ -9,7 +9,7 @@ use crate::{
     },
     message::UiMessage,
 };
-use fyrox_core::PhantomDataSendSync;
+use i3m_core::PhantomDataSendSync;
 use std::{
     any::TypeId,
     cell::RefCell,

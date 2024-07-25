@@ -22,8 +22,8 @@ use crate::{
     BuildContext, Control, HorizontalAlignment, Orientation, RestrictionEntry, Thickness, UiNode,
     UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages that can be used to communicate with message boxes.
@@ -88,7 +88,7 @@ pub enum MessageBoxButtons {
 /// A simple message box with two buttons (Yes and No) and some text can be created like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     messagebox::{MessageBoxBuilder, MessageBoxButtons},
 /// #     widget::WidgetBuilder,
@@ -107,7 +107,7 @@ pub enum MessageBoxButtons {
 /// To "catch" the moment when any of the buttons will be clicked, you should listen for [`MessageBoxMessage::Close`] message:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     message::UiMessage,
 /// #     messagebox::{MessageBoxMessage, MessageBoxResult},
@@ -134,7 +134,7 @@ pub enum MessageBoxButtons {
 /// message box:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, message::MessageDirection, messagebox::MessageBoxMessage, UiNode,
 /// #     UserInterface,
 /// # };

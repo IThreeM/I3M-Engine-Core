@@ -18,7 +18,7 @@ use crate::{
     widget::{Widget, WidgetBuilder, WidgetMessage},
     BuildContext, Control, Orientation, UiNode, UserInterface,
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages that could be used to alternate the state of a [`ScrollViewer`] widget.
@@ -68,7 +68,7 @@ impl ScrollViewerMessage {
 /// A scroll viewer widget could be created using [`ScrollViewerBuilder`]:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     button::ButtonBuilder, core::pool::Handle, scroll_viewer::ScrollViewerBuilder,
 /// #     stack_panel::StackPanelBuilder, text::TextBuilder, widget::WidgetBuilder, BuildContext,
 /// #     UiNode,
@@ -104,7 +104,7 @@ impl ScrollViewerMessage {
 /// scrolls vertical axis, which can be changed by holding `Shift` key. Scrolling speed can be set during the build phase:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, scroll_viewer::ScrollViewerBuilder, widget::WidgetBuilder,
 /// #     BuildContext, UiNode,
 /// # };
@@ -126,7 +126,7 @@ impl ScrollViewerMessage {
 /// Calculates the scroll values to bring a desired child into view, it can be used for automatic navigation:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, message::MessageDirection, scroll_viewer::ScrollViewerMessage, UiNode,
 /// #     UserInterface,
 /// # };

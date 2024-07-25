@@ -1,9 +1,9 @@
 //! Special utility that allows you to fix paths to resources. It is very useful if you've
 //! moved a resource in a file system, but a scene has old path.
 
-use crate::fyrox::asset::untyped::ResourceKind;
-use crate::fyrox::graph::{BaseSceneGraph, SceneGraph};
-use crate::fyrox::{
+use crate::i3m::asset::untyped::ResourceKind;
+use crate::i3m::graph::{BaseSceneGraph, SceneGraph};
+use crate::i3m::{
     asset::{manager::ResourceManager, untyped::UntypedResource},
     core::{
         color::Color, futures::executor::block_on, pool::Handle, replace_slashes, visitor::Visitor,
@@ -54,7 +54,7 @@ pub struct PathFixer {
 
 fn find_file(name: &Path) -> Vec<PathBuf> {
     let mut files = Vec::new();
-    for dir in fyrox::walkdir::WalkDir::new(".").into_iter().flatten() {
+    for dir in i3m::walkdir::WalkDir::new(".").into_iter().flatten() {
         let path = dir.path();
         if let Some(file_name) = path.file_name() {
             if file_name == name {

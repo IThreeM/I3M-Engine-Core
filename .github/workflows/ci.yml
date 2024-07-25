@@ -68,9 +68,9 @@ jobs:
 
       - run: rustc --version && cargo --version
       - name: Build
-        # Build only fyrox package here, because there's fyrox-dylib package which cannot be compiled on wasm.
+        # Build only i3m package here, because there's i3m-dylib package which cannot be compiled on wasm.
         run: |
-          cargo build --verbose --target=wasm32-unknown-unknown --package fyrox
+          cargo build --verbose --target=wasm32-unknown-unknown --package i3m
 
   format:
     name: Rustfmt CI
@@ -128,13 +128,13 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: Install Tools
         run: |
-          cargo install fyrox-template --path=template --force
+          cargo install i3m-template --path=template --force
       - name: Generate and Build Projects
         run: |
           cd ../
-          fyrox-template init --name test_project --style=3d
+          i3m-template init --name test_project --style=3d
           cd test_project
-          fyrox-template upgrade --version=latest --local
+          i3m-template upgrade --version=latest --local
           cargo build --package editor
 
   template_android:
@@ -157,15 +157,15 @@ jobs:
           ndk-version: r26
       - name: Install Tools
         run: |
-          cargo install fyrox-template --path=template --force
+          cargo install i3m-template --path=template --force
           cargo install cargo-apk
           rustup target add armv7-linux-androideabi
       - name: Generate and Build Projects
         run: |
           cd ../
-          fyrox-template init --name test_project --style=3d
+          i3m-template init --name test_project --style=3d
           cd test_project
-          fyrox-template upgrade --version=latest --local
+          i3m-template upgrade --version=latest --local
           cargo-apk apk build --package executor-android --target armv7-linux-androideabi
 
   template_wasm:
@@ -177,14 +177,14 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: Install Tools
         run: |
-          cargo install fyrox-template --path=template --force
+          cargo install i3m-template --path=template --force
           cargo install wasm-pack
           rustup target add wasm32-unknown-unknown
       - name: Generate and Build Projects
         run: |
           cd ../
-          fyrox-template init --name test_project --style=3d
+          i3m-template init --name test_project --style=3d
           cd test_project
-          fyrox-template upgrade --version=latest --local
+          i3m-template upgrade --version=latest --local
           cd executor-wasm
           wasm-pack build --target=web

@@ -47,7 +47,7 @@ impl SearchBarMessage {
 /// ## Examples
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     message::UiMessage,
 /// #     searchbar::{SearchBarBuilder, SearchBarMessage},

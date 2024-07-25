@@ -3,7 +3,7 @@
 use std::{env, fs::File, io::Write, path::PathBuf};
 
 use futures::executor::block_on;
-use fyrox_core::visitor::prelude::*;
+use i3m_core::visitor::prelude::*;
 
 #[derive(Debug, Clone, Default, PartialEq, Visit)]
 struct NamedFields {

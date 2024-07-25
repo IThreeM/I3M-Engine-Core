@@ -85,8 +85,8 @@ use crate::{
     scene::{camera::Camera, mesh::surface::SurfaceData, Scene, SceneContainer},
 };
 use fxhash::FxHashMap;
-use fyrox_core::algebra::Vector4;
-use fyrox_core::uuid_provider;
+use i3m_core::algebra::Vector4;
+use i3m_core::uuid_provider;
 use glow::HasContext;
 #[cfg(not(target_arch = "wasm32"))]
 use glutin::{

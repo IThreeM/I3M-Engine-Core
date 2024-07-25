@@ -1,6 +1,6 @@
 use crate::command::CommandContext;
-use crate::fyrox::core::parking_lot::RwLockWriteGuard;
-use crate::fyrox::{
+use crate::i3m::core::parking_lot::RwLockWriteGuard;
+use crate::i3m::{
     core::{
         algebra::Vector3,
         math::{TriangleDefinition, TriangleEdge},

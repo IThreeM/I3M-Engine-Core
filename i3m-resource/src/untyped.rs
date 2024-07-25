@@ -448,7 +448,7 @@ impl Future for UntypedResource {
 #[cfg(test)]
 mod test {
     use futures::task::noop_waker;
-    use fyrox_core::futures;
+    use i3m_core::futures;
     use std::error::Error;
     use std::task::{self};
 

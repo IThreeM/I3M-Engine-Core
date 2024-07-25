@@ -1,7 +1,7 @@
 use crate::{
     audio::bus::{AudioBusView, AudioBusViewBuilder, AudioBusViewMessage},
     command::CommandGroup,
-    fyrox::{
+    i3m::{
         core::pool::Handle,
         engine::Engine,
         graph::BaseSceneGraph,

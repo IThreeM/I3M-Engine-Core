@@ -1,6 +1,6 @@
-use crate::fyrox::core::pool::Handle;
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::gui::{UiNode, UserInterface};
+use crate::i3m::core::pool::Handle;
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::gui::{UiNode, UserInterface};
 use crate::ui_scene::selection::UiSelection;
 use std::collections::HashMap;
 

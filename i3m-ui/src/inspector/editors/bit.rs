@@ -9,7 +9,7 @@ use crate::{
     },
     MessageDirection, Thickness, UiMessage, WidgetBuilder,
 };
-use fyrox_core::PhantomDataSendSync;
+use i3m_core::PhantomDataSendSync;
 use std::any::TypeId;
 
 #[derive(Debug)]

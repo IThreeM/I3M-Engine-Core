@@ -18,12 +18,12 @@ use crate::{
     },
     keyboard::{KeyCode, ModifiersState},
 };
-use fyrox_ui::message::CursorIcon;
+use i3m_ui::message::CursorIcon;
 use half::f16;
 use std::{any::Any, sync::Arc};
 use winit::{event::Touch, keyboard::PhysicalKey};
 
-/// Translates `winit`'s key code to `fyrox-ui`'s key code.
+/// Translates `winit`'s key code to `i3m-ui`'s key code.
 pub fn translate_key_to_ui(key: KeyCode) -> message::KeyCode {
     match key {
         KeyCode::Backquote => message::KeyCode::Backquote,
@@ -224,7 +224,7 @@ pub fn translate_key_to_ui(key: KeyCode) -> message::KeyCode {
     }
 }
 
-/// Translates `fyrox-ui`'s key code to `winit`'s.
+/// Translates `i3m-ui`'s key code to `winit`'s.
 pub fn translate_key_from_ui(key: message::KeyCode) -> KeyCode {
     match key {
         message::KeyCode::Backquote => KeyCode::Backquote,
@@ -425,7 +425,7 @@ pub fn translate_key_from_ui(key: message::KeyCode) -> KeyCode {
     }
 }
 
-/// Translates cursor icon from fyrox-ui library to glutin format.
+/// Translates cursor icon from i3m-ui library to glutin format.
 pub fn translate_cursor_icon(icon: CursorIcon) -> crate::window::CursorIcon {
     match icon {
         CursorIcon::Default => crate::window::CursorIcon::Default,
@@ -465,7 +465,7 @@ pub fn translate_cursor_icon(icon: CursorIcon) -> crate::window::CursorIcon {
     }
 }
 
-/// Translates window mouse button into fyrox-ui mouse button.
+/// Translates window mouse button into i3m-ui mouse button.
 pub fn translate_button(button: crate::event::MouseButton) -> crate::gui::message::MouseButton {
     match button {
         crate::event::MouseButton::Left => crate::gui::message::MouseButton::Left,
@@ -477,7 +477,7 @@ pub fn translate_button(button: crate::event::MouseButton) -> crate::gui::messag
     }
 }
 
-/// Translates library button state into fyrox-ui button state.
+/// Translates library button state into i3m-ui button state.
 pub fn translate_state(state: ElementState) -> ButtonState {
     match state {
         ElementState::Pressed => ButtonState::Pressed,
@@ -485,7 +485,7 @@ pub fn translate_state(state: ElementState) -> ButtonState {
     }
 }
 
-/// Translates window event to fyrox-ui event.
+/// Translates window event to i3m-ui event.
 pub fn translate_event(event: &WindowEvent) -> Option<OsEvent> {
     match event {
         WindowEvent::KeyboardInput { event, .. } => {
@@ -527,10 +527,10 @@ pub fn translate_event(event: &WindowEvent) -> Option<OsEvent> {
             ..
         }) => Some(OsEvent::Touch {
             phase: match phase {
-                winit::event::TouchPhase::Started => fyrox_ui::message::TouchPhase::Started,
-                winit::event::TouchPhase::Moved => fyrox_ui::message::TouchPhase::Moved,
-                winit::event::TouchPhase::Ended => fyrox_ui::message::TouchPhase::Ended,
-                winit::event::TouchPhase::Cancelled => fyrox_ui::message::TouchPhase::Cancelled,
+                winit::event::TouchPhase::Started => i3m_ui::message::TouchPhase::Started,
+                winit::event::TouchPhase::Moved => i3m_ui::message::TouchPhase::Moved,
+                winit::event::TouchPhase::Ended => i3m_ui::message::TouchPhase::Ended,
+                winit::event::TouchPhase::Cancelled => i3m_ui::message::TouchPhase::Cancelled,
             },
             location: Vector2::new(location.x as f32, location.y as f32),
             force: match force {
@@ -539,7 +539,7 @@ pub fn translate_event(event: &WindowEvent) -> Option<OsEvent> {
                         force,
                         max_possible_force,
                         altitude_angle,
-                    } => Some(fyrox_ui::message::Force::Calibrated {
+                    } => Some(i3m_ui::message::Force::Calibrated {
                         force: force.to_be_bytes(),
                         max_possible_force: max_possible_force.to_be_bytes(),
                         altitude_angle: altitude_angle
@@ -547,7 +547,7 @@ pub fn translate_event(event: &WindowEvent) -> Option<OsEvent> {
                             .map(|altitude_angle| altitude_angle.to_be_bytes()),
                     }),
                     winit::event::Force::Normalized(value) => {
-                        Some(fyrox_ui::message::Force::Normalized(value.to_be_bytes()))
+                        Some(i3m_ui::message::Force::Normalized(value.to_be_bytes()))
                     }
                 },
                 None => None,
@@ -558,7 +558,7 @@ pub fn translate_event(event: &WindowEvent) -> Option<OsEvent> {
     }
 }
 
-/// Translates keyboard modifiers to fyrox-ui keyboard modifiers.
+/// Translates keyboard modifiers to i3m-ui keyboard modifiers.
 pub fn translate_keyboard_modifiers(modifiers: ModifiersState) -> KeyboardModifiers {
     KeyboardModifiers {
         alt: modifiers.alt_key(),

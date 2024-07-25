@@ -1,5 +1,5 @@
 [package]
-name = "fyrox-math"
+name = "i3m-math"
 version = "0.2.0"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
@@ -9,7 +9,7 @@ keywords = ["octree", "plane", "ray", "aabb", "frustum"]
 categories = ["game-development"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE"]
 homepage = "https://ithreem.com"
-documentation = "https://docs.rs/fyrox-math"
+documentation = "https://docs.rs/i3m-math"
 repository = "https://github.com/IThreeM/I3M-Engine-Core"
 rust-version = "1.72"
 

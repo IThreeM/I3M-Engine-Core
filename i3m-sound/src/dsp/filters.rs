@@ -7,7 +7,7 @@
 //! description of each filter. There is no need to describe them all here.
 
 use crate::dsp::DelayLine;
-use fyrox_core::{
+use i3m_core::{
     reflect::prelude::*,
     uuid_provider,
     visitor::{Visit, VisitResult, Visitor},

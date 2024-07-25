@@ -1,6 +1,6 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::scene::SceneRenderingOptions;
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::scene::SceneRenderingOptions;
+use crate::i3m::{
     core::{
         algebra::{UnitQuaternion, Vector2, Vector3},
         color::Color,

@@ -1,5 +1,5 @@
 use crate::command::CommandContext;
-use crate::fyrox::{
+use crate::i3m::{
     core::{algebra::Vector2, pool::Handle},
     generic_animation::machine::{
         node::blendspace::BlendSpacePoint, BlendPose, IndexedBlendInput, PoseNode,

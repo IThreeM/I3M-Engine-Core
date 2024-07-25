@@ -1,4 +1,4 @@
-use crate::fyrox::{core::algebra::Vector3, core::pool::ErasedHandle, scene::camera::Projection};
+use crate::i3m::{core::algebra::Vector3, core::pool::ErasedHandle, scene::camera::Projection};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 

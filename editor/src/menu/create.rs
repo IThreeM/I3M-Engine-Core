@@ -1,7 +1,7 @@
 use crate::{
     command::{Command, CommandGroup},
     create_terrain_layer_material,
-    fyrox::{
+    i3m::{
         asset::untyped::ResourceKind,
         core::{
             algebra::{Matrix4, Vector3},
@@ -52,7 +52,7 @@ use crate::{
     ui_scene::UiScene,
     Mode,
 };
-use fyrox::engine::Engine;
+use i3m::engine::Engine;
 
 pub struct CreateEntityRootMenu {
     pub menu: Handle<UiNode>,

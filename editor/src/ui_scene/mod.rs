@@ -5,7 +5,7 @@ pub mod menu;
 pub mod selection;
 pub mod utils;
 
-use crate::fyrox::{
+use crate::i3m::{
     core::{
         algebra::{Vector2, Vector3},
         color::Color,

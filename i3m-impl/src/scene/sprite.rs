@@ -32,8 +32,8 @@ use crate::{
     },
 };
 use bytemuck::{Pod, Zeroable};
-use fyrox_core::value_as_u8_slice;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::value_as_u8_slice;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// A vertex for sprites.
@@ -110,7 +110,7 @@ impl VertexTrait for SpriteVertex {
 /// texture:
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     asset::manager::ResourceManager,
 /// #     core::pool::Handle,
 /// #     material::{Material, MaterialResource},
@@ -214,7 +214,7 @@ impl TypeUuidProvider for Sprite {
 
 impl Sprite {
     /// Sets new size of sprite. Since sprite is always square, size defines half of width or height, so actual size
-    /// will be doubled. Default value is 0.2.    
+    /// will be doubled. Default value is 0.2.
     ///
     /// Negative values could be used to "inverse" the image on the sprite.
     pub fn set_size(&mut self, size: f32) -> f32 {

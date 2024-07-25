@@ -1,6 +1,6 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::graph::{SceneGraph, SceneGraphNode};
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::graph::{SceneGraph, SceneGraphNode};
+use crate::i3m::{
     core::{
         algebra::Vector2, parking_lot::Mutex, pool::ErasedHandle, pool::Handle,
         reflect::prelude::*, type_traits::prelude::*, uuid_provider, visitor::prelude::*,
@@ -323,7 +323,7 @@ impl NodeSelectorBuilder {
                 .with_child(
                     BorderBuilder::new(
                         WidgetBuilder::new()
-                            .with_background(fyrox::gui::BRUSH_DARK)
+                            .with_background(i3m::gui::BRUSH_DARK)
                             .on_row(1)
                             .on_column(0)
                             .with_child({

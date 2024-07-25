@@ -77,7 +77,7 @@ pub enum PluginContainer {
         lib_path: PathBuf,
         /// Path to the source file, that is emitted by the compiler. If hot reloading is enabled,
         /// this library will be cloned to `lib_path` and loaded. This is needed, because usually
-        /// OS locks the library and it is not possible to overwrite it while it is loaded in a process.  
+        /// OS locks the library and it is not possible to overwrite it while it is loaded in a process.
         source_lib_path: PathBuf,
         /// Optional file system watcher, that is configured to watch the source library and re-load
         /// the plugin if the source library has changed. If the watcher is `None`, then hot reloading
@@ -237,7 +237,7 @@ impl dyn Plugin {
 /// # Example
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     core::{pool::Handle}, core::visitor::prelude::*, core::reflect::prelude::*,
 /// #     plugin::{Plugin, PluginContext, PluginRegistrationContext},
 /// #     scene::Scene,

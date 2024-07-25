@@ -39,9 +39,9 @@ use crate::{
     },
 };
 use fxhash::FxHashMap;
-use fyrox_core::uuid_provider;
-use fyrox_graph::BaseSceneGraph;
-use fyrox_resource::untyped::ResourceKind;
+use i3m_core::uuid_provider;
+use i3m_graph::BaseSceneGraph;
+use i3m_resource::untyped::ResourceKind;
 use half::f16;
 use image::{imageops::FilterType, ImageBuffer, Luma};
 use std::{

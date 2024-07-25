@@ -26,10 +26,10 @@ use crate::{
         node::{Node, NodeTrait, UpdateContext},
     },
 };
-use fyrox_core::uuid_provider;
-use fyrox_graph::BaseSceneGraph;
-use fyrox_resource::state::LoadError;
-use fyrox_resource::untyped::ResourceKind;
+use i3m_core::uuid_provider;
+use i3m_graph::BaseSceneGraph;
+use i3m_resource::state::LoadError;
+use i3m_resource::untyped::ResourceKind;
 use lazy_static::lazy_static;
 use serde::{Deserialize, Serialize};
 use std::{
@@ -813,9 +813,9 @@ impl ColorGradingLut {
     /// Typical usage would be:
     ///
     /// ```no_run
-    /// # use fyrox_impl::scene::camera::ColorGradingLut;
-    /// # use fyrox_impl::asset::manager::{ResourceManager};
-    /// # use fyrox_impl::resource::texture::Texture;
+    /// # use i3m_impl::scene::camera::ColorGradingLut;
+    /// # use i3m_impl::asset::manager::{ResourceManager};
+    /// # use i3m_impl::resource::texture::Texture;
     ///
     /// async fn create_lut(resource_manager: ResourceManager) -> ColorGradingLut {
     ///     ColorGradingLut::new(resource_manager.request::<Texture>(

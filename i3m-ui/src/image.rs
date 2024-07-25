@@ -14,9 +14,9 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
-use fyrox_resource::untyped::UntypedResource;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
+use i3m_resource::untyped::UntypedResource;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages that could be used to alter [`Image`] widget state at runtime.
@@ -63,8 +63,8 @@ impl ImageMessage {
 /// ## Usage
 ///
 /// ```rust,no_run
-/// # use fyrox_resource::untyped::UntypedResource;
-/// # use fyrox_ui::{
+/// # use i3m_resource::untyped::UntypedResource;
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     image::ImageBuilder, widget::WidgetBuilder, BuildContext, UiNode,
 /// # };
@@ -74,7 +74,7 @@ impl ImageMessage {
 ///     // point and you won't see anything.
 ///     let width = 100.0;
 ///     let height = 100.0;
-///     ImageBuilder::new(WidgetBuilder::new().with_width(width).with_height(height))        
+///     ImageBuilder::new(WidgetBuilder::new().with_width(width).with_height(height))
 ///         .with_texture(texture)
 ///         .build(ctx)
 /// }
@@ -89,8 +89,8 @@ impl ImageMessage {
 /// In some rare cases you need to flip your source image before showing it, there is `.with_flip` option for that:
 ///
 /// ```rust,no_run
-/// # use fyrox_resource::untyped::UntypedResource;
-/// # use fyrox_ui::{
+/// # use i3m_resource::untyped::UntypedResource;
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     image::ImageBuilder, widget::WidgetBuilder, BuildContext, UiNode
 /// # };
@@ -115,8 +115,8 @@ impl ImageMessage {
 /// be enabled either when building the widget or via [`ImageMessage::CheckerboardBackground`] message:
 ///
 /// ```rust,no_run
-/// # use fyrox_resource::untyped::UntypedResource;
-/// # use fyrox_ui::{
+/// # use i3m_resource::untyped::UntypedResource;
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     image::ImageBuilder, widget::WidgetBuilder, BuildContext, UiNode
 /// # };
@@ -135,8 +135,8 @@ impl ImageMessage {
 /// custom UV rect (UV stands for XY coordinates, but texture related):
 ///
 /// ```rust,no_run
-/// # use fyrox_resource::untyped::UntypedResource;
-/// # use fyrox_ui::{
+/// # use i3m_resource::untyped::UntypedResource;
+/// # use i3m_ui::{
 /// #     core::{pool::Handle, math::Rect},
 /// #     image::ImageBuilder, widget::WidgetBuilder, BuildContext, UiNode
 /// # };

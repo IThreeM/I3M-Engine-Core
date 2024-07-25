@@ -10,7 +10,7 @@ use crate::scene::animation::Animation;
 use crate::scene::graph::Graph;
 use crate::scene::mesh::Mesh;
 use crate::scene::node::Node;
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use gltf::animation::util::ReadOutputs;
 use gltf::animation::Channel;
 use gltf::animation::{Interpolation, Property};

@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     asset::{untyped::ResourceKind, Resource},
     core::{
         color::Color, futures::executor::block_on, math::curve::Curve, pool::Handle,

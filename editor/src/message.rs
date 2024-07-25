@@ -1,6 +1,6 @@
 use crate::{
     command::{Command, CommandTrait},
-    fyrox::{
+    i3m::{
         core::{
             log::Log,
             pool::{ErasedHandle, Handle},
@@ -13,7 +13,7 @@ use crate::{
     scene::Selection,
     SaveSceneConfirmationDialogAction,
 };
-use fyrox::scene::tilemap::tileset::TileSetResource;
+use i3m::scene::tilemap::tileset::TileSetResource;
 use std::{path::PathBuf, sync::mpsc::Sender};
 
 #[derive(Debug)]

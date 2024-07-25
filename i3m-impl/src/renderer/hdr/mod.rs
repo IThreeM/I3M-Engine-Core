@@ -26,7 +26,7 @@ use crate::{
     },
     scene::camera::{ColorGradingLut, Exposure},
 };
-use fyrox_core::{transmute_slice, value_as_u8_slice};
+use i3m_core::{transmute_slice, value_as_u8_slice};
 use std::{cell::RefCell, rc::Rc};
 
 mod adaptation;

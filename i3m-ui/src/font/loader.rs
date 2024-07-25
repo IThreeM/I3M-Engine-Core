@@ -4,7 +4,7 @@ use crate::{
     core::{reflect::prelude::*, uuid::Uuid, TypeUuidProvider},
     font::Font,
 };
-use fyrox_resource::{
+use i3m_resource::{
     io::ResourceIo,
     loader::{BoxedLoaderFuture, LoaderPayload, ResourceLoader},
     options::{try_get_import_settings, ImportOptions},

@@ -2,7 +2,7 @@
 //! It is made as a separate widget to be able to draw it on top of curve editor,
 //! dope sheet and time ruler.
 
-use crate::fyrox::{
+use crate::i3m::{
     core::{
         algebra::{Point2, Vector2},
         pool::Handle,
@@ -19,7 +19,7 @@ use crate::fyrox::{
         BuildContext, Control, UiNode, UserInterface, BRUSH_BRIGHT,
     },
 };
-use fyrox::gui::curve::CurveTransformCell;
+use i3m::gui::curve::CurveTransformCell;
 use std::ops::{Deref, DerefMut};
 
 #[derive(Debug, Clone, PartialEq)]

@@ -30,7 +30,7 @@ impl DerefMut for WakersList {
     }
 }
 
-/// Arbitrary loading error, that could be optionally be empty.  
+/// Arbitrary loading error, that could be optionally be empty.
 #[derive(Reflect, Debug, Clone, Default)]
 #[reflect(hide_all)]
 pub struct LoadError(pub Option<Arc<dyn ResourceLoadError>>);
@@ -187,7 +187,7 @@ impl ResourceState {
 
 #[cfg(test)]
 mod test {
-    use fyrox_core::{
+    use i3m_core::{
         reflect::{FieldInfo, Reflect},
         TypeUuidProvider,
     };

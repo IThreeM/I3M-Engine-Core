@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::{color::Color, pool::Handle},
     engine::Engine,
     gui::{
@@ -31,7 +31,7 @@ use crate::{
 };
 
 use crate::command::make_command;
-use crate::fyrox::core::reflect::Reflect;
+use crate::i3m::core::reflect::Reflect;
 use crate::scene::commands::GameSceneContext;
 use std::sync::Arc;
 

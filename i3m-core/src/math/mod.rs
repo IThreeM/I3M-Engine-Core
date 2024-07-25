@@ -1,7 +1,7 @@
 // Clippy complains about normal mathematical symbols like A, B, C for quadratic equation.
 #![allow(clippy::many_single_char_names)]
 
-pub use fyrox_math::*;
+pub use i3m_math::*;
 
 use crate::math::curve::Curve;
 use crate::math::curve::CurveKey;
@@ -14,7 +14,7 @@ use crate::{
     reflect::prelude::*,
     visitor::prelude::*,
 };
-use fyrox_core_derive::{impl_reflect, impl_visit};
+use i3m_core_derive::{impl_reflect, impl_visit};
 use std::fmt::Debug;
 
 impl_reflect!(

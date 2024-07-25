@@ -1,5 +1,5 @@
 [package]
-name = "fyrox-animation"
+name = "i3m-animation"
 version = "0.2.0"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
@@ -9,7 +9,7 @@ keywords = ["animation", "game"]
 categories = ["game-development", "animation"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
 homepage = "https://ithreem.com"
-documentation = "https://docs.rs/fyrox-animation"
+documentation = "https://docs.rs/i3m-animation"
 repository = "https://github.com/IThreeM/I3M-Engine-Core"
 readme = "README.md"
 rust-version = "1.72"

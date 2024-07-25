@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::{
         reflect::{is_path_to_array_element, Reflect, ResolvePath, SetFieldByPathError},
         ComponentProvider,
@@ -309,7 +309,7 @@ where
     let mut func = Some(func);
     entity.resolve_path_mut(path, &mut |result| match result {
         Ok(field) => func.take().unwrap()(field),
-        Err(e) => fyrox::core::log::Log::err(format!(
+        Err(e) => i3m::core::log::Log::err(format!(
             "There is no such property {}! Reason: {:?}",
             path, e
         )),
@@ -350,7 +350,7 @@ where
         if is_path_to_array_element(&self.path) {
             (self.entity_getter)(ctx).resolve_path_mut(&self.path, &mut |result| match result {
                 Err(reason) => {
-                    fyrox::core::log::Log::err(format!(
+                    i3m::core::log::Log::err(format!(
                         "Failed to set property {}! Invalid path {:?}!",
                         self.path, reason
                     ));
@@ -360,7 +360,7 @@ where
                         self.value = Some(old_value);
                     }
                     Err(current_value) => {
-                        fyrox::core::log::Log::err(format!(
+                        i3m::core::log::Log::err(format!(
                             "Failed to set property {}! Incompatible types {}!",
                             self.path,
                             current_value.type_name()
@@ -380,7 +380,7 @@ where
                     Err(result) => {
                         let value = match result {
                             SetFieldByPathError::InvalidPath { value, reason } => {
-                                fyrox::core::log::Log::err(format!(
+                                i3m::core::log::Log::err(format!(
                                     "Failed to set property {}! Invalid path {:?}!",
                                     self.path, reason
                                 ));
@@ -388,7 +388,7 @@ where
                                 value
                             }
                             SetFieldByPathError::InvalidValue(value) => {
-                                fyrox::core::log::Log::err(format!(
+                                i3m::core::log::Log::err(format!(
                                     "Failed to set property {}! Incompatible types {}!",
                                     self.path,
                                     value.type_name()
@@ -466,7 +466,7 @@ where
             field.as_list_mut(&mut |result| {
                 if let Some(list) = result {
                     if let Err(item) = list.reflect_push(self.item.take().unwrap()) {
-                        fyrox::core::log::Log::err(format!(
+                        i3m::core::log::Log::err(format!(
                             "Failed to push item to {} collection. Type mismatch {} and {}!",
                             self.path,
                             item.type_name(),
@@ -475,7 +475,7 @@ where
                         self.item = Some(item);
                     }
                 } else {
-                    fyrox::core::log::Log::err(format!(
+                    i3m::core::log::Log::err(format!(
                         "Property {} is not a collection!",
                         self.path
                     ))
@@ -491,13 +491,13 @@ where
                     if let Some(item) = list.reflect_pop() {
                         self.item = Some(item);
                     } else {
-                        fyrox::core::log::Log::err(format!(
+                        i3m::core::log::Log::err(format!(
                             "Failed to pop item from {} collection!",
                             self.path
                         ))
                     }
                 } else {
-                    fyrox::core::log::Log::err(format!(
+                    i3m::core::log::Log::err(format!(
                         "Property {} is not a collection!",
                         self.path
                     ))
@@ -554,7 +554,7 @@ where
                 if let Some(list) = result {
                     self.value = list.reflect_remove(self.index);
                 } else {
-                    fyrox::core::log::Log::err(format!(
+                    i3m::core::log::Log::err(format!(
                         "Property {} is not a collection!",
                         self.path
                     ))
@@ -569,13 +569,13 @@ where
                 if let Some(list) = result {
                     if let Err(item) = list.reflect_insert(self.index, self.value.take().unwrap()) {
                         self.value = Some(item);
-                        fyrox::core::log::Log::err(format!(
+                        i3m::core::log::Log::err(format!(
                             "Failed to insert item to {} collection. Type mismatch!",
                             self.path
                         ))
                     }
                 } else {
-                    fyrox::core::log::Log::err(format!(
+                    i3m::core::log::Log::err(format!(
                         "Property {} is not a collection!",
                         self.path
                     ))

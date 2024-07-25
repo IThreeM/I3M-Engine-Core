@@ -1,7 +1,7 @@
-use crate::fyrox::core::pool::ErasedHandle;
-use crate::fyrox::core::variable::InheritableVariable;
-use crate::fyrox::graph::{BaseSceneGraph, SceneGraphNode};
-use crate::fyrox::{
+use crate::i3m::core::pool::ErasedHandle;
+use crate::i3m::core::variable::InheritableVariable;
+use crate::i3m::graph::{BaseSceneGraph, SceneGraphNode};
+use crate::i3m::{
     core::{
         algebra::Vector2,
         pool::{Handle, Ticket},

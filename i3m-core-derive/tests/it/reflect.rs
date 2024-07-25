@@ -1,4 +1,4 @@
-//! Test cases for `fyrox_core::reflect::Reflect`
+//! Test cases for `i3m_core::reflect::Reflect`
 
 #![allow(clippy::disallowed_names)] // Useless in tests
 
@@ -8,7 +8,7 @@ use std::{
     ops::{Deref, DerefMut},
 };
 
-use fyrox_core::{parking_lot::Mutex, reflect::*};
+use i3m_core::{parking_lot::Mutex, reflect::*};
 
 /// Struct doc comment.
 #[allow(dead_code)]

@@ -379,7 +379,7 @@ impl Graph {
     /// ## Examples
     ///
     /// ```rust
-    /// # use fyrox_impl::{
+    /// # use i3m_impl::{
     /// #     core::pool::Handle,
     /// #     scene::{base::BaseBuilder, graph::Graph, node::Node, pivot::PivotBuilder},
     /// # };
@@ -1016,10 +1016,10 @@ impl Graph {
     /// available indices and try to convert them to handles.
     ///
     /// ```
-    /// # use fyrox_impl::scene::node::Node;
-    /// # use fyrox_impl::scene::graph::Graph;
-    /// # use fyrox_impl::scene::pivot::Pivot;
-    /// # use fyrox_graph::BaseSceneGraph;
+    /// # use i3m_impl::scene::node::Node;
+    /// # use i3m_impl::scene::graph::Graph;
+    /// # use i3m_impl::scene::pivot::Pivot;
+    /// # use i3m_graph::BaseSceneGraph;
     /// let mut graph = Graph::new();
     /// graph.add_node(Node::new(Pivot::default()));
     /// graph.add_node(Node::new(Pivot::default()));
@@ -1040,10 +1040,10 @@ impl Graph {
     /// or point to a vacant pool entry.
     ///
     /// ```
-    /// # use fyrox_impl::scene::node::Node;
-    /// # use fyrox_impl::scene::graph::Graph;
-    /// # use fyrox_impl::scene::pivot::Pivot;
-    /// # use fyrox_graph::BaseSceneGraph;
+    /// # use i3m_impl::scene::node::Node;
+    /// # use i3m_impl::scene::graph::Graph;
+    /// # use i3m_impl::scene::pivot::Pivot;
+    /// # use i3m_graph::BaseSceneGraph;
     /// let mut graph = Graph::new();
     /// graph.add_node(Node::new(Pivot::default()));
     /// graph.add_node(Node::new(Pivot::default()));
@@ -1675,7 +1675,7 @@ mod test {
         },
         script::ScriptTrait,
     };
-    use fyrox_resource::untyped::ResourceKind;
+    use i3m_resource::untyped::ResourceKind;
     use std::{fs, path::Path, sync::Arc};
 
     #[derive(Clone, Debug, PartialEq, Reflect, Visit, TypeUuidProvider, ComponentProvider)]

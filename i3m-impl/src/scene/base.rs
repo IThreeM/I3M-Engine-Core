@@ -334,11 +334,11 @@ impl Visit for ScriptRecord {
 /// # Example
 ///
 /// ```
-/// # use fyrox_impl::scene::base::BaseBuilder;
-/// # use fyrox_impl::scene::graph::Graph;
-/// # use fyrox_impl::scene::node::Node;
-/// # use fyrox_impl::core::pool::Handle;
-/// # use fyrox_impl::scene::pivot::PivotBuilder;
+/// # use i3m_impl::scene::base::BaseBuilder;
+/// # use i3m_impl::scene::graph::Graph;
+/// # use i3m_impl::scene::node::Node;
+/// # use i3m_impl::core::pool::Handle;
+/// # use i3m_impl::scene::pivot::PivotBuilder;
 ///
 /// fn create_pivot_node(graph: &mut Graph) -> Handle<Node> {
 ///     PivotBuilder::new(BaseBuilder::new()

@@ -148,7 +148,7 @@ pub struct VertexAttributeDescriptor {
     /// always stay in `0.0..1.0` range.
     ///
     /// For example, normalization could be useful for RGB colors that expressed as three bytes (u8).
-    /// In this case normalization will turn the color into `0.0..1.0` range.  
+    /// In this case normalization will turn the color into `0.0..1.0` range.
     pub normalized: bool,
 }
 
@@ -179,7 +179,7 @@ pub struct VertexAttribute {
     /// always stay in `0.0..1.0` range.
     ///
     /// For example, normalization could be useful for RGB colors that expressed as three bytes (u8).
-    /// In this case normalization will turn the color into `0.0..1.0` range.  
+    /// In this case normalization will turn the color into `0.0..1.0` range.
     #[visit(optional)]
     pub normalized: bool,
 }
@@ -306,7 +306,7 @@ impl Deref for BytesStorage {
 /// ## Examples
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     core::algebra::Vector3,
 /// #     scene::mesh::buffer::{
 /// #         VertexAttributeDataType, VertexAttributeDescriptor, VertexAttributeUsage, VertexBuffer,
@@ -349,7 +349,7 @@ impl Deref for BytesStorage {
 ///         ],
 ///     )
 ///     .unwrap()
-/// }  
+/// }
 /// ```
 ///
 /// This example creates a simple vertex buffer that contains a single triangle with custom vertex format. The most important
@@ -846,7 +846,7 @@ impl VertexBuffer {
     }
 
     /// Creates a new empty vertex buffer with the same layout and vertex size, but with an empty
-    /// inner buffer of the specified capacity.  
+    /// inner buffer of the specified capacity.
     pub fn clone_empty(&self, capacity: usize) -> Self {
         Self {
             dense_layout: self.dense_layout.clone(),
@@ -895,7 +895,7 @@ impl VertexBuffer {
     /// Do **not** even try to do this:
     ///
     /// ```no_run
-    /// use fyrox_impl::{
+    /// use i3m_impl::{
     ///     scene::mesh::buffer::{VertexBuffer, VertexWriteTrait, VertexAttributeUsage},
     ///     core::algebra::Vector3
     /// };
@@ -914,7 +914,7 @@ impl VertexBuffer {
     /// Instead do this:
     ///
     /// ```no_run
-    /// use fyrox_impl::{
+    /// use i3m_impl::{
     ///     scene::mesh::buffer::{VertexBuffer, VertexWriteTrait, VertexAttributeUsage},
     ///     core::algebra::Vector3
     /// };

@@ -41,8 +41,8 @@ use crate::{
         Scene,
     },
 };
-use fyrox_core::{ComponentProvider, NameProvider};
-use fyrox_resource::Resource;
+use i3m_core::{ComponentProvider, NameProvider};
+use i3m_resource::Resource;
 use std::{
     any::{Any, TypeId},
     fmt::Debug,
@@ -447,8 +447,8 @@ impl Node {
     /// # Example
     ///
     /// ```rust
-    /// # use fyrox_impl::scene::mesh::Mesh;
-    /// # use fyrox_impl::scene::node::Node;
+    /// # use i3m_impl::scene::mesh::Mesh;
+    /// # use i3m_impl::scene::node::Node;
     ///
     /// fn node_as_mesh_ref(node: &Node) -> &Mesh {
     ///     node.cast::<Mesh>().expect("Expected to be an instance of Mesh")
@@ -464,8 +464,8 @@ impl Node {
     /// # Example
     ///
     /// ```rust
-    /// # use fyrox_impl::scene::mesh::Mesh;
-    /// # use fyrox_impl::scene::node::Node;
+    /// # use i3m_impl::scene::mesh::Mesh;
+    /// # use i3m_impl::scene::node::Node;
     ///
     /// fn node_as_mesh_mut(node: &mut Node) -> &mut Mesh {
     ///     node.cast_mut::<Mesh>().expect("Expected to be an instance of Mesh")
@@ -483,9 +483,9 @@ impl Node {
     /// A good example is a light source node, it gives access to internal `BaseLight`:
     ///
     /// ```rust
-    /// # use fyrox_impl::scene::light::BaseLight;
-    /// # use fyrox_impl::scene::light::directional::DirectionalLight;
-    /// # use fyrox_impl::scene::node::{Node};
+    /// # use i3m_impl::scene::light::BaseLight;
+    /// # use i3m_impl::scene::light::directional::DirectionalLight;
+    /// # use i3m_impl::scene::node::{Node};
     ///
     /// fn base_light_ref(directional_light: &Node) -> &BaseLight {
     ///     directional_light.query_component_ref::<BaseLight>().expect("Must have base light")
@@ -511,9 +511,9 @@ impl Node {
     /// A good example is a light source node, it gives access to internal `BaseLight`:
     ///
     /// ```rust
-    /// # use fyrox_impl::scene::light::BaseLight;
-    /// # use fyrox_impl::scene::light::directional::DirectionalLight;
-    /// # use fyrox_impl::scene::node::{Node};
+    /// # use i3m_impl::scene::light::BaseLight;
+    /// # use i3m_impl::scene::light::directional::DirectionalLight;
+    /// # use i3m_impl::scene::node::{Node};
     ///
     /// fn base_light_mut(directional_light: &mut Node) -> &mut BaseLight {
     ///     directional_light.query_component_mut::<BaseLight>().expect("Must have base light")
@@ -692,8 +692,8 @@ mod test {
         },
         script::ScriptTrait,
     };
-    use fyrox_graph::SceneGraph;
-    use fyrox_resource::untyped::ResourceKind;
+    use i3m_graph::SceneGraph;
+    use i3m_resource::untyped::ResourceKind;
     use std::{fs, path::Path, sync::Arc};
 
     #[derive(Debug, Clone, Reflect, Visit, Default)]

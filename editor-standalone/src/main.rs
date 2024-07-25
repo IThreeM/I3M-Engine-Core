@@ -1,5 +1,5 @@
 use clap::Parser;
-use fyrox::event_loop::EventLoop;
+use i3m::event_loop::EventLoop;
 use I3M_Engine_Core_base::{Editor, StartupData};
 
 #[derive(Parser, Debug)]

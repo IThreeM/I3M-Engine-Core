@@ -1,8 +1,8 @@
 use crate::command::{Command, CommandGroup};
-use crate::fyrox::generic_animation::machine::Machine;
-use crate::fyrox::generic_animation::AnimationContainer;
-use crate::fyrox::graph::{PrefabData, SceneGraphNode};
-use crate::fyrox::{
+use crate::i3m::generic_animation::machine::Machine;
+use crate::i3m::generic_animation::AnimationContainer;
+use crate::i3m::graph::{PrefabData, SceneGraphNode};
+use crate::i3m::{
     core::pool::{ErasedHandle, Handle},
     generic_animation::{
         machine::{MachineLayer, PoseNode, State},

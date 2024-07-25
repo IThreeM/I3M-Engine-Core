@@ -5,7 +5,7 @@ use crate::{
     core::pool::Handle, font::FontResource, message::UiMessage, RestrictionEntry, UiNode,
     UserInterface,
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::{
     ops::{Index, IndexMut},
     sync::mpsc::Sender,
@@ -22,7 +22,7 @@ use std::{
 /// ## Examples
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     core::{visitor::prelude::*, reflect::prelude::*, type_traits::prelude::*,},
 /// #     define_widget_deref,
@@ -34,7 +34,7 @@ use std::{
 /// #     any::{Any, TypeId},
 /// #     ops::{Deref, DerefMut},
 /// # };
-/// # use fyrox_core::uuid_provider;
+/// # use i3m_core::uuid_provider;
 /// #
 /// #[derive(Clone, Visit, Reflect, Debug, ComponentProvider)]
 /// struct MyWidget {

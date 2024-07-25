@@ -1,6 +1,6 @@
 use crate::{
     absm::animation_container_ref,
-    fyrox::{
+    i3m::{
         asset::manager::ResourceManager,
         core::{
             color::Color,
@@ -235,7 +235,7 @@ impl Inspector {
     ) -> Result<(), Vec<InspectorError>> {
         let ctx = ui
             .node(self.inspector)
-            .cast::<fyrox::gui::inspector::Inspector>()
+            .cast::<i3m::gui::inspector::Inspector>()
             .unwrap()
             .context()
             .clone();

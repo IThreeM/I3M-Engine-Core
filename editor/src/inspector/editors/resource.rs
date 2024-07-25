@@ -1,5 +1,5 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::{
     asset::{manager::ResourceManager, state::LoadError, Resource, TypedResourceData},
     core::{
         color::Color, parking_lot::Mutex, pool::Handle, reflect::prelude::*,
@@ -29,7 +29,7 @@ use crate::{
     asset::item::AssetItem, inspector::EditorEnvironment, load_image, message::MessageSender,
     Message,
 };
-use fyrox::core::PhantomDataSendSync;
+use i3m::core::PhantomDataSendSync;
 use std::{
     any::TypeId,
     fmt::{Debug, Formatter},

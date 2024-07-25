@@ -8,7 +8,7 @@
 //! types and some of basic structures of the crate. Main criteria of what could be the field and what
 //! not is the ability to be represented as set of bytes without any aliasing issues.
 
-pub use fyrox_core_derive::Visit;
+pub use i3m_core_derive::Visit;
 
 pub mod prelude {
     //! Types to use `#[derive(Visit)]`
@@ -1269,7 +1269,7 @@ pub trait Visit {
     /// or write to that node using the returned Visitor without risk of name
     /// clashes.
     ///
-    /// See the documentation for [the Visit derive macro](fyrox_core_derive::Visit) for examples of how to
+    /// See the documentation for [the Visit derive macro](i3m_core_derive::Visit) for examples of how to
     /// implement Visit for some simple types.
     ///
     /// # Abnormal Implementations

@@ -12,8 +12,8 @@ use crate::{
     },
     Animation, AnimationContainer, AnimationEvent, AnimationPose, EntityId,
 };
-use fyrox_core::uuid::{uuid, Uuid};
-use fyrox_core::TypeUuidProvider;
+use i3m_core::uuid::{uuid, Uuid};
+use i3m_core::TypeUuidProvider;
 use std::cmp::Ordering;
 use std::{
     cell::{Cell, Ref, RefCell},

@@ -25,8 +25,8 @@ use crate::{
         light::directional::{DirectionalLight, FrustumSplitOptions, CSM_NUM_CASCADES},
     },
 };
-use fyrox_core::color::Color;
-use fyrox_core::math::Matrix4Ext;
+use i3m_core::color::Color;
+use i3m_core::math::Matrix4Ext;
 use std::{cell::RefCell, rc::Rc};
 
 pub struct Cascade {

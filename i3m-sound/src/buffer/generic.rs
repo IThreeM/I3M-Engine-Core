@@ -12,8 +12,8 @@
 //!
 //! ```no_run
 //! use std::sync::{Mutex, Arc};
-//! use fyrox_sound::buffer::{SoundBufferResource, DataSource, SoundBufferResourceExtension};
-//! use fyrox_resource::io::FsResourceIo;
+//! use i3m_sound::buffer::{SoundBufferResource, DataSource, SoundBufferResourceExtension};
+//! use i3m_resource::io::FsResourceIo;
 //!
 //! async fn make_buffer() -> SoundBufferResource {
 //!     let data_source = DataSource::from_file("sound.wav", &FsResourceIo).await.unwrap();
@@ -24,7 +24,7 @@
 #![allow(clippy::manual_range_contains)]
 
 use crate::{buffer::DataSource, decoder::Decoder};
-use fyrox_core::{reflect::prelude::*, visitor::prelude::*};
+use i3m_core::{reflect::prelude::*, visitor::prelude::*};
 use std::time::Duration;
 
 /// Generic sound buffer that contains decoded samples and allows random access.

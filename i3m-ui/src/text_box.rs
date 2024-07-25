@@ -196,7 +196,7 @@ pub type FilterCallback = dyn FnMut(char) -> bool + Send;
 /// An instance of the TextBox widget could be created like so:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     text_box::TextBoxBuilder, widget::WidgetBuilder, UiNode, UserInterface
 /// # };
@@ -215,7 +215,7 @@ pub type FilterCallback = dyn FnMut(char) -> bool + Send;
 /// An instance of centered text could be created like so:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     text_box::TextBoxBuilder, widget::WidgetBuilder, HorizontalAlignment, UiNode, UserInterface,
 /// #     VerticalAlignment,
@@ -234,7 +234,7 @@ pub type FilterCallback = dyn FnMut(char) -> bool + Send;
 /// created like so:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     formatted_text::WrapMode, text_box::TextBoxBuilder, widget::WidgetBuilder, UiNode,
 /// #     UserInterface,
@@ -252,7 +252,7 @@ pub type FilterCallback = dyn FnMut(char) -> bool + Send;
 /// To set a color of the text just use [`WidgetBuilder::with_foreground`] while building the text instance:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{color::Color, pool::Handle},
 /// #     brush::Brush, text_box::TextBoxBuilder, widget::WidgetBuilder, UiNode, UserInterface
 /// # };
@@ -267,8 +267,8 @@ pub type FilterCallback = dyn FnMut(char) -> bool + Send;
 /// By default, text is created with default font, however it is possible to set any custom font:
 ///
 /// ```rust,no_run
-/// # use fyrox_resource::manager::ResourceManager;
-/// # use fyrox_ui::{
+/// # use i3m_resource::manager::ResourceManager;
+/// # use i3m_ui::{
 /// #     core::{futures::executor::block_on, pool::Handle},
 /// #     text_box::TextBoxBuilder,
 /// #     font::{Font},
@@ -306,7 +306,7 @@ pub type FilterCallback = dyn FnMut(char) -> bool + Send;
 /// runtime could be something like this:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     message::{MessageDirection},
 /// #     UiNode, UserInterface,
@@ -373,12 +373,12 @@ pub type FilterCallback = dyn FnMut(char) -> bool + Send;
 /// phone number. A filter can be specified at build stage like so:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     text_box::TextBoxBuilder, widget::WidgetBuilder, UiNode, UserInterface
 /// # };
 /// # use std::sync::Arc;
-/// # use fyrox_core::parking_lot::Mutex;
+/// # use i3m_core::parking_lot::Mutex;
 /// fn create_text_box(ui: &mut UserInterface) -> Handle<UiNode> {
 ///     TextBoxBuilder::new(WidgetBuilder::new())
 ///         // Specify a filter that will pass only digits.

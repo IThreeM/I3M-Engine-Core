@@ -53,10 +53,10 @@
                layout(location = 3) in float particleRotation;
                layout(location = 4) in vec4 vertexColor;
 
-               uniform mat4 fyrox_viewProjectionMatrix;
-               uniform mat4 fyrox_worldMatrix;
-               uniform vec3 fyrox_cameraUpVector;
-               uniform vec3 fyrox_cameraSideVector;
+               uniform mat4 i3m_viewProjectionMatrix;
+               uniform mat4 i3m_worldMatrix;
+               uniform vec3 i3m_cameraUpVector;
+               uniform vec3 i3m_cameraSideVector;
 
                out vec2 texCoord;
                out vec4 color;
@@ -74,9 +74,9 @@
                    color = S_SRGBToLinear(vertexColor);
                    texCoord = vertexTexCoord;
                    vec2 vertexOffset = rotateVec2(vertexTexCoord * 2.0 - 1.0, particleRotation);
-                   vec4 worldPosition = fyrox_worldMatrix * vec4(vertexPosition, 1.0);
-                   vec3 offset = (vertexOffset.x * fyrox_cameraSideVector + vertexOffset.y * fyrox_cameraUpVector) * particleSize;
-                   gl_Position = fyrox_viewProjectionMatrix * (worldPosition + vec4(offset.x, offset.y, offset.z, 0.0));
+                   vec4 worldPosition = i3m_worldMatrix * vec4(vertexPosition, 1.0);
+                   vec3 offset = (vertexOffset.x * i3m_cameraSideVector + vertexOffset.y * i3m_cameraUpVector) * particleSize;
+                   gl_Position = i3m_viewProjectionMatrix * (worldPosition + vec4(offset.x, offset.y, offset.z, 0.0));
                }
                "#,
 
@@ -85,9 +85,9 @@
                uniform sampler2D diffuseTexture;
                uniform float softBoundarySharpnessFactor;
 
-               uniform sampler2D fyrox_sceneDepth;
-               uniform float fyrox_zNear;
-               uniform float fyrox_zFar;
+               uniform sampler2D i3m_sceneDepth;
+               uniform float i3m_zNear;
+               uniform float i3m_zFar;
 
                out vec4 FragColor;
                in vec2 texCoord;
@@ -95,14 +95,14 @@
 
                float toProjSpace(float z)
                {
-                   return (fyrox_zFar * fyrox_zNear) / (fyrox_zFar - z * (fyrox_zFar - fyrox_zNear));
+                   return (i3m_zFar * i3m_zNear) / (i3m_zFar - z * (i3m_zFar - i3m_zNear));
                }
 
                void main()
                {
-                   ivec2 depthTextureSize = textureSize(fyrox_sceneDepth, 0);
+                   ivec2 depthTextureSize = textureSize(i3m_sceneDepth, 0);
                    vec2 pixelSize = vec2(1.0 / float(depthTextureSize.x), 1.0 / float(depthTextureSize.y));
-                   float sceneDepth = toProjSpace(texture(fyrox_sceneDepth, gl_FragCoord.xy * pixelSize).r);
+                   float sceneDepth = toProjSpace(texture(i3m_sceneDepth, gl_FragCoord.xy * pixelSize).r);
                    float fragmentDepth = toProjSpace(gl_FragCoord.z);
                    float depthOpacity = smoothstep((sceneDepth - fragmentDepth) * softBoundarySharpnessFactor, 0.0, 1.0);
                    FragColor = color * S_SRGBToLinear(texture(diffuseTexture, texCoord)).r;

@@ -1,6 +1,6 @@
-use crate::fyrox::core::reflect::Reflect;
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::{
+use crate::i3m::core::reflect::Reflect;
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::{
     asset::{manager::ResourceManager, options::BaseImportOptions},
     core::{append_extension, futures::executor::block_on, log::Log, pool::Handle},
     engine::Engine,

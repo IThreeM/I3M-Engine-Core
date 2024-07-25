@@ -1,6 +1,6 @@
 //! `Reflect` implementations for external types othern than `std` types
 
-use fyrox_core_derive::impl_reflect;
+use i3m_core_derive::impl_reflect;
 use nalgebra::*;
 use std::fmt::Debug;
 

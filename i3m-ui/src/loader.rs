@@ -5,7 +5,7 @@ use crate::{
     core::{uuid::Uuid, TypeUuidProvider},
     UserInterface,
 };
-use fyrox_resource::{
+use i3m_resource::{
     io::ResourceIo,
     loader::{BoxedLoaderFuture, LoaderPayload, ResourceLoader},
     manager::ResourceManager,

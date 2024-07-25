@@ -1,5 +1,5 @@
 use crate::command::CommandContext;
-use crate::fyrox::scene::sound::{
+use crate::i3m::scene::sound::{
     context::SoundContext, DistanceModel, HrirSphereResource, Renderer,
 };
 use crate::{CommandTrait, GameSceneContext};

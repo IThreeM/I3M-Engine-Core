@@ -13,8 +13,8 @@ sound are independent of the engine. Internal coupling is one-way in most of the
 instance, a renderer **is** dependent on a scene, but scene does **not** know anything about the renderer.
 This fact makes changes in the engine very easy even for beginners.
 
-Fyrox consists of the four crates - i3m-core, fyrox-sound, fyrox-ui, and Fyrox itself. i3m-core, fyrox-sound and
-fyrox-ui are **standalone** crates and can be used separately, the only place where these three are meet is the
+Fyrox consists of the four crates - i3m-core, i3m-sound, i3m-ui, and Fyrox itself. i3m-core, i3m-sound and
+i3m-ui are **standalone** crates and can be used separately, the only place where these three are meet is the
 Fyrox. Previously each crate had a separate repository, but then I decided to put everything in single repository
 because it was too much of a pain to build any project that uses the engine.
 
@@ -49,7 +49,7 @@ instance) or a hardware (OpenGL, DirectX, Vulkan, Metal, etc.).
 
 ### Sound
 
-Fyrox uses software sound engine [fyrox-sound](https://github.com/IThreeM/I3M-Engine-Core/tree/master/fyrox-sound).
+Fyrox uses software sound engine [i3m-sound](https://github.com/IThreeM/I3M-Engine-Core/tree/master/i3m-sound).
 The sound engine provides support for binaural sound rendering using HRTF, which gives excellent sound
 spatialization.
 
@@ -60,13 +60,13 @@ document, here is the table of contents for your comfort:
 
 - [i3m-core](#i3m-core)
     - [math](#mathmodrs)
-- [fyrox-ui](#fyrox-ui)
+- [i3m-ui](#i3m-ui)
     - [widgets](#borderrs)
-- [fyrox-sound](#fyrox-sound)
+- [i3m-sound](#i3m-sound)
     - [buffer](#buffermodrs)
     - [decoder](#decodermodrs)
     - [device](#devicemodrs)
-- [Fyrox](#fyrox)
+- [Fyrox](#i3m)
 
 ### i3m-core
 
@@ -152,9 +152,9 @@ The module contains node-based serializer/deserializer (visitor). Everything in 
 this serializer. It supports serialization of basic types, many std types (including
 Rc/Arc) and user-defined types.
 
-### fyrox-ui
+### i3m-ui
 
-fyrox-ui is a standalone, graphics API-agnostic, node-based, general-purpose user interface library.
+i3m-ui is a standalone, graphics API-agnostic, node-based, general-purpose user interface library.
 
 #### lib.rs
 
@@ -287,9 +287,9 @@ The module contains all supported messages for every widget in the library.
 
 #### wrap_panel.rs
 
-### fyrox-sound
+### i3m-sound
 
-fyrox-sound is a standalone sound engine with multiple renderers and high-quality sound. The sound engine
+i3m-sound is a standalone sound engine with multiple renderers and high-quality sound. The sound engine
 provides support for binaural sound rendering using HRTF, which gives excellent sound spatialization.
 
 #### buffer/mod.rs

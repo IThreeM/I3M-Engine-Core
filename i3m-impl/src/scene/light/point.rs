@@ -36,7 +36,7 @@ use crate::{
         node::{Node, NodeTrait},
     },
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// See module docs.
@@ -74,7 +74,7 @@ impl TypeUuidProvider for PointLight {
 }
 
 impl PointLight {
-    /// Returns a reference to base light.    
+    /// Returns a reference to base light.
     pub fn base_light_ref(&self) -> &BaseLight {
         &self.base_light
     }

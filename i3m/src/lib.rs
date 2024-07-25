@@ -1,5 +1,5 @@
 #[cfg(not(feature = "dylib"))]
-pub use fyrox_impl::*;
+pub use i3m_impl::*;
 
 #[cfg(feature = "dylib")]
-pub use fyrox_dylib::*;
+pub use i3m_dylib::*;

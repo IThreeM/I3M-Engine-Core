@@ -8,7 +8,7 @@ use crate::core::{
     reflect::prelude::*,
     visitor::prelude::*,
 };
-use fyrox_core::log::Log;
+use i3m_core::log::Log;
 use std::fmt::{Debug, Display, Formatter};
 
 /// An actual type of a property value.
@@ -260,7 +260,7 @@ impl TrackValue {
 /// Value binding tells the animation system to which of the many properties to set track's value. It has special
 /// cases for the most used properties and a generic one for arbitrary properties. Arbitrary properties are set using
 /// reflection system, while the special cases handles bindings to standard properties (such as position, scaling, or
-/// rotation) for optimization. Reflection is quite slow to be used as the universal property setting mechanism.  
+/// rotation) for optimization. Reflection is quite slow to be used as the universal property setting mechanism.
 #[derive(Clone, Visit, Reflect, Debug, PartialEq, Eq)]
 pub enum ValueBinding {
     /// A binding to position of a scene node.

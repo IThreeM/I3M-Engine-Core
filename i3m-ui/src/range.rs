@@ -13,7 +13,7 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, Thickness, UiNode, UserInterface, VerticalAlignment,
 };
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::variable::InheritableVariable;
 use std::ops::{Deref, DerefMut, Range};
 
 /// A set of messages, that can be used to modify/fetch the state of a [`RangeEditor`] widget instance.
@@ -41,7 +41,7 @@ impl<T: NumericType> RangeEditorMessage<T> {
 /// You can create range editors using [`RangeEditorBuilder`], like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, range::RangeEditorBuilder, widget::WidgetBuilder, BuildContext, UiNode,
 /// # };
 /// fn create_range_editor(ctx: &mut BuildContext) -> Handle<UiNode> {
@@ -58,7 +58,7 @@ impl<T: NumericType> RangeEditorMessage<T> {
 /// To change current value of a range editor, use [`RangeEditorMessage::Value`] message:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, message::MessageDirection, range::RangeEditorMessage, UiNode,
 /// #     UserInterface,
 /// # };
@@ -75,7 +75,7 @@ impl<T: NumericType> RangeEditorMessage<T> {
 /// on the message:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     message::{MessageDirection, UiMessage},
 /// #     range::RangeEditorMessage,

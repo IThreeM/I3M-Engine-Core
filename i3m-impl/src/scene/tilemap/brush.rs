@@ -18,7 +18,7 @@ use crate::{
     },
     scene::{debug::SceneDrawingContext, tilemap::tileset::TileDefinitionHandle},
 };
-use fyrox_core::math::Rect;
+use i3m_core::math::Rect;
 use std::{
     any::Any,
     error::Error,

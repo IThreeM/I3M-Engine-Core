@@ -31,7 +31,7 @@ use crate::{
     BuildContext, Control, RcUiNodeHandle, Thickness, UiNode, UserInterface, VerticalAlignment,
 };
 use copypasta::ClipboardProvider;
-use fyrox_graph::{BaseSceneGraph, SceneGraph};
+use i3m_graph::{BaseSceneGraph, SceneGraph};
 use std::{
     any::{Any, TypeId},
     fmt::{Debug, Formatter},
@@ -382,7 +382,7 @@ pub trait InspectorEnvironment: Any + Send + Sync {
 /// An instance of inspector widget could be created like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{pool::Handle, reflect::prelude::*},
 /// #     inspector::{
 /// #         editors::{
@@ -397,7 +397,7 @@ pub trait InspectorEnvironment: Any + Send + Sync {
 /// # };
 /// # use std::sync::Arc;
 /// # use strum_macros::{AsRefStr, EnumString, VariantNames};
-/// # use fyrox_core::uuid_provider;
+/// # use i3m_core::uuid_provider;
 ///
 /// #[derive(Reflect, Debug, Clone)]
 /// struct MyObject {

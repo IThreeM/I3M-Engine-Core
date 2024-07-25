@@ -5,7 +5,7 @@
 //! Sound engine manages contexts, feeds output device with data.
 
 use crate::context::{SoundContext, SAMPLE_RATE};
-use fyrox_core::visitor::{Visit, VisitResult, Visitor};
+use i3m_core::visitor::{Visit, VisitResult, Visitor};
 use std::error::Error;
 use std::sync::{Arc, Mutex, MutexGuard};
 

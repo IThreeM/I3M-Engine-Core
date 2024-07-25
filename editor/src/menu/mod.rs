@@ -1,7 +1,7 @@
 use crate::{
     animation::AnimationEditor,
     export::ExportWindow,
-    fyrox::{
+    i3m::{
         core::{algebra::Vector2, pool::Handle, scope_profile},
         gui::{
             menu::{MenuBuilder, MenuItemBuilder, MenuItemContent},

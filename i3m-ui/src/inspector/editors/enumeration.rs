@@ -27,8 +27,8 @@ use crate::{
     BuildContext, Control, HorizontalAlignment, Thickness, UiNode, UserInterface,
     VerticalAlignment,
 };
-use fyrox_core::ComponentProvider;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::ComponentProvider;
+use i3m_graph::BaseSceneGraph;
 use std::{
     any::TypeId,
     fmt::{Debug, Formatter},

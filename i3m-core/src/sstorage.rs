@@ -9,7 +9,7 @@ use crate::{
     visitor::{Visit, VisitResult, Visitor},
 };
 use fxhash::{FxHashMap, FxHasher};
-pub use fyrox_core_derive::TypeUuidProvider;
+pub use i3m_core_derive::TypeUuidProvider;
 use serde::{Deserialize, Serialize};
 use std::{
     fmt::{Debug, Display, Formatter},

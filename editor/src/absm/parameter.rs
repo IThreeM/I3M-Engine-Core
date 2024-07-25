@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::{log::Log, pool::Handle},
     generic_animation::machine::parameter::{Parameter, ParameterContainer, ParameterDefinition},
     graph::{BaseSceneGraph, PrefabData, SceneGraph, SceneGraphNode},
@@ -101,7 +101,7 @@ impl ParameterPanel {
     pub fn sync_to_model(&mut self, ui: &mut UserInterface, parameters: &ParameterContainer) {
         let ctx = ui
             .node(self.inspector)
-            .cast::<fyrox::gui::inspector::Inspector>()
+            .cast::<i3m::gui::inspector::Inspector>()
             .unwrap()
             .context()
             .clone();

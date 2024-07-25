@@ -32,7 +32,7 @@ use crate::{
         mesh::RenderPath,
     },
 };
-use fyrox_core::math::Matrix4Ext;
+use i3m_core::math::Matrix4Ext;
 use std::{cell::RefCell, rc::Rc};
 
 pub(crate) struct ForwardRenderer {

@@ -1,7 +1,7 @@
 pub mod cache;
 
 use crate::{
-    fyrox::{
+    i3m::{
         asset::{manager::ResourceManager, untyped::ResourceKind, untyped::UntypedResource},
         core::{
             algebra::{Matrix4, UnitQuaternion, Vector2, Vector3},
@@ -93,7 +93,7 @@ pub trait AssetPreviewGenerator: Send + Sync + 'static {
 
     /// Generates a preview image for an asset. For example, in case of prefabs, it will be the
     /// entire prefab content rendered to an image. In case of sounds it will be its waveform, and
-    /// so on.  
+    /// so on.
     fn generate_preview(
         &mut self,
         resource: &UntypedResource,

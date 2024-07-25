@@ -19,7 +19,7 @@ use crate::{
         node::{Node, NodeTrait, UpdateContext},
     },
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 pub mod absm;
@@ -172,7 +172,7 @@ impl BoundValueCollectionExt for BoundValueCollection {
 /// next code snippet is for you.
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     core::{
 /// #         math::curve::{Curve, CurveKey, CurveKeyKind},
 /// #         pool::Handle,

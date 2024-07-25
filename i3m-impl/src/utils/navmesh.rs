@@ -23,7 +23,7 @@ use crate::{
     },
 };
 use fxhash::{FxBuildHasher, FxHashMap};
-use fyrox_core::math::octree::{Octree, OctreeNode};
+use i3m_core::math::octree::{Octree, OctreeNode};
 use std::ops::{Deref, DerefMut};
 
 #[derive(Clone, Debug, Default, Visit)]
@@ -357,9 +357,9 @@ impl Navmesh {
     ///
     /// Example:
     /// ```
-    /// # use fyrox_impl::scene::Scene;
-    /// # use fyrox_impl::utils::navmesh::Navmesh;
-    /// # use fyrox_graph::SceneGraph;
+    /// # use i3m_impl::scene::Scene;
+    /// # use i3m_impl::utils::navmesh::Navmesh;
+    /// # use i3m_graph::SceneGraph;
     /// #
     /// fn make_navmesh(scene: &Scene, navmesh_name: &str) -> Navmesh {
     ///     // Find mesh node in existing scene and create navigation mesh from it.
@@ -547,9 +547,9 @@ impl Navmesh {
     /// Example:
     ///
     /// ```
-    /// use fyrox_impl::utils::navmesh::Navmesh;
-    /// use fyrox_impl::core::algebra::Vector3;
-    /// use fyrox_impl::utils::astar::{PathKind, PathError};
+    /// use i3m_impl::utils::navmesh::Navmesh;
+    /// use i3m_impl::core::algebra::Vector3;
+    /// use i3m_impl::utils::astar::{PathKind, PathError};
     ///
     /// fn find_path(navmesh: &Navmesh, begin: Vector3<f32>, end: Vector3<f32>, path: &mut Vec<Vector3<f32>>) -> Result<PathKind, PathError> {
     ///     if let Some((_, begin_index)) = navmesh.query_closest(begin) {

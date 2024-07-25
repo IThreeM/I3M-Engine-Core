@@ -12,10 +12,10 @@ use crate::{
     buffer::{generic::GenericBuffer, streaming::StreamingBuffer},
     error::SoundError,
 };
-use fyrox_core::{
+use i3m_core::{
     io::FileLoadError, reflect::prelude::*, uuid::Uuid, visitor::prelude::*, TypeUuidProvider,
 };
-use fyrox_resource::{
+use i3m_resource::{
     io::{FileReader, ResourceIo},
     Resource, ResourceData, SOUND_BUFFER_RESOURCE_UUID,
 };

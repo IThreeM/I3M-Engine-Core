@@ -1,7 +1,7 @@
 use crate::{
     asset::item::AssetItem,
     command::{Command, CommandGroup, SetPropertyCommand},
-    fyrox::{
+    i3m::{
         core::{algebra::Vector2, pool::Handle, TypeUuidProvider, Uuid},
         fxhash::FxHashSet,
         graph::{BaseSceneGraph, SceneGraph, SceneGraphNode},

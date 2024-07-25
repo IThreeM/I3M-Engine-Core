@@ -1,7 +1,7 @@
-use fyrox_core::futures::executor::block_on;
-use fyrox_resource::io::FsResourceIo;
-use fyrox_sound::buffer::SoundBufferResourceExtension;
-use fyrox_sound::{
+use i3m_core::futures::executor::block_on;
+use i3m_resource::io::FsResourceIo;
+use i3m_sound::buffer::SoundBufferResourceExtension;
+use i3m_sound::{
     algebra::{Point3, UnitQuaternion, Vector3},
     buffer::{DataSource, SoundBufferResource},
     context::SoundContext,

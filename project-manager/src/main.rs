@@ -11,7 +11,7 @@ use crate::{
     settings::Settings,
     utils::{is_production_ready, load_image, make_button},
 };
-use fyrox::{
+use i3m::{
     asset::manager::ResourceManager,
     core::{
         color::Color,

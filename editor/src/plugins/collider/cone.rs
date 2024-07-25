@@ -1,5 +1,5 @@
 use crate::{
-    fyrox::{
+    i3m::{
         core::{algebra::Vector3, pool::Handle},
         scene::{collider::ColliderShape, node::Node, Scene},
     },

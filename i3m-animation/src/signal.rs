@@ -1,7 +1,7 @@
 //! Signal is a named marker on specific time position on the animation timeline. See [`AnimationSignal`] docs for more info.
 
 use crate::core::{reflect::prelude::*, uuid::Uuid, visitor::prelude::*};
-use fyrox_core::NameProvider;
+use i3m_core::NameProvider;
 
 /// An event happened in an animation.
 #[derive(Clone, PartialEq, Eq, Debug)]

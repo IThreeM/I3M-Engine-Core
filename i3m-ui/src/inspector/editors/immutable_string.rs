@@ -1,5 +1,5 @@
 //! Property editor for [ImmutableString] properties based upon a [TextBox](crate::text_box::TextBox) widget.
-use fyrox_core::sstorage::ImmutableString;
+use i3m_core::sstorage::ImmutableString;
 
 use crate::{
     core::algebra::Vector2,

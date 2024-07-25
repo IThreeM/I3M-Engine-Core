@@ -32,7 +32,7 @@ use crate::{
     BRUSH_BRIGHT, BRUSH_LIGHT,
 };
 use fxhash::FxHashSet;
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::{
     cell::{Cell, RefCell},
     ops::{Deref, DerefMut},

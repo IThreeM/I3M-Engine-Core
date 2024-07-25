@@ -9,9 +9,9 @@
 /examples/data/lightmap_scene.rgs
 /i3m-core/test.bin
 /i3m-core/test.txt
-/fyrox-resource/test.txt
+/i3m-resource/test.txt
 /i3m-core-derive/test_output
-/fyrox-impl/test_output
+/i3m-impl/test_output
 history.bin
 settings.ron
 

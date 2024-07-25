@@ -30,8 +30,8 @@ use std::{
 
 use crate::state::LoadError;
 use crate::untyped::{ResourceHeader, ResourceKind};
-pub use fyrox_core as core;
-use fyrox_core::combine_uuids;
+pub use i3m_core as core;
+use i3m_core::combine_uuids;
 
 pub mod constructor;
 pub mod entry;

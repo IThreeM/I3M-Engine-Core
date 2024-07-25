@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::{
         algebra::Vector2,
         color::Color,
@@ -42,7 +42,7 @@ use crate::{
     message::MessageSender,
     send_sync_message,
 };
-use fyrox::gui::menu::ContextMenuBuilder;
+use i3m::gui::menu::ContextMenuBuilder;
 use std::{
     cell::Cell,
     fmt::{Debug, Formatter},

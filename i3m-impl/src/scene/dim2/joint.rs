@@ -20,8 +20,8 @@ use crate::{
         Scene,
     },
 };
-use fyrox_core::uuid_provider;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::uuid_provider;
+use i3m_graph::BaseSceneGraph;
 use rapier2d::dynamics::ImpulseJointHandle;
 use std::{
     cell::{Cell, RefCell},
@@ -250,7 +250,7 @@ impl Joint {
         *self.body2
     }
 
-    /// Sets whether the connected bodies should ignore collisions with each other or not.  
+    /// Sets whether the connected bodies should ignore collisions with each other or not.
     pub fn set_contacts_enabled(&mut self, enabled: bool) -> bool {
         self.contacts_enabled.set_value_and_mark_modified(enabled)
     }
@@ -368,7 +368,7 @@ impl JointBuilder {
         self
     }
 
-    /// Sets whether the connected bodies should ignore collisions with each other or not.  
+    /// Sets whether the connected bodies should ignore collisions with each other or not.
     pub fn with_contacts_enabled(mut self, enabled: bool) -> Self {
         self.contacts_enabled = enabled;
         self

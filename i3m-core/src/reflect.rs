@@ -3,7 +3,7 @@
 mod external_impls;
 mod std_impls;
 
-pub use fyrox_core_derive::Reflect;
+pub use i3m_core_derive::Reflect;
 use std::{
     any::{Any, TypeId},
     fmt::{self, Debug, Display, Formatter},

@@ -1,7 +1,7 @@
-use fyrox_resource::io::FsResourceIo;
-use fyrox_sound::buffer::SoundBufferResourceExtension;
-use fyrox_sound::engine::State;
-use fyrox_sound::{
+use i3m_resource::io::FsResourceIo;
+use i3m_sound::buffer::SoundBufferResourceExtension;
+use i3m_sound::engine::State;
+use i3m_sound::{
     buffer::{DataSource, SoundBufferResource},
     context::SoundContext,
     engine::SoundEngine,
@@ -21,7 +21,7 @@ fn main() {
 
     // Load sound buffer.
     let door_open_buffer = SoundBufferResource::new_generic(
-        fyrox_sound::futures::executor::block_on(DataSource::from_file(
+        i3m_sound::futures::executor::block_on(DataSource::from_file(
             "examples/data/door_open.wav",
             // Load from the default resource io (File system)
             &FsResourceIo,
@@ -44,7 +44,7 @@ fn main() {
     // Create output wav file. The sample rate is currently fixed.
     let wav_spec = hound::WavSpec {
         channels: 2,
-        sample_rate: fyrox_sound::context::SAMPLE_RATE,
+        sample_rate: i3m_sound::context::SAMPLE_RATE,
         bits_per_sample: 32,
         sample_format: hound::SampleFormat::Float,
     };
@@ -56,7 +56,7 @@ fn main() {
     let mut samples_written = 0;
 
     // Wait until sound will play completely.
-    while samples_written < 3 * fyrox_sound::context::SAMPLE_RATE {
+    while samples_written < 3 * i3m_sound::context::SAMPLE_RATE {
         engine.state().render(&mut buf);
         for &(l, r) in buf.iter() {
             wav_writer.write_sample(l).unwrap();

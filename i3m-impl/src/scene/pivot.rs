@@ -14,7 +14,7 @@ use crate::{
         node::{Node, NodeTrait},
     },
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// A simplest possible node which represents point in space.

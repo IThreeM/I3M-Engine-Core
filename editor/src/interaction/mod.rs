@@ -1,5 +1,5 @@
 use crate::{
-    fyrox::{
+    i3m::{
         core::{
             algebra::{Vector2, Vector3},
             color::Color,

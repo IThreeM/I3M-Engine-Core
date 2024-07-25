@@ -17,7 +17,7 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, HorizontalAlignment, UiNode, UserInterface, VerticalAlignment,
 };
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 use std::{
     cell::RefCell,
     ops::{Deref, DerefMut},
@@ -111,7 +111,7 @@ impl TextMessage {
 /// An instance of the [`Text`] widget could be created like so:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     text::TextBuilder, widget::WidgetBuilder, UiNode, UserInterface
 /// # };
@@ -130,7 +130,7 @@ impl TextMessage {
 /// instance of centered text could be created like so:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     text::TextBuilder, widget::WidgetBuilder, HorizontalAlignment, UiNode, UserInterface,
 /// #     VerticalAlignment,
@@ -154,7 +154,7 @@ impl TextMessage {
 /// be created like so:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     formatted_text::WrapMode, text::TextBuilder, widget::WidgetBuilder, UiNode,
 /// #     UserInterface,
@@ -173,7 +173,7 @@ impl TextMessage {
 /// text. **Caveat:** [`WidgetBuilder::with_background`] is ignored for [`Text`] widget!
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{color::Color, pool::Handle},
 /// #     border::BorderBuilder, brush::Brush, text::TextBuilder, widget::WidgetBuilder, UiNode,
 /// #     UserInterface,
@@ -201,7 +201,7 @@ impl TextMessage {
 /// To set a color of the text just use [`WidgetBuilder::with_foreground`] while building the text instance:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{color::Color, pool::Handle},
 /// #     brush::Brush, text::TextBuilder, widget::WidgetBuilder, UiNode, UserInterface
 /// # };
@@ -216,8 +216,8 @@ impl TextMessage {
 /// By default, text is created with default font, however it is possible to set any custom font:
 ///
 /// ```rust
-/// # use fyrox_resource::manager::ResourceManager;
-/// # use fyrox_ui::{
+/// # use i3m_resource::manager::ResourceManager;
+/// # use i3m_ui::{
 /// #     core::{futures::executor::block_on, pool::Handle},
 /// #     text::TextBuilder,
 /// #     font::{Font, FontResource},
@@ -248,7 +248,7 @@ impl TextMessage {
 /// is to enable them, setup desired thickness, offset and brush (solid color or gradient).
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{algebra::Vector2, color::Color, pool::Handle},
 /// #     brush::Brush, text::TextBuilder, widget::WidgetBuilder, UiNode, UserInterface
 /// # };
@@ -286,7 +286,7 @@ impl TextMessage {
 /// An example of changing text at runtime could be something like this:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     message::{MessageDirection},
 /// #     UiNode, UserInterface,

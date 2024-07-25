@@ -23,9 +23,9 @@ use crate::{
     BuildContext, Control, HorizontalAlignment, Orientation, Thickness, UiNode, UserInterface,
     VerticalAlignment, BRUSH_DARK, BRUSH_LIGHT, BRUSH_LIGHTER, BRUSH_LIGHTEST,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages that can be accepted by [`ScrollBar`] widget.
@@ -74,7 +74,7 @@ impl ScrollBarMessage {
 /// A simple example of how to create a new [`ScrollBar`] could be something like this:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, scroll_bar::ScrollBarBuilder, widget::WidgetBuilder, BuildContext,
 /// #     UiNode,
 /// # };
@@ -91,7 +91,7 @@ impl ScrollBarMessage {
 /// of the scroll bar, use [`ScrollBarMessage::Value`] message:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     message::{MessageDirection, UiMessage},
 /// #     scroll_bar::ScrollBarMessage,

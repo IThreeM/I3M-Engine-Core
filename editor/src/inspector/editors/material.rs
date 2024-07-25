@@ -1,6 +1,6 @@
 use crate::{
     asset::item::AssetItem,
-    fyrox::{
+    i3m::{
         asset::{core::pool::Handle, state::ResourceState},
         core::{
             color::Color, parking_lot::Mutex, reflect::prelude::*, type_traits::prelude::*,

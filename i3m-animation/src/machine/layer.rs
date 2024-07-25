@@ -14,7 +14,7 @@ use crate::{
     },
     Animation, AnimationContainer, AnimationEvent, AnimationPose, EntityId,
 };
-use fyrox_core::{find_by_name_mut, find_by_name_ref, NameProvider};
+use i3m_core::{find_by_name_mut, find_by_name_ref, NameProvider};
 
 /// Layer is a separate state graph. Layers mainly used to animate different parts of humanoid (but not only) characters. For
 /// example there could a layer for upper body and a layer for lower body. Upper body layer could contain animations for aiming,
@@ -25,14 +25,14 @@ use fyrox_core::{find_by_name_mut, find_by_name_ref, NameProvider};
 /// # Example
 ///
 /// ```rust
-/// use fyrox_animation::{
+/// use i3m_animation::{
 ///     machine::{
 ///         State, Transition, PoseNode, MachineLayer,
 ///         Parameter, PlayAnimation, PoseWeight, BlendAnimations, BlendPose
 ///     },
 ///     core::pool::Handle
 /// };
-/// use fyrox_core::pool::ErasedHandle;
+/// use i3m_core::pool::ErasedHandle;
 ///
 /// // Assume that these are correct handles.
 /// let idle_animation = Handle::default();
@@ -237,8 +237,8 @@ impl<T: EntityId> MachineLayer<T> {
     /// # Example
     ///
     /// ```rust
-    /// use fyrox_animation::machine::{Event, MachineLayer};
-    /// use fyrox_core::pool::ErasedHandle;
+    /// use i3m_animation::machine::{Event, MachineLayer};
+    /// use i3m_core::pool::ErasedHandle;
     ///
     /// let mut layer = MachineLayer::<ErasedHandle>::new();
     ///

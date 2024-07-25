@@ -9,9 +9,9 @@
 //!
 //! ```
 //! use std::time::Duration;
-//! use fyrox_sound::context::SoundContext;
-//! use fyrox_sound::effects::reverb::Reverb;
-//! use fyrox_sound::effects::Effect;
+//! use i3m_sound::context::SoundContext;
+//! use i3m_sound::effects::reverb::Reverb;
+//! use i3m_sound::effects::Effect;
 //!
 //! fn set_reverberator(context: &mut SoundContext) {
 //!     let mut reverb = Reverb::new();
@@ -29,7 +29,7 @@ use crate::{
     dsp::filters::{AllPass, LpfComb},
     effects::EffectRenderTrait,
 };
-use fyrox_core::{reflect::prelude::*, visitor::prelude::*};
+use i3m_core::{reflect::prelude::*, visitor::prelude::*};
 
 #[derive(Default, Debug, Clone, PartialEq, Visit)]
 struct ChannelReverb {

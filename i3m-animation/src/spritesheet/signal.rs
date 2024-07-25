@@ -2,7 +2,7 @@
 //! started to play a specific frame.
 
 use crate::core::{reflect::prelude::*, visitor::prelude::*};
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 
 /// Animation signal is used as a point at which to notify external observers that animation just
 /// started to play a specific frame.

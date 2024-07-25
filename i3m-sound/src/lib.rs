@@ -10,14 +10,14 @@
 //!
 //! ## Examples
 //!
-//! Here is an example of how to play a sound using fyrox-sound:
+//! Here is an example of how to play a sound using i3m-sound:
 //!
 //! ```no_run
 //! use std::{
 //!     thread,
 //!     time::Duration
 //! };
-//! use fyrox_sound::{
+//! use i3m_sound::{
 //!     source::{
 //!         SoundSourceBuilder,
 //!         SoundSource,
@@ -29,12 +29,12 @@
 //!         SoundBufferResource
 //!     },
 //! };
-//! use fyrox_sound::buffer::SoundBufferResourceExtension;
-//! use fyrox_resource::io::FsResourceIo;
+//! use i3m_sound::buffer::SoundBufferResourceExtension;
+//! use i3m_resource::io::FsResourceIo;
 //!
 //!  let context = SoundContext::new();
 //!
-//!  let sound_buffer = SoundBufferResource::new_generic(fyrox_sound::futures::executor::block_on(DataSource::from_file("sound.wav", &FsResourceIo)).unwrap()).unwrap();
+//!  let sound_buffer = SoundBufferResource::new_generic(i3m_sound::futures::executor::block_on(DataSource::from_file("sound.wav", &FsResourceIo)).unwrap()).unwrap();
 //!
 //!  let source = SoundSourceBuilder::new()
 //!     .with_buffer(sound_buffer)
@@ -80,10 +80,10 @@ pub mod renderer;
 pub mod source;
 
 // Reexport some modules because there some types of them in public API.
-pub use fyrox_core::algebra;
-pub use fyrox_core::futures;
-pub use fyrox_core::math;
-pub use fyrox_core::pool;
 pub use hrtf;
+pub use i3m_core::algebra;
+pub use i3m_core::futures;
+pub use i3m_core::math;
+pub use i3m_core::pool;
 
 mod decoder;

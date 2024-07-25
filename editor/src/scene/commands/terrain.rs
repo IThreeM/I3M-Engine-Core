@@ -1,7 +1,7 @@
-use fyrox::scene::terrain::brushstroke::ChunkData;
+use i3m::scene::terrain::brushstroke::ChunkData;
 
 use crate::command::CommandContext;
-use crate::fyrox::{
+use crate::i3m::{
     core::pool::Handle,
     resource::texture::TextureResource,
     scene::{node::Node, terrain::Layer},

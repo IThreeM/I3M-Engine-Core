@@ -13,7 +13,7 @@ use crate::{
     engine::SerializationContext,
     resource::model::{Model, ModelImportOptions},
 };
-use fyrox_resource::state::LoadError;
+use i3m_resource::state::LoadError;
 use std::{path::PathBuf, sync::Arc};
 
 /// Default implementation for model loading.

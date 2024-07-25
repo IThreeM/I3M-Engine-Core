@@ -1,6 +1,6 @@
-use fyrox_sound::buffer::SoundBufferResourceExtension;
-use fyrox_sound::engine::SoundEngine;
-use fyrox_sound::{
+use i3m_sound::buffer::SoundBufferResourceExtension;
+use i3m_sound::engine::SoundEngine;
+use i3m_sound::{
     buffer::{DataSource, SoundBufferResource},
     context::SoundContext,
     source::{SoundSourceBuilder, Status},

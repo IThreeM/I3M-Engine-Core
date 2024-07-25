@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     asset::ResourceData,
     core::{log::Log, sstorage::ImmutableString},
     material::{shader::ShaderResource, Material, MaterialResource, PropertyValue},

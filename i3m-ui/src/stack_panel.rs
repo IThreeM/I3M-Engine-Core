@@ -13,9 +13,9 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, Orientation, UiNode, UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// A set of possible [`StackPanel`] widget messages.
@@ -38,7 +38,7 @@ impl StackPanelMessage {
 /// bottom or continue from left most to right most. The below example code places 3 text widgets into a vertical stack:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     UiNode, core::pool::Handle,
 /// #     BuildContext,
 /// #     widget::WidgetBuilder,
@@ -65,7 +65,7 @@ impl StackPanelMessage {
 ///             )
 ///     )
 ///         .build(ctx)
-///     
+///
 /// }
 /// ```
 ///
@@ -80,7 +80,7 @@ impl StackPanelMessage {
 /// with a [`Orientation`] enum value. **By default** all stack panels has [`Orientation::Vertical`].
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     Orientation,
 /// #     BuildContext,
 /// #     widget::WidgetBuilder,

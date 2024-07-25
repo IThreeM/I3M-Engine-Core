@@ -35,9 +35,9 @@ use std::{
 mod menu;
 mod selector;
 
-use fyrox_core::parking_lot::Mutex;
-use fyrox_core::uuid_provider;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::parking_lot::Mutex;
+use i3m_core::uuid_provider;
+use i3m_graph::BaseSceneGraph;
 use notify::Watcher;
 pub use selector::*;
 #[cfg(not(target_arch = "wasm32"))]
@@ -1080,8 +1080,8 @@ mod test {
         widget::WidgetBuilder,
         RcUiNodeHandle, UserInterface,
     };
-    use fyrox_core::algebra::Vector2;
-    use fyrox_core::parking_lot::Mutex;
+    use i3m_core::algebra::Vector2;
+    use i3m_core::parking_lot::Mutex;
     use std::path::PathBuf;
     use std::sync::Arc;
 

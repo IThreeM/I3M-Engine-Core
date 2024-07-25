@@ -20,7 +20,7 @@ use crate::{
         node::{Node, NodeTrait},
     },
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// Decal is an image that gets projected to a geometry of a scene. Blood splatters, bullet holes, scratches
@@ -58,7 +58,7 @@ use std::ops::{Deref, DerefMut};
 /// # Example
 ///
 /// ```
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #         asset::manager::ResourceManager,
 /// #         core::pool::Handle,
 /// #         scene::{
@@ -70,7 +70,7 @@ use std::ops::{Deref, DerefMut};
 /// #     },
 /// #     core::algebra::Vector3
 /// # };
-/// # use fyrox_impl::resource::texture::Texture;
+/// # use i3m_impl::resource::texture::Texture;
 ///
 /// fn create_bullet_hole(resource_manager: ResourceManager, graph: &mut Graph) -> Handle<Node> {
 ///     DecalBuilder::new(

@@ -105,7 +105,7 @@ fn prepare_source_code(code: &str, gl_kind: GlKind) -> String {
     let mut full_source_code = "#version 330 core\n// include 'shared.glsl'\n".to_owned();
 
     if gl_kind == GlKind::OpenGLES {
-        full_source_code += r#"    
+        full_source_code += r#"
             precision highp float;
             precision lowp usampler2D;
             precision lowp sampler3D;
@@ -432,54 +432,54 @@ fn fetch_built_in_uniform_locations(
     let mut locations = [INIT; BuiltInUniform::Count as usize];
 
     locations[BuiltInUniform::WorldMatrix as usize] =
-        fetch_uniform_location(state, program, "fyrox_worldMatrix");
+        fetch_uniform_location(state, program, "i3m_worldMatrix");
     locations[BuiltInUniform::ViewProjectionMatrix as usize] =
-        fetch_uniform_location(state, program, "fyrox_viewProjectionMatrix");
+        fetch_uniform_location(state, program, "i3m_viewProjectionMatrix");
     locations[BuiltInUniform::WorldViewProjectionMatrix as usize] =
-        fetch_uniform_location(state, program, "fyrox_worldViewProjection");
+        fetch_uniform_location(state, program, "i3m_worldViewProjection");
 
     locations[BuiltInUniform::BoneMatrices as usize] =
-        fetch_uniform_location(state, program, "fyrox_boneMatrices");
+        fetch_uniform_location(state, program, "i3m_boneMatrices");
     locations[BuiltInUniform::UseSkeletalAnimation as usize] =
-        fetch_uniform_location(state, program, "fyrox_useSkeletalAnimation");
+        fetch_uniform_location(state, program, "i3m_useSkeletalAnimation");
 
     locations[BuiltInUniform::CameraPosition as usize] =
-        fetch_uniform_location(state, program, "fyrox_cameraPosition");
+        fetch_uniform_location(state, program, "i3m_cameraPosition");
     locations[BuiltInUniform::CameraUpVector as usize] =
-        fetch_uniform_location(state, program, "fyrox_cameraUpVector");
+        fetch_uniform_location(state, program, "i3m_cameraUpVector");
     locations[BuiltInUniform::CameraSideVector as usize] =
-        fetch_uniform_location(state, program, "fyrox_cameraSideVector");
+        fetch_uniform_location(state, program, "i3m_cameraSideVector");
     locations[BuiltInUniform::ZNear as usize] =
-        fetch_uniform_location(state, program, "fyrox_zNear");
-    locations[BuiltInUniform::ZFar as usize] = fetch_uniform_location(state, program, "fyrox_zFar");
+        fetch_uniform_location(state, program, "i3m_zNear");
+    locations[BuiltInUniform::ZFar as usize] = fetch_uniform_location(state, program, "i3m_zFar");
 
     locations[BuiltInUniform::SceneDepth as usize] =
-        fetch_uniform_location(state, program, "fyrox_sceneDepth");
+        fetch_uniform_location(state, program, "i3m_sceneDepth");
 
     locations[BuiltInUniform::UsePOM as usize] =
-        fetch_uniform_location(state, program, "fyrox_usePOM");
+        fetch_uniform_location(state, program, "i3m_usePOM");
 
     locations[BuiltInUniform::BlendShapesStorage as usize] =
-        fetch_uniform_location(state, program, "fyrox_blendShapesStorage");
+        fetch_uniform_location(state, program, "i3m_blendShapesStorage");
     locations[BuiltInUniform::BlendShapesWeights as usize] =
-        fetch_uniform_location(state, program, "fyrox_blendShapesWeights");
+        fetch_uniform_location(state, program, "i3m_blendShapesWeights");
     locations[BuiltInUniform::BlendShapesCount as usize] =
-        fetch_uniform_location(state, program, "fyrox_blendShapesCount");
+        fetch_uniform_location(state, program, "i3m_blendShapesCount");
 
     locations[BuiltInUniform::LightCount as usize] =
-        fetch_uniform_location(state, program, "fyrox_lightCount");
+        fetch_uniform_location(state, program, "i3m_lightCount");
     locations[BuiltInUniform::LightsColorRadius as usize] =
-        fetch_uniform_location(state, program, "fyrox_lightsColorRadius");
+        fetch_uniform_location(state, program, "i3m_lightsColorRadius");
     locations[BuiltInUniform::LightsPosition as usize] =
-        fetch_uniform_location(state, program, "fyrox_lightsPosition");
+        fetch_uniform_location(state, program, "i3m_lightsPosition");
     locations[BuiltInUniform::LightsDirection as usize] =
-        fetch_uniform_location(state, program, "fyrox_lightsDirection");
+        fetch_uniform_location(state, program, "i3m_lightsDirection");
     locations[BuiltInUniform::LightsParameters as usize] =
-        fetch_uniform_location(state, program, "fyrox_lightsParameters");
+        fetch_uniform_location(state, program, "i3m_lightsParameters");
     locations[BuiltInUniform::AmbientLight as usize] =
-        fetch_uniform_location(state, program, "fyrox_ambientLightColor");
+        fetch_uniform_location(state, program, "i3m_ambientLightColor");
     locations[BuiltInUniform::LightPosition as usize] =
-        fetch_uniform_location(state, program, "fyrox_lightPosition");
+        fetch_uniform_location(state, program, "i3m_lightPosition");
 
     locations
 }

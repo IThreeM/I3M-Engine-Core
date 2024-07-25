@@ -188,7 +188,7 @@ pub trait BaseScript: Visit + Reflect + Send + Debug + 'static {
     ///
     /// ```rust
     /// use std::str::FromStr;
-    /// use fyrox_impl::{
+    /// use i3m_impl::{
     ///     core::visitor::prelude::*,
     ///     core::reflect::prelude::*,
     ///     core::uuid::Uuid,
@@ -306,7 +306,7 @@ pub struct ScriptContext<'a, 'b, 'c> {
     /// in a plugin and access it later in scripts. A simplest example would be something like this:
     ///
     /// ```rust
-    /// # use fyrox_impl::{
+    /// # use i3m_impl::{
     /// #     core::{reflect::prelude::*, type_traits::prelude::*, visitor::prelude::*},
     /// #     plugin::Plugin,
     /// #     script::{ScriptContext, ScriptTrait},
@@ -340,7 +340,7 @@ pub struct ScriptContext<'a, 'b, 'c> {
     /// Handle of a node to which the script instance belongs to. To access the node itself use `scene` field:
     ///
     /// ```rust
-    /// # use fyrox_impl::script::ScriptContext;
+    /// # use i3m_impl::script::ScriptContext;
     /// # fn foo(context: ScriptContext) {
     /// let node_mut = &mut context.scene.graph[context.handle];
     /// # }
@@ -420,7 +420,7 @@ pub struct ScriptMessageContext<'a, 'b, 'c> {
     /// Handle of a node to which the script instance belongs to. To access the node itself use `scene` field:
     ///
     /// ```rust
-    /// # use fyrox_impl::script::ScriptContext;
+    /// # use i3m_impl::script::ScriptContext;
     /// # fn foo(context: ScriptContext) {
     /// let node_mut = &mut context.scene.graph[context.handle];
     /// # }
@@ -589,7 +589,7 @@ pub trait ScriptTrait: BaseScript + ComponentProvider {
     /// explicitly. Usually it is done in [`ScriptTrait::on_start`] method:
     ///
     /// ```rust
-    /// use fyrox_impl::{
+    /// use i3m_impl::{
     ///     core::{reflect::prelude::*, uuid::Uuid, visitor::prelude::*, type_traits::prelude::*},
     ///     core::TypeUuidProvider,
     ///     script::ScriptTrait,
@@ -836,7 +836,7 @@ mod test {
         scene::base::Base,
         script::{Script, ScriptTrait},
     };
-    use fyrox_core::uuid_provider;
+    use i3m_core::uuid_provider;
 
     #[derive(Reflect, Visit, Debug, Clone, Default)]
     struct MyScript {

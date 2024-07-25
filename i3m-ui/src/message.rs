@@ -7,7 +7,7 @@ use crate::{
     core::{algebra::Vector2, pool::Handle, reflect::prelude::*, visitor::prelude::*},
     UiNode,
 };
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 use serde::{Deserialize, Serialize};
 use std::{any::Any, cell::Cell, fmt::Debug};
 use strum_macros::{AsRefStr, EnumString, VariantNames};
@@ -20,7 +20,7 @@ use strum_macros::{AsRefStr, EnumString, VariantNames};
 /// The following example shows how to create message constructors for various kinds of enum variants:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, define_constructor, message::MessageDirection, message::UiMessage, UiNode,
 /// #     UserInterface,
 /// # };
@@ -209,7 +209,7 @@ where
 /// ## Examples
 ///
 /// ```rust
-/// use fyrox_ui::{
+/// use i3m_ui::{
 ///     core::pool::Handle, define_constructor, message::MessageDirection, message::UiMessage, UiNode,
 ///     UserInterface,
 /// };
@@ -606,7 +606,7 @@ impl KeyboardModifiers {
 }
 
 /// Code of a key on keyboard. Shamelessly taken from `winit` source code to match their key codes with
-/// `fyrox-ui`'s.
+/// `i3m-ui`'s.
 #[derive(
     Debug,
     Hash,

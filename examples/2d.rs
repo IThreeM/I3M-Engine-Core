@@ -4,7 +4,7 @@
 //!
 //! This example shows simple 2D scene with light sources.
 
-use fyrox_impl::{
+use i3m_impl::{
     asset::manager::ResourceManager,
     core::{
         algebra::{UnitQuaternion, Vector3},

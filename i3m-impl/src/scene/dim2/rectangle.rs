@@ -29,8 +29,8 @@ use crate::{
     },
 };
 use bytemuck::{Pod, Zeroable};
-use fyrox_core::value_as_u8_slice;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::value_as_u8_slice;
+use i3m_graph::BaseSceneGraph;
 use std::{
     hash::{Hash, Hasher},
     ops::{Deref, DerefMut},
@@ -115,7 +115,7 @@ impl Hash for RectangleVertex {
 /// You could use it to set a texture for your rectangle:
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     core::sstorage::ImmutableString,
 /// #     material::{shader::SamplerFallback, PropertyValue},
 /// #     resource::texture::TextureResource,

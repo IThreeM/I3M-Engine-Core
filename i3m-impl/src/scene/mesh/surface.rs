@@ -226,7 +226,7 @@ impl ResourceData for SurfaceData {
     }
 
     fn type_uuid(&self) -> Uuid {
-        <SurfaceData as fyrox_core::TypeUuidProvider>::type_uuid()
+        <SurfaceData as i3m_core::TypeUuidProvider>::type_uuid()
     }
 
     fn save(&mut self, _path: &Path) -> Result<(), Box<dyn Error>> {
@@ -1159,7 +1159,7 @@ impl SurfaceResourceExtension for SurfaceResource {
 /// ## Examples
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     core::{
 /// #         algebra::{Vector2, Vector3, Vector4},
 /// #         math::TriangleDefinition,
@@ -1170,7 +1170,7 @@ impl SurfaceResourceExtension for SurfaceResource {
 /// #         vertex::StaticVertex,
 /// #     },
 /// # };
-/// use fyrox_resource::untyped::ResourceKind;
+/// use i3m_resource::untyped::ResourceKind;
 /// fn create_triangle_surface() -> Surface {
 ///     let vertex_buffer = VertexBuffer::new(
 ///         3,
@@ -1212,11 +1212,11 @@ impl SurfaceResourceExtension for SurfaceResource {
 /// [`SurfaceData`] to create complex 3D shapes:
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     core::algebra::Matrix4,
 /// #     scene::mesh::surface::{Surface, SurfaceBuilder, SurfaceData, SurfaceResource},
 /// # };
-/// use fyrox_resource::untyped::ResourceKind;
+/// use i3m_resource::untyped::ResourceKind;
 /// fn create_cone_surface() -> Surface {
 ///     SurfaceBuilder::new(SurfaceResource::new_ok(ResourceKind::Embedded, SurfaceData::make_cone(
 ///         16,

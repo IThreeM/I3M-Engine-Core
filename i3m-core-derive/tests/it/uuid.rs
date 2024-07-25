@@ -1,4 +1,4 @@
-use fyrox_core::type_traits::prelude::*;
+use i3m_core::type_traits::prelude::*;
 use std::marker::PhantomData;
 
 #[derive(TypeUuidProvider)]

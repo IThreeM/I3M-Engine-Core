@@ -14,8 +14,8 @@ use crate::{
     },
     Animation, AnimationContainer, AnimationEvent, AnimationPose, EntityId,
 };
-use fyrox_core::uuid::{uuid, Uuid};
-use fyrox_core::TypeUuidProvider;
+use i3m_core::uuid::{uuid, Uuid};
+use i3m_core::TypeUuidProvider;
 use spade::{DelaunayTriangulation, Point2, Triangulation};
 use std::cmp::Ordering;
 use std::{
@@ -435,7 +435,7 @@ mod test {
         core::{algebra::Vector2, math::TriangleDefinition},
         machine::node::blendspace::{BlendSpace, BlendSpacePoint},
     };
-    use fyrox_core::pool::ErasedHandle;
+    use i3m_core::pool::ErasedHandle;
 
     #[test]
     fn test_blend_space_triangulation() {

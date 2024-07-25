@@ -3,15 +3,15 @@
 //! Graph utilities and common algorithms.
 
 use fxhash::FxHashMap;
-use fyrox_core::pool::ErasedHandle;
-use fyrox_core::{
+use i3m_core::pool::ErasedHandle;
+use i3m_core::{
     log::{Log, MessageKind},
     pool::Handle,
     reflect::prelude::*,
     variable::{self, InheritableVariable},
     ComponentProvider, NameProvider,
 };
-use fyrox_resource::{untyped::UntypedResource, Resource, TypedResourceData};
+use i3m_resource::{untyped::UntypedResource, Resource, TypedResourceData};
 use std::any::Any;
 use std::cmp::Ordering;
 use std::fmt::Debug;
@@ -649,7 +649,7 @@ pub trait BaseSceneGraph: AbstractSceneGraph {
     ///   |_A_
     ///   |   |_B
     ///   |_Root
-    /// ```    
+    /// ```
     ///
     /// This method returns an instance of [`LinkScheme`], that could be used to revert the hierarchy
     /// back to its original. See [`Self::apply_link_scheme`] for more info.
@@ -1352,15 +1352,15 @@ mod test {
         AbstractSceneGraph, AbstractSceneNode, BaseSceneGraph, NodeMapping, PrefabData, SceneGraph,
         SceneGraphNode,
     };
-    use fyrox_core::pool::ErasedHandle;
-    use fyrox_core::{
+    use i3m_core::pool::ErasedHandle;
+    use i3m_core::{
         pool::{Handle, Pool},
         reflect::prelude::*,
         type_traits::prelude::*,
         visitor::prelude::*,
         NameProvider,
     };
-    use fyrox_resource::{Resource, ResourceData};
+    use i3m_resource::{Resource, ResourceData};
     use std::{
         any::Any,
         error::Error,

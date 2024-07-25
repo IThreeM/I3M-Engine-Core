@@ -58,7 +58,7 @@ use crate::{
     window::{Window, WindowBuilder},
 };
 use fxhash::{FxHashMap, FxHashSet};
-use fyrox_sound::{
+use i3m_sound::{
     buffer::{loader::SoundBufferLoader, SoundBuffer},
     renderer::hrtf::{HrirSphereLoader, HrirSphereResourceData},
 };
@@ -103,12 +103,12 @@ use crate::scene::mesh::surface;
 use crate::scene::mesh::surface::{SurfaceData, SurfaceDataLoader};
 use crate::scene::tilemap::brush::{TileMapBrush, TileMapBrushLoader};
 use crate::scene::tilemap::tileset::{TileSet, TileSetLoader};
-use fyrox_core::futures::future::join_all;
-use fyrox_core::notify;
-use fyrox_core::notify::{EventKind, RecursiveMode, Watcher};
-use fyrox_resource::state::ResourceState;
-use fyrox_ui::constructor::WidgetConstructorContainer;
-use fyrox_ui::UiContainer;
+use i3m_core::futures::future::join_all;
+use i3m_core::notify;
+use i3m_core::notify::{EventKind, RecursiveMode, Watcher};
+use i3m_resource::state::ResourceState;
+use i3m_ui::constructor::WidgetConstructorContainer;
+use i3m_ui::UiContainer;
 use winit::{
     dpi::{Position, Size},
     event_loop::EventLoopWindowTarget,
@@ -234,7 +234,7 @@ struct SceneLoadingOptions {
 /// ## Examples
 ///
 /// ```rust
-/// use fyrox_impl::{
+/// use i3m_impl::{
 ///     core::{color::Color, visitor::prelude::*, reflect::prelude::*, log::Log, pool::Handle},
 ///     plugin::{Plugin, PluginContext},
 ///     scene::Scene,
@@ -1299,7 +1299,7 @@ impl Engine {
     /// # Examples
     ///
     /// ```no_run
-    /// # use fyrox_impl::{
+    /// # use i3m_impl::{
     /// #     asset::manager::ResourceManager,
     /// #     engine::{
     /// #         Engine, EngineInitParams, GraphicsContextParams,
@@ -1309,7 +1309,7 @@ impl Engine {
     /// #     window::WindowAttributes,
     /// # };
     /// # use std::sync::Arc;
-    /// # use fyrox_core::task::TaskPool;
+    /// # use i3m_core::task::TaskPool;
     ///
     /// let mut window_attributes = WindowAttributes::default();
     /// window_attributes.title = "Some title".to_string();
@@ -2505,9 +2505,9 @@ impl Engine {
     }
 
     /// Tries to add a new dynamic plugin. This method attempts to load a dynamic library by the
-    /// given path and searches for `fyrox_plugin` function. This function is called to create a
+    /// given path and searches for `i3m_plugin` function. This function is called to create a
     /// plugin instance. This method will fail if there's no dynamic library at the given path or
-    /// the `fyrox_plugin` function is not found.
+    /// the `i3m_plugin` function is not found.
     ///
     /// # Hot reloading
     ///
@@ -2937,7 +2937,7 @@ mod test {
             ScriptTrait,
         },
     };
-    use fyrox_ui::UiContainer;
+    use i3m_ui::UiContainer;
     use std::sync::{
         mpsc::{self, Sender, TryRecvError},
         Arc,

@@ -3,7 +3,7 @@ use crate::{
         item::AssetItemMessage, preview::AssetPreviewGeneratorsCollection,
         preview::AssetPreviewTexture,
     },
-    fyrox::{
+    i3m::{
         asset::untyped::{ResourceKind, UntypedResource},
         core::pool::Handle,
         engine::Engine,

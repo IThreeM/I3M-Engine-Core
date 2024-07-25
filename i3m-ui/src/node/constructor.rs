@@ -49,7 +49,7 @@ use crate::{
     Control, UiNode,
 };
 use fxhash::FxHashMap;
-use fyrox_core::parking_lot::MutexGuard;
+use i3m_core::parking_lot::MutexGuard;
 use std::any::{Any, TypeId};
 
 /// Node constructor.

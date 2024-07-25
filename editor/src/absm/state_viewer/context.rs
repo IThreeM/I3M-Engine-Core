@@ -1,5 +1,5 @@
-use crate::fyrox::graph::SceneGraphNode;
-use crate::fyrox::{
+use crate::i3m::graph::SceneGraphNode;
+use crate::i3m::{
     core::{algebra::Vector2, pool::Handle},
     generic_animation::machine::{
         node::{blendspace::BlendSpace, blendspace::BlendSpacePoint, BasePoseNode},
@@ -33,7 +33,7 @@ use crate::{
     message::MessageSender,
     scene::{commands::ChangeSelectionCommand, Selection},
 };
-use fyrox::gui::menu::ContextMenuBuilder;
+use i3m::gui::menu::ContextMenuBuilder;
 
 pub struct CanvasContextMenu {
     create_play_animation: Handle<UiNode>,

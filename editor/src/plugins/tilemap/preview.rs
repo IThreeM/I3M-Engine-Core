@@ -1,6 +1,6 @@
 use crate::{
     asset::preview::{render_ui_to_texture, AssetPreviewGenerator, AssetPreviewTexture},
-    fyrox::{
+    i3m::{
         asset::{manager::ResourceManager, untyped::UntypedResource},
         core::{algebra::Vector2, pool::Handle},
         engine::Engine,

@@ -1,5 +1,5 @@
 use crate::{
-    fyrox::{
+    i3m::{
         core::{
             color::Color,
             log::{Log, LogMessage, MessageKind},
@@ -36,7 +36,7 @@ use crate::{
     Message,
 };
 use cargo_metadata::{camino::Utf8Path, Metadata};
-use fyrox::graph::SceneGraph;
+use i3m::graph::SceneGraph;
 use std::{
     ffi::OsStr,
     fmt::{Display, Formatter},

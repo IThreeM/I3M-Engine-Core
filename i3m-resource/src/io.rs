@@ -1,7 +1,7 @@
 //! Provides an interface for IO operations that a resource loader will use, this facilliates
 //! things such as loading assets within archive files
 
-use fyrox_core::io::FileLoadError;
+use i3m_core::io::FileLoadError;
 use std::future::{ready, Future};
 use std::iter::empty;
 use std::pin::Pin;
@@ -117,7 +117,7 @@ impl ResourceIo for FsResourceIo {
         &'a self,
         path: &'a Path,
     ) -> ResourceIoFuture<'a, Result<Vec<u8>, FileLoadError>> {
-        Box::pin(fyrox_core::io::load_file(path))
+        Box::pin(i3m_core::io::load_file(path))
     }
 
     fn move_file<'a>(
@@ -197,14 +197,14 @@ impl ResourceIo for FsResourceIo {
     }
 
     fn exists<'a>(&'a self, path: &'a Path) -> ResourceIoFuture<'a, bool> {
-        Box::pin(fyrox_core::io::exists(path))
+        Box::pin(i3m_core::io::exists(path))
     }
 
     fn is_file<'a>(&'a self, path: &'a Path) -> ResourceIoFuture<'a, bool> {
-        Box::pin(fyrox_core::io::is_file(path))
+        Box::pin(i3m_core::io::is_file(path))
     }
 
     fn is_dir<'a>(&'a self, path: &'a Path) -> ResourceIoFuture<'a, bool> {
-        Box::pin(fyrox_core::io::is_dir(path))
+        Box::pin(i3m_core::io::is_dir(path))
     }
 }

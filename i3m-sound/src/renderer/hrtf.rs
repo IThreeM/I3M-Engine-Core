@@ -19,9 +19,9 @@
 //! To use HRTF you need to change default renderer to HRTF renderer like so:
 //!
 //! ```no_run
-//! use fyrox_sound::context::{self, SoundContext};
-//! use fyrox_sound::renderer::hrtf::{HrirSphereResource, HrirSphereResourceExt, HrtfRenderer};
-//! use fyrox_sound::renderer::Renderer;
+//! use i3m_sound::context::{self, SoundContext};
+//! use i3m_sound::renderer::hrtf::{HrirSphereResource, HrirSphereResourceExt, HrtfRenderer};
+//! use i3m_sound::renderer::Renderer;
 //! use std::path::{Path, PathBuf};
 //! use hrtf::HrirSphere;
 //!
@@ -58,15 +58,15 @@ use crate::{
     renderer::render_source_2d_only,
     source::SoundSource,
 };
-use fyrox_core::{
+use i3m_core::{
     log::Log,
     reflect::prelude::*,
     uuid::{uuid, Uuid},
     visitor::{Visit, VisitResult, Visitor},
     TypeUuidProvider,
 };
-use fyrox_resource::untyped::ResourceKind;
-use fyrox_resource::{
+use i3m_resource::untyped::ResourceKind;
+use i3m_resource::{
     io::ResourceIo,
     loader::{BoxedLoaderFuture, LoaderPayload, ResourceLoader},
     state::LoadError,

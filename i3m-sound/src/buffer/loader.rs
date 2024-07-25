@@ -1,8 +1,8 @@
 //! Sound buffer loader.
 
 use crate::buffer::{DataSource, SoundBuffer};
-use fyrox_core::{reflect::prelude::*, uuid::Uuid, TypeUuidProvider};
-use fyrox_resource::{
+use i3m_core::{reflect::prelude::*, uuid::Uuid, TypeUuidProvider};
+use i3m_resource::{
     io::ResourceIo,
     loader::{BoxedImportOptionsLoaderFuture, BoxedLoaderFuture, LoaderPayload, ResourceLoader},
     options::{

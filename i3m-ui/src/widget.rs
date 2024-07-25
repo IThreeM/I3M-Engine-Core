@@ -19,9 +19,9 @@ use crate::{
     HorizontalAlignment, LayoutEvent, MouseButton, MouseState, RcUiNodeHandle, Thickness, UiNode,
     UserInterface, VerticalAlignment, BRUSH_FOREGROUND, BRUSH_PRIMARY,
 };
-use fyrox_core::{parking_lot::Mutex, variable::InheritableVariable};
-use fyrox_graph::BaseSceneGraph;
-use fyrox_resource::Resource;
+use i3m_core::{parking_lot::Mutex, variable::InheritableVariable};
+use i3m_graph::BaseSceneGraph;
+use i3m_resource::Resource;
 use std::{
     any::Any,
     cell::{Cell, RefCell},
@@ -173,13 +173,13 @@ pub enum WidgetMessage {
     Name(String),
 
     /// A request to set width of a widget. In most cases there is no need to explicitly set width of a widget,
-    /// because fyrox-ui uses automatic layout engine which will correctly calculate desired width of a widget.
+    /// because i3m-ui uses automatic layout engine which will correctly calculate desired width of a widget.
     ///
     /// Direction: **From/To UI**
     Width(f32),
 
     /// A request to set height of a widget. In most cases there is no need to explicitly set height of a widget,
-    /// because fyrox-ui uses automatic layout engine which will correctly calculate desired height of a widget.
+    /// because i3m-ui uses automatic layout engine which will correctly calculate desired height of a widget.
     ///
     /// Direction: **From/To UI**
     Height(f32),

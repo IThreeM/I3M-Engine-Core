@@ -16,7 +16,7 @@ rust-version = "1.72"
 
 [dependencies]
 i3m-core-derive = { path = "../i3m-core-derive", version = "0.23.0" }
-fyrox-math = { path = "../fyrox-math", version = "0.2.0" }
+i3m-math = { path = "../i3m-math", version = "0.2.0" }
 base64 = "0.22.1"
 byteorder = "1.4.3"
 rand = "0.8.4"

@@ -56,7 +56,7 @@ use crate::{
 };
 use asset::io::ResourceIo;
 use fxhash::FxHashSet;
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::variable::InheritableVariable;
 use std::{
     fmt::{Display, Formatter},
     ops::{Index, IndexMut},
@@ -483,7 +483,7 @@ impl Scene {
     /// ## Example
     ///
     /// ```rust,no_run
-    /// # use fyrox_impl::{
+    /// # use i3m_impl::{
     /// #     core::visitor::Visitor,
     /// #     scene::{
     /// #         base::BaseBuilder,
@@ -494,7 +494,7 @@ impl Scene {
     /// #         Scene,
     /// #     },
     /// # };
-    /// use fyrox_resource::untyped::ResourceKind;
+    /// use i3m_resource::untyped::ResourceKind;
     /// #
     /// // Create a scene.
     /// let mut scene = Scene::new();

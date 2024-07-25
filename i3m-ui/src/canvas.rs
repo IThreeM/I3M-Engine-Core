@@ -18,7 +18,7 @@ use std::ops::{Deref, DerefMut};
 /// Canvas widget allows its children to have an arbitrary position on an imaginable infinite plane, it also
 /// gives the children constraints of infinite size, which forces them to take all the desired size. This widget
 /// could be used when you need to have an ability to put widgets at arbitrary positions. Canvas widget is the
-/// root widget of the widget hierarchy used in `fyrox-ui`.
+/// root widget of the widget hierarchy used in `i3m-ui`.
 ///
 /// ## Examples
 ///
@@ -26,7 +26,7 @@ use std::ops::{Deref, DerefMut};
 /// to [`WidgetBuilder`]:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     button::ButtonBuilder, canvas::CanvasBuilder, core::pool::Handle, text::TextBuilder,
 /// #     widget::WidgetBuilder, BuildContext, UiNode,
 /// # };

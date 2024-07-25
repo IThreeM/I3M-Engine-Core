@@ -2,7 +2,7 @@
 //! [`HorizontalAlignment`] and [`VerticalAlignment`]. Check the docs for them for more info.
 
 use crate::core::{reflect::prelude::*, visitor::prelude::*};
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 
 /// Horizontal alignment defines relative location and size of the widget to its parent widget along horizontal

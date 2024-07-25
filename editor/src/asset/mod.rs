@@ -8,7 +8,7 @@ use crate::{
             AssetPreviewGeneratorsCollection,
         },
     },
-    fyrox::{
+    i3m::{
         asset::{
             manager::ResourceManager,
             state::ResourceState,
@@ -931,7 +931,7 @@ impl AssetBrowser {
                             }
                         }
 
-                        for dir in fyrox::walkdir::WalkDir::new(path).into_iter().flatten() {
+                        for dir in i3m::walkdir::WalkDir::new(path).into_iter().flatten() {
                             if let Some(extension) = dir.path().extension() {
                                 if is_supported_resource(extension, &engine.resource_manager) {
                                     let file_stem = dir

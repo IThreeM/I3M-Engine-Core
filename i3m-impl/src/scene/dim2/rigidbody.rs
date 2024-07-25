@@ -30,7 +30,7 @@ use crate::{
         Scene,
     },
 };
-use fyrox_graph::{BaseSceneGraph, SceneGraph};
+use i3m_graph::{BaseSceneGraph, SceneGraph};
 use rapier2d::prelude::RigidBodyHandle;
 use std::{
     cell::Cell,
@@ -267,7 +267,7 @@ impl RigidBody {
         self.translation_locked.set_value_and_mark_modified(state)
     }
 
-    /// Returns true if translation is locked, false - otherwise.    
+    /// Returns true if translation is locked, false - otherwise.
     pub fn is_translation_locked(&self) -> bool {
         *self.translation_locked
     }

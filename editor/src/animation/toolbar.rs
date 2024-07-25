@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     asset::manager::ResourceManager,
     core::{
         algebra::Vector2, futures::executor::block_on, log::Log, math::Rect, pool::ErasedHandle,

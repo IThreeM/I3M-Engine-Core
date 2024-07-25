@@ -16,8 +16,8 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::uuid_provider;
+use i3m_graph::BaseSceneGraph;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages, that is used to modify the state of a scroll panel.
@@ -58,7 +58,7 @@ impl ScrollPanelMessage {
 /// ## Examples
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     button::ButtonBuilder,
 /// #     core::{algebra::Vector2, pool::Handle},
 /// #     grid::{Column, GridBuilder, Row},
@@ -101,7 +101,7 @@ impl ScrollPanelMessage {
 /// Scrolling value for both axes can be set via [`ScrollPanelMessage::VerticalScroll`] and [`ScrollPanelMessage::HorizontalScroll`]:
 ///
 /// ```rust
-/// use fyrox_ui::{
+/// use i3m_ui::{
 ///     core::pool::Handle, message::MessageDirection, scroll_panel::ScrollPanelMessage, UiNode,
 ///     UserInterface,
 /// };
@@ -129,7 +129,7 @@ impl ScrollPanelMessage {
 /// Calculates the scroll values to bring a desired child into view, it can be used for automatic navigation:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, message::MessageDirection, scroll_panel::ScrollPanelMessage, UiNode,
 /// #     UserInterface,
 /// # };

@@ -33,7 +33,7 @@ use std::{
 /// will always be centered in the current screen bounds.
 ///
 /// ```rust
-/// use fyrox_ui::{
+/// use i3m_ui::{
 ///     core::pool::Handle,
 ///     button::ButtonBuilder,
 ///     grid::{Column, GridBuilder, Row},

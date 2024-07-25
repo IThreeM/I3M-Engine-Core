@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::{log::Log, pool::Handle},
     gui::{menu::MenuItemMessage, message::UiMessage, BuildContext, UiNode},
 };
@@ -39,9 +39,9 @@ impl HelpMenu {
     pub fn handle_ui_message(&mut self, message: &UiMessage) {
         if let Some(MenuItemMessage::Click) = message.data::<MenuItemMessage>() {
             if message.destination() == self.open_book {
-                Log::verify(open::that("https://fyrox-book.github.io"));
+                Log::verify(open::that("https://i3m-book.github.io"));
             } else if message.destination() == self.open_api_reference {
-                Log::verify(open::that("https://docs.rs/fyrox/latest"));
+                Log::verify(open::that("https://docs.rs/i3m/latest"));
             }
         }
     }

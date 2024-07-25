@@ -11,8 +11,8 @@ use crate::{
     Thickness,
 };
 use bytemuck::{Pod, Zeroable};
-use fyrox_core::math::round_to_step;
-use fyrox_resource::untyped::UntypedResource;
+use i3m_core::math::round_to_step;
+use i3m_resource::untyped::UntypedResource;
 use std::ops::Range;
 
 #[derive(Clone, Copy, Debug, Pod, Zeroable)]

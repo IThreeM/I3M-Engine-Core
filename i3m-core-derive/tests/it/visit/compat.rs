@@ -1,6 +1,6 @@
 //! Fight the compatibility hell with attributes! .. someday :)
 
-use fyrox_core::visitor::prelude::*;
+use i3m_core::visitor::prelude::*;
 
 // Comment it out and make sure it panics
 // #[derive(Debug, Clone, PartialEq, Visit)]

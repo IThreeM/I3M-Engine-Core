@@ -14,8 +14,8 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
 use std::ops::{Deref, DerefMut};
 use strum_macros::{AsRefStr, EnumString, VariantNames};
 
@@ -27,7 +27,7 @@ pub enum Primitive {
         /// Points of the triangle in local coordinates.
         points: [Vector2<f32>; 3],
     },
-    /// A line of fixed thickness between two points.  
+    /// A line of fixed thickness between two points.
     Line {
         /// Beginning of the line in local coordinates.
         begin: Vector2<f32>,
@@ -140,7 +140,7 @@ impl Primitive {
 /// The following example creates a cross shape with given size and thickness:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{algebra::Vector2, pool::Handle},
 /// #     vector_image::{Primitive, VectorImageBuilder},
 /// #     widget::WidgetBuilder,

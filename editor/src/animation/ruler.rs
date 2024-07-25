@@ -1,5 +1,5 @@
-use crate::fyrox::graph::BaseSceneGraph;
-use crate::fyrox::{
+use crate::i3m::graph::BaseSceneGraph;
+use crate::i3m::{
     core::{
         algebra::{Point2, Vector2},
         math::Rect,
@@ -24,8 +24,8 @@ use crate::fyrox::{
     },
 };
 use crate::menu::create_menu_item;
-use fyrox::gui::curve::{CurveTransformCell, STANDARD_GRID_SIZE};
-use fyrox::gui::menu::ContextMenuBuilder;
+use i3m::gui::curve::{CurveTransformCell, STANDARD_GRID_SIZE};
+use i3m::gui::menu::ContextMenuBuilder;
 use std::{
     cell::{Cell, RefCell},
     fmt::{Debug, Formatter},

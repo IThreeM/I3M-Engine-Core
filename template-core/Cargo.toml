@@ -1,11 +1,11 @@
 [package]
-name = "fyrox-template-core"
+name = "i3m-template-core"
 version = "0.11.0"
 edition = "2021"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 license = "MIT"
 description = "Project template generator for Fyrox engine"
-keywords = ["fyrox", "game", "project"]
+keywords = ["i3m", "game", "project"]
 categories = ["game-development"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
 homepage = "https://ithreem.com"

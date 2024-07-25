@@ -1,5 +1,5 @@
-use crate::fyrox::gui::selector::SelectorBuilder;
-use crate::fyrox::{
+use crate::i3m::gui::selector::SelectorBuilder;
+use crate::i3m::{
     core::pool::Handle,
     fxhash::FxHashMap,
     gui::{

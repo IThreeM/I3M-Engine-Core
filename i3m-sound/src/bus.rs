@@ -2,7 +2,7 @@
 //! for more info and examples
 
 use crate::effects::{Effect, EffectRenderTrait};
-use fyrox_core::{
+use i3m_core::{
     pool::{Handle, Pool, Ticket},
     reflect::prelude::*,
     visitor::prelude::*,
@@ -266,9 +266,9 @@ impl AudioBus {
 /// of a such binding is something like this:
 ///
 /// ```rust
-/// # use fyrox_sound::bus::AudioBus;
-/// # use fyrox_sound::context::SoundContext;
-/// # use fyrox_sound::source::SoundSourceBuilder;
+/// # use i3m_sound::bus::AudioBus;
+/// # use i3m_sound::context::SoundContext;
+/// # use i3m_sound::source::SoundSourceBuilder;
 /// let context = SoundContext::new();
 /// let mut state = context.state();
 ///
@@ -308,7 +308,7 @@ impl AudioBusGraph {
     /// # Examples
     ///
     /// ```rust
-    /// use fyrox_sound::bus::{AudioBus, AudioBusGraph};
+    /// use i3m_sound::bus::{AudioBus, AudioBusGraph};
     ///
     /// // By default it has one primary audio bus.
     /// let mut graph = AudioBusGraph::new();

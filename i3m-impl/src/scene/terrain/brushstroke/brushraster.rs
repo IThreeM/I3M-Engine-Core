@@ -5,7 +5,7 @@
 //!
 //! This rasterization tool is used by the UI to convert mouse events into pixel messages
 //! that get sent to the brush painting thread.
-use fyrox_core::math::segment::LineSegment2;
+use i3m_core::math::segment::LineSegment2;
 
 use crate::core::{
     algebra::{Matrix2, Vector2},

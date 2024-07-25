@@ -11,8 +11,8 @@ use crate::{
     context::DistanceModel, listener::Listener, math, renderer::hrtf::HrtfRenderer,
     source::SoundSource,
 };
-use fyrox_core::math::lerpf;
-use fyrox_core::{
+use i3m_core::math::lerpf;
+use i3m_core::{
     reflect::prelude::*,
     uuid_provider,
     visitor::{Visit, VisitResult, Visitor},

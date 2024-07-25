@@ -65,7 +65,7 @@ impl ButtonMessage {
 /// To create a simple button with text you should do something like this:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     button::ButtonBuilder, widget::WidgetBuilder, UiNode, UserInterface
 /// # };
@@ -80,7 +80,7 @@ impl ButtonMessage {
 /// queue and check if there's [`ButtonMessage::Click`] message from your button:
 ///
 /// ```rust
-/// # use fyrox_ui::{button::ButtonMessage, core::pool::Handle, message::UiMessage};
+/// # use i3m_ui::{button::ButtonMessage, core::pool::Handle, message::UiMessage};
 /// fn on_ui_message(message: &UiMessage) {
 /// #   let your_button_handle = Handle::NONE;
 ///     if let Some(ButtonMessage::Click) = message.data() {

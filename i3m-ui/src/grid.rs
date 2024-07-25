@@ -14,7 +14,7 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_graph::BaseSceneGraph;
+use i3m_graph::BaseSceneGraph;
 use std::{
     cell::RefCell,
     ops::{Deref, DerefMut},
@@ -127,7 +127,7 @@ pub type Row = GridDimension;
 /// Here is a simple example that positions several text widgets into a 2 by 2 grid:
 ///
 /// ```rust,no_run
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     UiNode, core::pool::Handle,
 /// #     BuildContext,
 /// #     widget::WidgetBuilder,

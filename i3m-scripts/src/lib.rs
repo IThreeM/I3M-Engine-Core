@@ -1,7 +1,7 @@
 //! A set of useful scripts that can be used to in your game.
 
 use crate::camera::FlyingCameraController;
-use fyrox::script::constructor::ScriptConstructorContainer;
+use i3m::script::constructor::ScriptConstructorContainer;
 
 pub mod camera;
 
@@ -9,7 +9,7 @@ pub mod camera;
 /// available scripts at once. Typical usage could be like this:
 ///
 /// ```rust,no_run
-/// # use fyrox::{
+/// # use i3m::{
 /// #     core::pool::Handle, core::visitor::prelude::*, core::reflect::prelude::*,
 /// #     plugin::{Plugin, PluginContext, PluginRegistrationContext},
 /// #     scene::Scene,
@@ -21,7 +21,7 @@ pub mod camera;
 /// # impl Plugin for Game {
 ///   // This is PluginConstructor::register method of your GameConstructor.
 ///   fn register(&self, context: PluginRegistrationContext) {
-///       fyrox_scripts::register(&context.serialization_context.script_constructors)
+///       i3m_scripts::register(&context.serialization_context.script_constructors)
 ///   }
 /// # }
 /// ```

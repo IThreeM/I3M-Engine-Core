@@ -9,7 +9,7 @@ use crate::{
     },
     scene::mesh::surface::{SurfaceData, SurfaceResource},
 };
-use fyrox_core::log::Log;
+use i3m_core::log::Log;
 
 struct SurfaceRenderData {
     buffer: GeometryBuffer,

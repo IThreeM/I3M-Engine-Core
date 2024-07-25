@@ -1,5 +1,5 @@
 use crate::{
-    fyrox::{
+    i3m::{
         core::{color::Color, math::Rect, pool::Handle, uuid::Uuid},
         engine::Engine,
         fxhash::FxHashMap,

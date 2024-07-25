@@ -5,8 +5,8 @@ use crate::core::{
     visitor::prelude::*, TypeUuidProvider,
 };
 use fxhash::FxHashMap;
-use fyrox_resource::untyped::UntypedResource;
-use fyrox_resource::{io::ResourceIo, Resource, ResourceData};
+use i3m_resource::untyped::UntypedResource;
+use i3m_resource::{io::ResourceIo, Resource, ResourceData};
 use lazy_static::lazy_static;
 use std::fmt::Formatter;
 use std::{
@@ -225,7 +225,7 @@ impl From<f32> for FontHeight {
 
 impl PartialEq for FontHeight {
     fn eq(&self, other: &Self) -> bool {
-        fyrox_core::value_as_u8_slice(&self.0) == fyrox_core::value_as_u8_slice(&other.0)
+        i3m_core::value_as_u8_slice(&self.0) == i3m_core::value_as_u8_slice(&other.0)
     }
 }
 
@@ -235,7 +235,7 @@ impl Hash for FontHeight {
     fn hash<H: Hasher>(&self, state: &mut H) {
         // Don't care about "genius" Rust decision to make f32 non-hashable. If a user is dumb enough
         // to put NaN or any other special value as a glyph height, then it is their choice.
-        fyrox_core::hash_as_bytes(&self.0, state)
+        i3m_core::hash_as_bytes(&self.0, state)
     }
 }
 

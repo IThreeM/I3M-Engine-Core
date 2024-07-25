@@ -3,7 +3,7 @@ use crate::{
     core::{color::Color, math::Rect, reflect::prelude::*, visitor::prelude::*},
     renderer::framework::framebuffer::{CullFace, DrawParameters},
 };
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 use glow::{Framebuffer, HasContext};
 use serde::{Deserialize, Serialize};
 use std::cell::RefCell;

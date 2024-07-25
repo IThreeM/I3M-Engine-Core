@@ -40,9 +40,9 @@ pub struct Line {
 /// So typical usage would be:
 ///
 /// ```
-/// # use fyrox_impl::scene::debug::SceneDrawingContext;
-/// # use fyrox_impl::core::algebra::Matrix4;
-/// # use fyrox_impl::core::color::Color;
+/// # use i3m_impl::scene::debug::SceneDrawingContext;
+/// # use i3m_impl::core::algebra::Matrix4;
+/// # use i3m_impl::core::color::Color;
 ///
 /// fn draw_debug_objects(ctx: &mut SceneDrawingContext) {
 ///     // Clear at the beginning of the frame.

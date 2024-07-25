@@ -1,6 +1,6 @@
 use crate::command::{Command, CommandGroup};
-use crate::fyrox::graph::{BaseSceneGraph, SceneGraph};
-use crate::fyrox::{
+use crate::i3m::graph::{BaseSceneGraph, SceneGraph};
+use crate::i3m::{
     core::{
         algebra::{UnitQuaternion, Vector3},
         log::Log,
@@ -1185,7 +1185,7 @@ impl RagdollWizard {
 
                 let ctx = ui
                     .node(self.inspector)
-                    .cast::<fyrox::gui::inspector::Inspector>()
+                    .cast::<i3m::gui::inspector::Inspector>()
                     .unwrap()
                     .context()
                     .clone();

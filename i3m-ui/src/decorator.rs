@@ -17,8 +17,8 @@ use crate::{
     BuildContext, Control, UiNode, UserInterface, BRUSH_BRIGHT, BRUSH_DARKER, BRUSH_LIGHT,
     BRUSH_LIGHTER, BRUSH_LIGHTEST,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages that is used to modify [`Decorator`] widgets state.
@@ -74,7 +74,7 @@ impl DecoratorMessage {
 /// ## Example
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     border::BorderBuilder,
 /// #     brush::Brush,
 /// #     core::{color::Color, pool::Handle},

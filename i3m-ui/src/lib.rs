@@ -141,7 +141,7 @@
 //! A simple usage example could be the following code:
 //!
 //! ```rust
-//! use fyrox_ui::{
+//! use i3m_ui::{
 //!     button::{ButtonBuilder, ButtonMessage},
 //!     core::algebra::Vector2,
 //!     widget::WidgetBuilder,
@@ -180,7 +180,7 @@
 #![allow(clippy::type_complexity)]
 
 pub use copypasta;
-pub use fyrox_core as core;
+pub use i3m_core as core;
 use message::TouchPhase;
 
 pub mod absm;
@@ -272,7 +272,7 @@ use crate::{
 };
 use copypasta::ClipboardContext;
 use fxhash::{FxHashMap, FxHashSet};
-use fyrox_resource::{
+use i3m_resource::{
     io::FsResourceIo, io::ResourceIo, manager::ResourceManager, untyped::UntypedResource, Resource,
     ResourceData,
 };
@@ -297,17 +297,17 @@ use strum_macros::{AsRefStr, EnumString, VariantNames};
 pub use alignment::*;
 pub use build::*;
 pub use control::*;
-use fyrox_core::futures::future::join_all;
-use fyrox_core::log::Log;
-use fyrox_graph::{
+use i3m_core::futures::future::join_all;
+use i3m_core::log::Log;
+use i3m_graph::{
     AbstractSceneGraph, AbstractSceneNode, BaseSceneGraph, NodeHandleMap, NodeMapping, PrefabData,
     SceneGraph, SceneGraphNode,
 };
 pub use node::*;
 pub use thickness::*;
 
-pub use fyrox_animation as generic_animation;
-use fyrox_core::pool::ErasedHandle;
+pub use i3m_animation as generic_animation;
+use i3m_core::pool::ErasedHandle;
 
 // TODO: Make this part of UserInterface struct.
 pub const COLOR_COAL_BLACK: Color = Color::opaque(10, 10, 10);
@@ -2983,7 +2983,7 @@ impl UserInterface {
     /// such field will be ignored!
     pub fn collect_used_resources(&self) -> FxHashSet<UntypedResource> {
         let mut collection = FxHashSet::default();
-        fyrox_resource::collect_used_resources(self, &mut collection);
+        i3m_resource::collect_used_resources(self, &mut collection);
         collection
     }
 
@@ -3427,7 +3427,7 @@ mod test {
         widget::{WidgetBuilder, WidgetMessage},
         OsEvent, UserInterface,
     };
-    use fyrox_graph::BaseSceneGraph;
+    use i3m_graph::BaseSceneGraph;
 
     #[test]
     fn test_transform_size() {

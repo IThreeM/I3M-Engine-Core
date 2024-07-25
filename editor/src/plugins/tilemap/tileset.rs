@@ -1,7 +1,7 @@
 use crate::{
     asset::item::AssetItem,
     command::{make_command, Command, CommandGroup},
-    fyrox::{
+    i3m::{
         asset::{manager::ResourceManager, untyped::ResourceKind, ResourceData},
         core::{
             color::Color, log::Log, math::Rect, pool::Handle, reflect::prelude::*,
@@ -44,8 +44,8 @@ use crate::{
     },
     Message,
 };
-use fyrox::graph::SceneGraph;
-use fyrox::scene::tilemap::tileset::TileDefinitionHandle;
+use i3m::graph::SceneGraph;
+use i3m::scene::tilemap::tileset::TileDefinitionHandle;
 use std::{
     ops::{Deref, DerefMut},
     sync::Arc,

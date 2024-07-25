@@ -9,7 +9,7 @@ use crate::{
     scene::{node::Node, sound::Sound},
 };
 use fxhash::FxHashSet;
-use fyrox_sound::{
+use i3m_sound::{
     bus::AudioBusGraph,
     context::DistanceModel,
     renderer::Renderer,
@@ -21,12 +21,12 @@ use std::{sync::MutexGuard, time::Duration};
 #[derive(Debug, Visit)]
 pub struct SoundContext {
     #[visit(optional)]
-    pub(crate) native: fyrox_sound::context::SoundContext,
+    pub(crate) native: i3m_sound::context::SoundContext,
 }
 
 /// Proxy for guarded access to the sound context.
 pub struct SoundContextGuard<'a> {
-    guard: MutexGuard<'a, fyrox_sound::context::State>,
+    guard: MutexGuard<'a, i3m_sound::context::State>,
 }
 
 impl<'a> SoundContextGuard<'a> {
@@ -99,7 +99,7 @@ impl<'a> SoundContextGuard<'a> {
 
 impl Default for SoundContext {
     fn default() -> Self {
-        let native = fyrox_sound::context::SoundContext::new();
+        let native = i3m_sound::context::SoundContext::new();
         let mut state = native.state();
         // There's no need to serialize native sources, because they'll be re-created automatically.
         state.serialization_options.skip_sources = true;

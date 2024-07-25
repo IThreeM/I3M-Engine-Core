@@ -8,8 +8,8 @@ use crate::{
     widget::Widget,
     BaseControl, Control, UserInterface,
 };
-use fyrox_graph::SceneGraphNode;
-use fyrox_resource::{untyped::UntypedResource, Resource};
+use i3m_graph::SceneGraphNode;
+use i3m_resource::{untyped::UntypedResource, Resource};
 use std::{
     any::{Any, TypeId},
     fmt::{Debug, Formatter},
@@ -124,7 +124,7 @@ impl UiNode {
     /// is to finish widget creation like so:
     ///
     /// ```rust
-    /// # use fyrox_ui::{
+    /// # use i3m_ui::{
     /// #     core::pool::Handle,
     /// #     define_widget_deref,
     /// #     core::{visitor::prelude::*, reflect::prelude::*, type_traits::prelude::*,},
@@ -136,7 +136,7 @@ impl UiNode {
     /// #     any::{Any, TypeId},
     /// #     ops::{Deref, DerefMut},
     /// # };
-    /// # use fyrox_core::uuid_provider;
+    /// # use i3m_core::uuid_provider;
     /// #
     /// #[derive(Clone, Visit, Reflect, Debug, ComponentProvider)]
     /// struct MyWidget {
@@ -198,7 +198,7 @@ impl UiNode {
     /// Tries to fetch a component of the given type `T`. At very basis it mimics [`Self::cast`] behaviour, but
     /// also allows you to fetch components of other types as well. For example, your widget may be built on
     /// top of existing one (via composition) and you have it as a field inside your widget. In this case, you
-    /// can fetch it by using this method with the appropriate type. See docs for [`fyrox_core::type_traits::ComponentProvider::query_component_ref`]
+    /// can fetch it by using this method with the appropriate type. See docs for [`i3m_core::type_traits::ComponentProvider::query_component_ref`]
     /// for more info.
     pub fn query_component<T>(&self) -> Option<&T>
     where

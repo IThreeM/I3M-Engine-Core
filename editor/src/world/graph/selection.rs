@@ -1,11 +1,11 @@
-use crate::fyrox::{
+use crate::i3m::{
     asset::core::algebra::Vector3,
     core::{algebra::UnitQuaternion, math::Matrix4Ext, pool::Handle},
     scene::{graph::Graph, node::Node},
 };
 use crate::scene::SelectionContainer;
 use crate::utils;
-use fyrox::graph::BaseSceneGraph;
+use i3m::graph::BaseSceneGraph;
 
 #[derive(Debug, Default, Clone, Eq)]
 pub struct GraphSelection {

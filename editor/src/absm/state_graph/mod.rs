@@ -1,5 +1,5 @@
-use crate::fyrox::graph::{PrefabData, SceneGraph, SceneGraphNode};
-use crate::fyrox::{
+use crate::i3m::graph::{PrefabData, SceneGraph, SceneGraphNode};
+use crate::i3m::{
     core::pool::{ErasedHandle, Handle},
     generic_animation::machine::{Machine, MachineLayer, State, Transition},
     graph::BaseSceneGraph,

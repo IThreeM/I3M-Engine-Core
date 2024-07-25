@@ -40,7 +40,7 @@ mod surface;
 mod uri;
 
 use animation::import_animations;
-use fyrox_resource::untyped::ResourceKind;
+use i3m_resource::untyped::ResourceKind;
 use material::*;
 pub use surface::SurfaceDataError;
 use surface::{build_surface_data, BlendShapeInfoContainer, GeometryStatistics};

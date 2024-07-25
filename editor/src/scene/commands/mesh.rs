@@ -1,5 +1,5 @@
 use crate::command::CommandContext;
-use crate::fyrox::{
+use crate::i3m::{
     core::{pool::Handle, sstorage::ImmutableString},
     material::{shader::SamplerFallback, PropertyValue},
     resource::texture::TextureResource,

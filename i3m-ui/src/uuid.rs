@@ -13,7 +13,7 @@ use crate::{
     widget::{Widget, WidgetBuilder},
     BuildContext, Control, Thickness, UiNode, UserInterface, VerticalAlignment,
 };
-use fyrox_core::uuid_provider;
+use i3m_core::uuid_provider;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages that is used to fetch or modify values of [`UuidEditor`] widgets.
@@ -36,7 +36,7 @@ impl UuidEditorMessage {
 /// ## Example
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::{pool::Handle, uuid::Uuid},
 /// #     uuid::UuidEditorBuilder,
 /// #     widget::WidgetBuilder,

@@ -24,7 +24,7 @@ use crate::{
     BuildContext, Control, HorizontalAlignment, Orientation, RestrictionEntry, Thickness, UiNode,
     UserInterface, VerticalAlignment, BRUSH_BRIGHT, BRUSH_BRIGHT_BLUE, BRUSH_PRIMARY,
 };
-use fyrox_graph::{BaseSceneGraph, SceneGraph, SceneGraphNode};
+use i3m_graph::{BaseSceneGraph, SceneGraph, SceneGraphNode};
 use std::any::TypeId;
 use std::{
     ops::{Deref, DerefMut},
@@ -120,7 +120,7 @@ impl MenuItemMessage {
 /// ```
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle,
 /// #     menu::{MenuBuilder, MenuItemBuilder, MenuItemContent},
 /// #     widget::WidgetBuilder,

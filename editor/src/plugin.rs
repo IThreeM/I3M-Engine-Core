@@ -1,4 +1,4 @@
-use crate::fyrox::gui::message::UiMessage;
+use crate::i3m::gui::message::UiMessage;
 use crate::{Editor, Message};
 
 /// Editor plugin allows you to extend editor functionality with custom tools. It provides a standard way of interaction
@@ -28,7 +28,7 @@ pub trait EditorPlugin {
     fn on_exit(&mut self, #[allow(unused_variables)] editor: &mut Editor) {}
 
     /// This method is called either when there was some action via command, or a syncing request is performed. It should
-    /// be used to synchronize the state of your widgets with the actual data model.  
+    /// be used to synchronize the state of your widgets with the actual data model.
     fn on_sync_to_model(&mut self, #[allow(unused_variables)] editor: &mut Editor) {}
 
     /// This method is called when the editor switches to another mode. For example, if a user clicks the "Play" button,
@@ -38,7 +38,7 @@ pub trait EditorPlugin {
     fn on_mode_changed(&mut self, #[allow(unused_variables)] editor: &mut Editor) {}
 
     /// This method is called when a UI message was extracted from the message queue. It should be used to react to user
-    /// changes, for example a user could click a button, then a [`fyrox::gui::button::ButtonMessage::Click`] will be
+    /// changes, for example a user could click a button, then a [`i3m::gui::button::ButtonMessage::Click`] will be
     /// passed to this method. It then can be used to perform some other action.
     fn on_ui_message(
         &mut self,

@@ -21,8 +21,8 @@ use crate::{
     },
     utils::navmesh::Navmesh,
 };
-use fyrox_core::parking_lot::{RwLockReadGuard, RwLockWriteGuard};
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::parking_lot::{RwLockReadGuard, RwLockWriteGuard};
+use i3m_graph::BaseSceneGraph;
 use std::{
     ops::{Deref, DerefMut},
     sync::Arc,
@@ -56,7 +56,7 @@ impl Visit for Container {
 /// convenient wrapper around [`Navmesh`], so you should also read its docs to get better understanding how it works.
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     core::{algebra::Vector3, math::TriangleDefinition, pool::Handle},
 /// #     scene::{base::BaseBuilder, graph::Graph, navmesh::NavigationalMeshBuilder, node::Node},
 /// #     utils::navmesh::Navmesh,
@@ -87,7 +87,7 @@ impl Visit for Container {
 /// to update their state every frame, so they can recalculate path if needed. A simple example could something like this:
 ///
 /// ```rust
-/// # use fyrox_impl::utils::navmesh::NavmeshAgent;
+/// # use i3m_impl::utils::navmesh::NavmeshAgent;
 /// # struct Foo {
 /// // Add this to your script
 /// agent: NavmeshAgent
@@ -97,7 +97,7 @@ impl Visit for Container {
 /// After that, you need to update the agent every frame to make sure it will follow the target:
 ///
 /// ```rust
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #    core::algebra::Vector3, scene::navmesh::NavigationalMesh, utils::navmesh::NavmeshAgent,
 /// # };
 /// fn update_agent(
@@ -123,8 +123,8 @@ impl Visit for Container {
 /// navigational mesh from the scene graph by its name:
 ///
 /// ```rust
-/// # use fyrox_impl::scene::{navmesh::NavigationalMesh, Scene};
-/// # use fyrox_graph::SceneGraph;
+/// # use i3m_impl::scene::{navmesh::NavigationalMesh, Scene};
+/// # use i3m_graph::SceneGraph;
 /// fn find_navmesh<'a>(scene: &'a mut Scene, name: &str) -> &'a mut NavigationalMesh {
 ///     let handle = scene.graph.find_by_name_from_root(name).unwrap().0;
 ///     scene.graph[handle].as_navigational_mesh_mut()

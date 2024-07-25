@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::pool::Handle,
     generic_animation::machine::{Machine, State, Transition},
     graph::BaseSceneGraph,
@@ -27,7 +27,7 @@ use crate::{
     message::MessageSender,
     scene::{commands::ChangeSelectionCommand, Selection},
 };
-use fyrox::gui::menu::ContextMenuBuilder;
+use i3m::gui::menu::ContextMenuBuilder;
 use std::fmt::Debug;
 
 use super::fetch_state_node_model_handle;

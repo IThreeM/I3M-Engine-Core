@@ -32,8 +32,8 @@ use crate::{
         },
     },
 };
-use fyrox_core::value_as_u8_slice;
-use fyrox_graph::BaseSceneGraph;
+use i3m_core::value_as_u8_slice;
+use i3m_graph::BaseSceneGraph;
 use std::{
     cmp::Ordering,
     fmt::Debug,
@@ -138,7 +138,7 @@ impl Visit for ParticleSystemRng {
 /// Simple smoke effect can be create like so:
 ///
 /// ```
-/// # use fyrox_impl::{
+/// # use i3m_impl::{
 /// #     asset::manager::ResourceManager,
 /// #     core::{
 /// #         algebra::Vector3,

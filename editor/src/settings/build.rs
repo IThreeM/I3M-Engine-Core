@@ -1,5 +1,5 @@
-use crate::fyrox::core::reflect::prelude::*;
-use fyrox::core::type_traits::prelude::*;
+use crate::i3m::core::reflect::prelude::*;
+use i3m::core::type_traits::prelude::*;
 use serde::{Deserialize, Serialize};
 use std::fmt::{Display, Formatter};
 
@@ -105,7 +105,7 @@ impl Default for BuildSettings {
                         "game_dylib".to_string(),
                         "--no-default-features".to_string(),
                         "--features".to_string(),
-                        "dylib-engine".to_string(),                  
+                        "dylib-engine".to_string(),
                         "--profile".to_string(),
                         "dev-hot-reload".to_string(),
                     ],
@@ -120,10 +120,10 @@ impl Default for BuildSettings {
                     args: vec![
                         "build".to_string(),
                         "--package".to_string(),
-                        "executor".to_string(),  
+                        "executor".to_string(),
                         "--no-default-features".to_string(),
                         "--features".to_string(),
-                        "dylib".to_string(),                        
+                        "dylib".to_string(),
                         "--profile".to_string(),
                         "dev-hot-reload".to_string(),
                     ],
@@ -140,7 +140,7 @@ impl Default for BuildSettings {
                     args: vec![
                         "run".to_string(),
                         "--package".to_string(),
-                        "executor".to_string(), 
+                        "executor".to_string(),
                         "--no-default-features".to_string(),
                         "--features".to_string(),
                         "dylib".to_string(),

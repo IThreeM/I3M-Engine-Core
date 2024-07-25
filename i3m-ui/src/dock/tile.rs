@@ -11,8 +11,8 @@ use crate::{
     window::{Window, WindowMessage},
     BuildContext, Control, Thickness, UiNode, UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_graph::{BaseSceneGraph, SceneGraph};
+use i3m_core::uuid_provider;
+use i3m_graph::{BaseSceneGraph, SceneGraph};
 use std::{
     cell::Cell,
     ops::{Deref, DerefMut},

@@ -16,8 +16,8 @@ use crate::{
     widget::{Widget, WidgetBuilder, WidgetMessage},
     BuildContext, Control, UiNode, UserInterface,
 };
-use fyrox_core::uuid_provider;
-use fyrox_core::variable::InheritableVariable;
+use i3m_core::uuid_provider;
+use i3m_core::variable::InheritableVariable;
 use std::ops::{Deref, DerefMut};
 
 /// A set of messages that can be used to modify the state of a progress bar.
@@ -40,7 +40,7 @@ impl ProgressBarMessage {
 /// ## Example
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, progress_bar::ProgressBarBuilder, widget::WidgetBuilder, BuildContext,
 /// #     UiNode,
 /// # };
@@ -58,7 +58,7 @@ impl ProgressBarMessage {
 /// To change progress of a progress bar all you need is to send [`ProgressBarMessage::Progress`] to it:
 ///
 /// ```rust
-/// # use fyrox_ui::{
+/// # use i3m_ui::{
 /// #     core::pool::Handle, message::MessageDirection, progress_bar::ProgressBarMessage, UiNode,
 /// #     UserInterface,
 /// # };

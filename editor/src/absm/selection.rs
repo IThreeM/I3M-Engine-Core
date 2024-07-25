@@ -1,4 +1,4 @@
-use crate::fyrox::{
+use crate::i3m::{
     core::pool::Handle,
     generic_animation::machine::{PoseNode, State, Transition},
 };

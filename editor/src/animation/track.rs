@@ -10,7 +10,7 @@ use crate::{
         selection::{AnimationSelection, SelectedEntity},
     },
     command::{Command, CommandGroup},
-    fyrox::{
+    i3m::{
         core::{
             algebra::{UnitQuaternion, Vector2, Vector3, Vector4},
             color::Color,

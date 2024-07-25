@@ -1,5 +1,5 @@
-use fyrox_graph::SceneGraph;
-use fyrox_impl::{
+use i3m_graph::SceneGraph;
+use i3m_impl::{
     asset::manager::ResourceManager,
     core::{
         algebra::{Matrix4, Point3, UnitQuaternion, Vector2, Vector3},
@@ -229,7 +229,7 @@ impl PluginConstructor for GameConstructor {
             agent,
             cursor,
             camera,
-        } = fyrox::core::futures::executor::block_on(create_scene(
+        } = i3m::core::futures::executor::block_on(create_scene(
             context.resource_manager.clone(),
         ));
 

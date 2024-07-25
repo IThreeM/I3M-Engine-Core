@@ -22,24 +22,24 @@
       <sourceFolder url="file://$MODULE_DIR$/i3m-core-derive/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/i3m-core-derive/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/i3m-core/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-resource/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-sound/examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-sound/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-ui/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-resource/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-sound/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-sound/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-ui/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/examples/scripting/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/executor/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/editor-standalone/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/template/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-scripts/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-animation/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-prefab/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-graph/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-math/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-scripts/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-animation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-prefab/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-graph/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-math/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/editor-dylib/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-dylib/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-bridge/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox-impl/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/fyrox/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-dylib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-bridge/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m-impl/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/i3m/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/project-manager/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/template-core/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
