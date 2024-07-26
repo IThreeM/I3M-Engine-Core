@@ -8,14 +8,13 @@
 [![License (MIT)](https://img.shields.io/crates/l/i3m)](https://github.com/IThreeM/I3M-Engine-Core/blob/master/LICENSE.md)
 [![CI Status](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/ci.yml/badge.svg)](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/ci.yml)
 [![audit](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/audit.yml/badge.svg)](https://github.com/IThreeM/I3M-Engine-Core/actions/workflows/audit.yml)
-[![Dependency status](https://deps.rs/repo/github/FyroxEngine/IThreeM/status.svg)](https://deps.rs/repo/github/FyroxEngine/IThreeM)
+[![Dependency status](https://deps.rs/repo/github/IThreeM/IThreeM/status.svg)](https://deps.rs/repo/github/IThreeM/IThreeM)
 [![Crates.io](https://img.shields.io/crates/v/i3m)](https://crates.io/crates/i3m)
 [![docs.rs](https://img.shields.io/badge/docs-website-blue)](https://docs.rs/IThreeM/)
 [![Discord](https://img.shields.io/discord/756573453561102427)](https://discord.gg/xENF5Uh)
-[![Lines of code](https://tokei.rs/b1/github/FyroxEngine/IThreeM)](https://github.com/IThreeM/I3M-Engine-Core)
+[![Lines of code](https://tokei.rs/b1/github/IThreeM/IThreeM)](https://github.com/IThreeM/I3M-Engine-Core)
 
 A feature-rich, production-ready, general purpose 2D/3D game engine written in Rust with a scene editor.
-_Formerly known as rg3d_
 
 ## [Learning materials](https://i3m-book.github.io/)
 
@@ -30,7 +29,7 @@ You can always ask your question in Discord server - [Join the Discord server](h
 ## Examples
 
 You can run examples directly in your web browser, the full list of demo projects is [available here](https://ithreem.com/examples.html).
-Source code for each demo project [can be found here](https://github.com/FyroxEngine/i3m-demo-projects).
+Source code for each demo project [can be found here](https://github.com/IThreeM/i3m-demo-projects).
 
 ## Support
 

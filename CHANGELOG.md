@@ -528,7 +528,7 @@ loaders that will be used in both the game and the editor.
 - Fallback to root directory if `I3M-CLI script` cant find `game/src`.
 - Added debug impls for gpu texture.
 - Fixed seams between terrain chunks.
-- Removed obsolete examples and replaced them with [new examples](https://github.com/FyroxEngine/i3m-demo-projects).
+- Removed obsolete examples and replaced them with [new examples](https://github.com/IThreeM/i3m-demo-projects).
 - Fixed curve editor compatibility with scrolling regions.
 - Fixed clipping issues in curve editor.
 - Save expanded state of the scene items in the world viewer in the editor settings.

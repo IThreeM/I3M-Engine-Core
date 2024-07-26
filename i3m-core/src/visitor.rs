@@ -1297,7 +1297,7 @@ impl Visitor {
     /// [Visitor::load_binary] will return an error if this sequence of bytes is not present at the beginning
     /// of the file, and [Visitor::load_from_memory] will return an error of these bytes are not at the beginning
     /// of the given slice.
-    pub const MAGIC: &'static str = "RG3D";
+    pub const MAGIC: &'static str = "I3M";
 
     /// Creates a Visitor containing only a single node called "`__ROOT__`" which will be the
     /// current region of the visitor.

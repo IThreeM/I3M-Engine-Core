@@ -3,7 +3,7 @@
 //!
 //! ## Basic Concepts
 //!
-//! FyroxUI is quite complex UI library and before using it, you should understand basic concepts of it. Especially,
+//! I3MUI is quite complex UI library and before using it, you should understand basic concepts of it. Especially,
 //! if you're got used to immediate-mode UIs.
 //!
 //! ### Stateful
@@ -60,7 +60,7 @@
 //!
 //! ## Widgets Overview
 //!
-//! The following subsections explains how to use every widget built into FyroxUI. We will order them by primary function to
+//! The following subsections explains how to use every widget built into I3MUI. We will order them by primary function to
 //! help introduce them to new users.
 //!
 //! ### Containers

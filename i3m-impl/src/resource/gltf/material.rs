@@ -19,8 +19,8 @@ use super::uri;
 
 type Result<T> = std::result::Result<T, GltfMaterialError>;
 
-use crate::resource::texture::TextureMagnificationFilter as FyroxMagFilter;
-use crate::resource::texture::TextureMinificationFilter as FyroxMinFilter;
+use crate::resource::texture::TextureMagnificationFilter as I3MMagFilter;
+use crate::resource::texture::TextureMinificationFilter as I3MMinFilter;
 use gltf::texture::MagFilter as GltfMagFilter;
 use gltf::texture::MinFilter as GltfMinFilter;
 
@@ -32,32 +32,32 @@ lazy_static! {
         ShaderResource::new_ok(SHADER_NAME.into(), Shader::from_string(SHADER_SRC).unwrap());
 }
 
-fn convert_mini(filter: GltfMinFilter) -> FyroxMinFilter {
+fn convert_mini(filter: GltfMinFilter) -> I3MMinFilter {
     match filter {
-        GltfMinFilter::Linear => FyroxMinFilter::Linear,
-        GltfMinFilter::Nearest => FyroxMinFilter::Nearest,
-        GltfMinFilter::LinearMipmapLinear => FyroxMinFilter::LinearMipMapLinear,
-        GltfMinFilter::NearestMipmapLinear => FyroxMinFilter::NearestMipMapLinear,
-        GltfMinFilter::LinearMipmapNearest => FyroxMinFilter::LinearMipMapNearest,
-        GltfMinFilter::NearestMipmapNearest => FyroxMinFilter::NearestMipMapNearest,
+        GltfMinFilter::Linear => I3MMinFilter::Linear,
+        GltfMinFilter::Nearest => I3MMinFilter::Nearest,
+        GltfMinFilter::LinearMipmapLinear => I3MMinFilter::LinearMipMapLinear,
+        GltfMinFilter::NearestMipmapLinear => I3MMinFilter::NearestMipMapLinear,
+        GltfMinFilter::LinearMipmapNearest => I3MMinFilter::LinearMipMapNearest,
+        GltfMinFilter::NearestMipmapNearest => I3MMinFilter::NearestMipMapNearest,
     }
 }
 
-fn convert_mag(filter: GltfMagFilter) -> FyroxMagFilter {
+fn convert_mag(filter: GltfMagFilter) -> I3MMagFilter {
     match filter {
-        GltfMagFilter::Linear => FyroxMagFilter::Linear,
-        GltfMagFilter::Nearest => FyroxMagFilter::Nearest,
+        GltfMagFilter::Linear => I3MMagFilter::Linear,
+        GltfMagFilter::Nearest => I3MMagFilter::Nearest,
     }
 }
 
-use crate::resource::texture::TextureWrapMode as FyroxWrapMode;
+use crate::resource::texture::TextureWrapMode as I3MWrapMode;
 use gltf::texture::WrappingMode as GltfWrapMode;
 
-fn convert_wrap(mode: GltfWrapMode) -> FyroxWrapMode {
+fn convert_wrap(mode: GltfWrapMode) -> I3MWrapMode {
     match mode {
-        GltfWrapMode::Repeat => FyroxWrapMode::Repeat,
-        GltfWrapMode::ClampToEdge => FyroxWrapMode::ClampToEdge,
-        GltfWrapMode::MirroredRepeat => FyroxWrapMode::MirroredRepeat,
+        GltfWrapMode::Repeat => I3MWrapMode::Repeat,
+        GltfWrapMode::ClampToEdge => I3MWrapMode::ClampToEdge,
+        GltfWrapMode::MirroredRepeat => I3MWrapMode::MirroredRepeat,
     }
 }
 
