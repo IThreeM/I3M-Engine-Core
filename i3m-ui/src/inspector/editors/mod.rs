@@ -130,7 +130,7 @@ pub struct PropertyEditorBuildContext<'a, 'b, 'c, 'd> {
     pub property_info: &'b FieldInfo<'b, 'd>,
     /// Untyped reference to the environment that the Inspector is being used in.
     /// This will often be
-    /// [I3M-Engine-Core_base::inspector::EditorEnvironment](https://docs.rs/I3M-Engine-Core_base/latest/I3M-Engine-Core_base/inspector/struct.EditorEnvironment.html)
+    /// [i3m_engine_core_base::inspector::EditorEnvironment](https://docs.rs/i3m_engine_core_base/latest/i3m_engine_core_base/inspector/struct.EditorEnvironment.html)
     /// when the Inspector is being used in I3M-Engine-Core, but Inspector widgets can be used in other applications,
     /// and we can access those applications by casting the environment to the appropriate type.
     pub environment: Option<Arc<dyn InspectorEnvironment>>,
@@ -205,14 +205,14 @@ pub struct PropertyEditorTranslationContext<'b, 'c> {
     /// [InspectorEnvironment] into a specific type.
     ///
     /// When the environment is not None, it is often an
-    /// [I3M-Engine-Core_base::inspector::EditorEnvironment](https://docs.rs/I3M-Engine-Core_base/latest/I3M-Engine-Core_base/inspector/struct.EditorEnvironment.html)
+    /// [i3m_engine_core_base::inspector::EditorEnvironment](https://docs.rs/i3m_engine_core_base/latest/i3m_engine_core_base/inspector/struct.EditorEnvironment.html)
     /// which may be accessed using EditorEnvironment::try_get_from.
     /// For example, the EditorEnvironment can be used by
-    /// [I3M-Engine-Core_base::inspector::editors::script::ScriptPropertyEditor](https://docs.rs/I3M-Engine-Core_base/latest/I3M-Engine-Core_base/inspector/editors/script/struct.ScriptPropertyEditor.html)
+    /// [i3m_engine_core_base::inspector::editors::script::ScriptPropertyEditor](https://docs.rs/i3m_engine_core_base/latest/i3m_engine_core_base/inspector/editors/script/struct.ScriptPropertyEditor.html)
     /// to translate the UUID of a script into an actual
     /// [i3m::script::Script](https://docs.rs/i3m/latest/i3m/script/struct.Script.html)
     /// when it receives a
-    /// [ScriptPropertyEditorMessage::Value](https://docs.rs/I3M-Engine-Core_base/latest/I3M-Engine-Core_base/inspector/editors/script/enum.ScriptPropertyEditorMessage.html#variant.Value).
+    /// [ScriptPropertyEditorMessage::Value](https://docs.rs/i3m_engine_core_base/latest/i3m_engine_core_base/inspector/editors/script/enum.ScriptPropertyEditorMessage.html#variant.Value).
     pub environment: Option<Arc<dyn InspectorEnvironment>>,
     /// The name of the property being edited.
     /// This comes from [ContextEntry::property_name](crate::inspector::ContextEntry).

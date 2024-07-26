@@ -374,12 +374,12 @@ edition = "2021"
 
 [dependencies]
 i3m = {{ workspace = true }}
-I3M-Engine-Core_base = {{ workspace = true }}
+i3m_engine_core_base = {{ workspace = true }}
 {name} = {{ path = "../game", optional = true }}
 
 [features]
-default = ["{name}", "I3M-Engine-Core_base/default"]
-dylib = ["I3M-Engine-Core_base/dylib_engine"]
+default = ["{name}", "i3m_engine_core_base/default"]
+dylib = ["i3m_engine_core_base/dylib_engine"]
 "#,
         ),
     )?;
@@ -388,7 +388,7 @@ dylib = ["I3M-Engine-Core_base/dylib_engine"]
         base_path.join("editor/src/main.rs"),
         format!(
             r#"//! Editor with your game connected to it as a plugin.
-use I3M-Engine-Core_base::{{i3m::event_loop::EventLoop, Editor, StartupData}};
+use i3m_engine_core_base::{{i3m::event_loop::EventLoop, Editor, StartupData}};
 
 fn main() {{
     let event_loop = EventLoop::new().unwrap();
@@ -572,7 +572,7 @@ resolver = "2"
 [workspace.dependencies.i3m]
 version = "{CURRENT_ENGINE_VERSION}"
 default-features = false
-[workspace.dependencies.I3M-Engine-Core_base]
+[workspace.dependencies.i3m_engine_core_base]
 version = "{CURRENT_EDITOR_VERSION}"
 default-features = false
 
@@ -785,7 +785,7 @@ pub fn upgrade_project(root_path: &Path, version: &str, local: bool) -> Result<(
 
                                 let mut editor_table = table();
                                 editor_table["path"] = value("../IThreeM/editor");
-                                dependencies["I3M-Engine-Core_base"] = editor_table;
+                                dependencies["i3m_engine_core_base"] = editor_table;
 
                                 if dependencies.contains_key("i3m_scripts") {
                                     let mut scripts_table = table();
@@ -794,7 +794,7 @@ pub fn upgrade_project(root_path: &Path, version: &str, local: bool) -> Result<(
                                 }
                             } else {
                                 dependencies["i3m"] = value(CURRENT_ENGINE_VERSION);
-                                dependencies["I3M-Engine-Core_base"] =
+                                dependencies["i3m_engine_core_base"] =
                                     value(CURRENT_EDITOR_VERSION);
                                 if dependencies.contains_key("i3m_scripts") {
                                     dependencies["i3m_scripts"] = value(CURRENT_SCRIPTS_VERSION);
@@ -805,13 +805,13 @@ pub fn upgrade_project(root_path: &Path, version: &str, local: bool) -> Result<(
                             table["git"] = value("https://github.com/IThreeM/I3M-Engine-Core");
 
                             dependencies["i3m"] = table.clone();
-                            dependencies["I3M-Engine-Core_base"] = table.clone();
+                            dependencies["i3m_engine_core_base"] = table.clone();
                         } else {
                             dependencies["i3m"] = value(version);
                             if let Some((editor_version, scripts_version)) =
                                 editor_versions.get(version)
                             {
-                                dependencies["I3M-Engine-Core_base"] = value(editor_version);
+                                dependencies["i3m_engine_core_base"] = value(editor_version);
                                 if let Some(scripts_version) = scripts_version {
                                     if dependencies.contains_key("i3m_scripts") {
                                         dependencies["i3m_scripts"] = value(scripts_version);

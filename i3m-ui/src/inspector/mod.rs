@@ -367,7 +367,7 @@ impl InspectorMessage {
 /// passed to an [Inspector] widget.
 /// Since an Inspector might be used in applications other than I3M-Engine-Core,
 /// Inspector does not assume that InspectorEnvironment must always be
-/// [I3M-Engine-Core_base::inspector::EditorEnvironment](https://docs.rs/I3M-Engine-Core_base/latest/I3M-Engine-Core_base/inspector/struct.EditorEnvironment.html).
+/// [i3m_engine_core_base::inspector::EditorEnvironment](https://docs.rs/i3m_engine_core_base/latest/i3m_engine_core_base/inspector/struct.EditorEnvironment.html).
 /// Instead, when a property editor needs to talk to the application using the Inspector,
 /// it can attempt to cast InspectorEnvironment to whatever type it might be.
 pub trait InspectorEnvironment: Any + Send + Sync {

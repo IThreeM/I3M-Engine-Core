@@ -1,6 +1,6 @@
 use clap::Parser;
 use i3m::event_loop::EventLoop;
-use I3M_Engine_Core_base::{Editor, StartupData};
+use I3M-Engine-Core_base::{Editor, StartupData};
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]

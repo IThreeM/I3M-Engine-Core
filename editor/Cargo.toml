@@ -1,5 +1,5 @@
 [package]
-name = "I3M-Engine-Core_base"
+name = "i3m_engine_core_base"
 license = "MIT"
 version = "0.21.1"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
