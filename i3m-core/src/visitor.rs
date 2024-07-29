@@ -2178,26 +2178,38 @@ mod test {
         {
             let mut visitor = Visitor::new();
             let mut resource = Rc::new(Resource::new(ResourceKind::Model(Model { data: 555 })));
-            resource.visit("SharedResource", &mut visitor).unwrap();
+            resource
+                .visit("SharedResource", &mut visitor)
+                .expect("Failed to visit SharedResource during save");
 
             let mut objects = vec![Foo::new(resource.clone()), Foo::new(resource)];
 
-            objects.visit("Objects", &mut visitor).unwrap();
+            objects
+                .visit("Objects", &mut visitor)
+                .expect("Failed to visit Objects during save");
 
-            visitor.save_binary(path).unwrap();
+            visitor
+                .save_binary(path)
+                .expect("Failed to save binary data");
             if let Ok(mut file) = File::create(Path::new("test.txt")) {
-                file.write_all(visitor.save_text().as_bytes()).unwrap();
+                file.write_all(visitor.save_text().as_bytes())
+                    .expect("Failed to write text data");
             }
         }
 
         // Load
         {
-            let mut visitor = futures::executor::block_on(Visitor::load_binary(path)).unwrap();
+            let mut visitor = futures::executor::block_on(Visitor::load_binary(path))
+                .expect("Failed to load binary data");
             let mut resource: Rc<Resource> = Rc::new(Default::default());
-            resource.visit("SharedResource", &mut visitor).unwrap();
+            resource
+                .visit("SharedResource", &mut visitor)
+                .expect("Failed to visit SharedResource during load");
 
             let mut objects: Vec<Foo> = Vec::new();
-            objects.visit("Objects", &mut visitor).unwrap();
+            objects
+                .visit("Objects", &mut visitor)
+                .expect("Failed to visit Objects during load");
         }
     }
 
