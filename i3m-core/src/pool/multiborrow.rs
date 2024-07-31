@@ -240,14 +240,16 @@ where
         })
     }
 
-    /// Tries to get a mutable reference to a pool element located at the given handle. The method could
-    /// fail in three main reasons:
-    ///
-    /// 1) A reference to an element is already taken - returning multiple mutable references to the
-    /// same element is forbidden by Rust safety rules.
-    /// 2) You're trying to get more references that the context could handle (there is not enough space
-    /// in the internal handles storage) - in this case you must increase `N`.
-    /// 3) A given handle is invalid.
+    /**
+    Tries to get a mutable reference to a pool element located at the given handle. The method could
+    fail in three main reasons:
+
+    1) A reference to an element is already taken - returning multiple mutable references to the
+    same element is forbidden by Rust safety rules.
+    2) You're trying to get more references that the context could handle (there is not enough space
+    in the internal handles storage) - in this case you must increase `N`.
+    3) A given handle is invalid.
+    */
     #[inline]
     pub fn try_get<'b: 'a>(
         &'b self,

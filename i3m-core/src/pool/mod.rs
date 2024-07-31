@@ -1,24 +1,26 @@
-//! A generational arena - a contiguous growable array type which allows removing
-//! from the middle without shifting and therefore without invalidating other indices.
-//!
-//! Pool is a contiguous block of memory with fixed-size entries, each entry can be
-//! either vacant or occupied. When you put an object into the pool you get a handle to
-//! that object. You can use that handle later on to borrow a reference to an object.
-//! A handle can point to some object or be invalid, this may look similar to raw
-//! pointers, but there is two major differences:
-//!
-//! 1) We can check if a handle is valid before accessing the object it might point to.
-//! 2) We can ensure the handle we're using is still valid for the object it points to
-//! to make sure it hasn't been replaced with a different object on the same position.
-//! Each handle stores a special field called generation which is shared across the entry
-//! and the handle, so the handle is valid if these fields are the same on both the entry
-//! and the handle. This protects from situations where you have a handle that has
-//! a valid index of a record, but the payload in this record has been replaced.
-//!
-//! Contiguous memory block increases efficiency of memory operations - the CPU will
-//! load portions of data into its cache piece by piece, it will be free from any
-//! indirections that might cause cache invalidation. This is the so called cache
-//! friendliness.
+/*!
+A generational arena - a contiguous growable array type which allows removing
+from the middle without shifting and therefore without invalidating other indices.
+
+Pool is a contiguous block of memory with fixed-size entries, each entry can be
+either vacant or occupied. When you put an object into the pool you get a handle to
+that object. You can use that handle later on to borrow a reference to an object.
+A handle can point to some object or be invalid, this may look similar to raw
+pointers, but there is two major differences:
+
+1) We can check if a handle is valid before accessing the object it might point to.
+2) We can ensure the handle we're using is still valid for the object it points to
+to make sure it hasn't been replaced with a different object on the same position.
+Each handle stores a special field called generation which is shared across the entry
+and the handle, so the handle is valid if these fields are the same on both the entry
+and the handle. This protects from situations where you have a handle that has
+a valid index of a record, but the payload in this record has been replaced.
+
+Contiguous memory block increases efficiency of memory operations - the CPU will
+load portions of data into its cache piece by piece, it will be free from any
+indirections that might cause cache invalidation. This is the so called cache
+friendliness.
+*/
 
 use crate::{reflect::prelude::*, visitor::prelude::*, ComponentProvider};
 use std::{

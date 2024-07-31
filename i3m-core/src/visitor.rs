@@ -1641,7 +1641,7 @@ impl Visit for PathBuf {
 
         // We have to replace Windows back slashes \ to forward / to make paths portable
         // across all OSes.
-        let portable_path = replace_slashes(&self);
+        let portable_path = replace_slashes(self);
 
         let bytes = if let Some(path_str) = portable_path.as_os_str().to_str() {
             path_str.as_bytes()
