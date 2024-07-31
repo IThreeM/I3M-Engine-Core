@@ -475,30 +475,39 @@ impl_field_data!(f32, FieldKind::F32);
 impl_field_data!(f64, FieldKind::F64);
 impl_field_data!(UnitQuaternion<f32>, FieldKind::UnitQuaternion);
 impl_field_data!(Matrix4<f32>, FieldKind::Matrix4);
-impl_field_data!(bool, FieldKind::Bool);
-impl_field_data!(Matrix3<f32>, FieldKind::Matrix3);
-impl_field_data!(Uuid, FieldKind::Uuid);
-impl_field_data!(UnitComplex<f32>, FieldKind::UnitComplex);
-impl_field_data!(Matrix2<f32>, FieldKind::Matrix2);
+impl_field_data!(bool, FieldKiimpl Visit for PathBuf {
+    fn visit(&mut self, name: &str, visitor: &mut Visitor) -> VisitResult {
+        let mut region = visitor.enter_region(name)?;
 
-impl_field_data!(Vector2<f32>, FieldKind::Vector2F32);
-impl_field_data!(Vector3<f32>, FieldKind::Vector3F32);
-impl_field_data!(Vector4<f32>, FieldKind::Vector4F32);
+        // We have to replace Windows back slashes \ to forward / to make paths portable
+        // across all OSes.
+        let portable_path = replace_slashes(&self); // Pass a reference to self
 
-impl_field_data!(Vector2<f64>, FieldKind::Vector2F64);
-impl_field_data!(Vector3<f64>, FieldKind::Vector3F64);
-impl_field_data!(Vector4<f64>, FieldKind::Vector4F64);
+        let bytes = if let Some(path_str) = portable_path.as_os_str().to_str() {
+            path_str.as_bytes()
+        } else {
+            return Err(VisitError::InvalidName);
+        };
 
-impl_field_data!(Vector2<i8>, FieldKind::Vector2I8);
-impl_field_data!(Vector3<i8>, FieldKind::Vector3I8);
-impl_field_data!(Vector4<i8>, FieldKind::Vector4I8);
+        let mut len = bytes.len() as u32;
+        len.visit("Length", &mut region)?;
 
-impl_field_data!(Vector2<u8>, FieldKind::Vector2U8);
-impl_field_data!(Vector3<u8>, FieldKind::Vector3U8);
-impl_field_data!(Vector4<u8>, FieldKind::Vector4U8);
+        let mut data = if region.reading {
+            Vec::new()
+        } else {
+            Vec::from(bytes)
+        };
 
-impl_field_data!(Vector2<i16>, FieldKind::Vector2I16);
-impl_field_data!(Vector3<i16>, FieldKind::Vector3I16);
+        let mut proxy = BinaryBlob { vec: &mut data };
+        proxy.visit("Data", &mut region)?;
+
+        if region.reading {
+            *self = PathBuf::from(String::from_utf8(data)?);
+        }
+
+        Ok(())
+    }
+}3<i16>, FieldKind::Vector3I16);
 impl_field_data!(Vector4<i16>, FieldKind::Vector4I16);
 
 impl_field_data!(Vector2<u16>, FieldKind::Vector2U16);
