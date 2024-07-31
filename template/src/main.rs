@@ -56,7 +56,7 @@ fn main() {
             vcs,
             overwrite,
         } => {
-            I3M_CLI_core::init_project(Path::new("./"), &name, &style, &vcs, overwrite).unwrap();
+            i3_m_cli_core::init_project(Path::new("./"), &name, &style, &vcs, overwrite).unwrap();
 
             println!("Project {} was generated successfully!", name);
             println!(
@@ -73,14 +73,14 @@ fn main() {
             );
         }
         Commands::Script { name } => {
-            I3M_CLI_core::init_script(Path::new("./"), &name).unwrap();
+            i3_m_cli_core::init_script(Path::new("./"), &name).unwrap();
 
             println!(
                 "Script {name} was added successfully! Do not forget to add it to your module tree!",
             );
         }
         Commands::Upgrade { version, local } => {
-            I3M_CLI_core::upgrade_project(Path::new("./"), &version, local).unwrap();
+            i3_m_cli_core::upgrade_project(Path::new("./"), &version, local).unwrap();
 
             println!("IThreeM version was successfully set to '{}'!", version);
         }
