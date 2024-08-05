@@ -13,6 +13,6 @@ readme = "README.md"
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
 
 [dependencies]
-i3m = { version = "0.34.0", path = "../i3m" }
-i3m_engine_core_base = { version = "0.21.0", path = "../editor" }
+i3m = { version = "1.0.0", path = "../i3m" }
+i3m_engine_core_base = { version = "1.0.0", path = "../editor" }
 clap = { version = "4", features = ["derive"] }

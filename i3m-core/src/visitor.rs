@@ -1,12 +1,14 @@
-//! Visitor is a tree-based serializer/deserializer.
-//!
-//! # Overview
-//!
-//! Visitor uses tree to create structured storage of data. Basic unit is a *node* - it is a container
-//! for data fields. Each node has name, handle to parent, set of handles to children nodes and some
-//! container for data fields. Data field is tuple of name and value, value can be any of simple Rust
-//! types and some of basic structures of the crate. Main criteria of what could be the field and what
-//! not is the ability to be represented as set of bytes without any aliasing issues.
+/*!
+Visitor is a tree-based serializer/deserializer.
+
+# Overview
+
+Visitor uses tree to create structured storage of data. Basic unit is a *node* - it is a container
+for data fields. Each node has name, handle to parent, set of handles to children nodes and some
+container for data fields. Data field is tuple of name and value, value can be any of simple Rust
+types and some of basic structures of the crate. Main criteria of what could be the field and what
+not is the ability to be represented as set of bytes without any aliasing issues.
+*/
 
 pub use i3m_core_derive::Visit;
 
@@ -48,11 +50,13 @@ use std::{
 };
 use uuid::Uuid;
 
-/// The internal data format of [Visitor]. Fields are limited to being one of these types.
-/// This means that all [Visit] values must be built from some assortment
-/// of these types.
-/// Fields can be accessed from a visitor using [Visit::visit] on a variable with the
-/// same type as the field.
+/**
+The internal data format of [Visitor]. Fields are limited to being one of these types.
+This means that all [Visit] values must be built from some assortment
+of these types.
+Fields can be accessed from a visitor using [Visit::visit] on a variable with the
+same type as the field.
+*/
 pub enum FieldKind {
     Bool(bool),
     U8(u8),

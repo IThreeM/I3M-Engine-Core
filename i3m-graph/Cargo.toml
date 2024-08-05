@@ -1,6 +1,6 @@
 [package]
 name = "i3m-graph"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
 license = "MIT"
@@ -14,6 +14,6 @@ repository = "https://github.com/IThreeM/I3M-Engine-Core"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core = { path = "../i3m-core", version = "0.28.1" }
+i3m-core = { path = "../i3m-core", version = "1.0.0" }
 i3m-resource = { path = "../i3m-resource", version = "0.12.0" }
 fxhash = "0.2.1"

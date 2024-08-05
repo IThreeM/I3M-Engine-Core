@@ -1,4 +1,6 @@
-//! IThreeM Project Template Generator.
+/*!
+IThreeM Project Template Generator.
+*/
 
 use convert_case::{Case, Casing};
 use regex::Regex;

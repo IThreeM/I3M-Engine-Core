@@ -246,7 +246,7 @@ impl ProjectWizard {
     ) -> bool {
         if let Some(ButtonMessage::Click) = message.data() {
             if message.destination() == self.create {
-                let _ = i3_m_cli_core::init_project(
+                let _ = I3M_CLI_core::init_project(
                     &self.path,
                     &self.name,
                     self.style.as_str(),

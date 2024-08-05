@@ -14,7 +14,7 @@ repository = "https://github.com/IThreeM/I3M-Engine-Core"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core = { path = "../i3m-core", version = "0.28.1" }
+i3m-core = { path = "../i3m-core", version = "1.0.0" }
 fxhash = "0.2.1"
 ron = "0.8.0"
 serde = { version = "1", features = ["derive"] }
