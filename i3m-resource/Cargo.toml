@@ -1,6 +1,6 @@
 [package]
 name = "i3m-resource"
-version = "0.12.0"
+version = "1.0.0"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
 license = "MIT"

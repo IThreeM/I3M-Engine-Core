@@ -1,6 +1,6 @@
 [package]
 name = "I3M-CLI-core"
-version = "0.11.0"
+version = "0.1.0"
 edition = "2021"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 license = "MIT"
