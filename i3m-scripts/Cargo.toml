@@ -14,4 +14,4 @@ repository = "https://github.com/IThreeM/I3M-Engine-Core"
 rust-version = "1.72"
 
 [dependencies]
-i3m = "1.0.0"
+i3m = "0.34.0"
