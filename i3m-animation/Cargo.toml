@@ -6,7 +6,7 @@ edition = "2021"
 license = "MIT"
 description = "Flexible Animation System"
 keywords = ["animation", "game"]
-categories = ["game-development", "animation"]
+categories = ["game-development"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
 homepage = "https://ithreem.com"
 documentation = "https://docs.rs/i3m-animation"
@@ -15,7 +15,7 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core = { version = "0.28.1", path = "../i3m-core" }
+i3m-core = "1.0.0"
 strum = "0.26.1"
 strum_macros = "0.26.1"
 fxhash = "0.2.1"

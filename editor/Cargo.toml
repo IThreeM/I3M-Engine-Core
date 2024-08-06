@@ -13,7 +13,7 @@ readme = "README.md"
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md", "/resources/**/*"]
 
 [dependencies]
-i3m = { version = "1.0.0", path = "../i3m", default-features = false }
+i3m = { version = "1.0.0", default-features = false }
 lazy_static = "1.4.0"
 ron = "0.8.0"
 serde = "^1.0.0"

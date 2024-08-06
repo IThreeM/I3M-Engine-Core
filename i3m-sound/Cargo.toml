@@ -15,8 +15,8 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core = { path = "../i3m-core", version = "1.0.0" }
-i3m-resource = { path = "../i3m-resource", version = "1.0.0" }
+i3m-core = "1.0.0"
+i3m-resource = "1.0.0"
 lewton = "0.10.2"
 ogg = "0.8.0"
 hrtf = "0.8.0"

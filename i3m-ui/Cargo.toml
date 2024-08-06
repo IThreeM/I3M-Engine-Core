@@ -15,10 +15,10 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core = { path = "../i3m-core", version = "1.0.0", features = ["serde"] }
-i3m-resource = { path = "../i3m-resource", version = "1.0.0" }
-i3m-graph = { path = "../i3m-graph", version = "1.0.0" }
-i3m-animation = { path = "../i3m-animation", version = "1.0.0"}
+i3m-core = { version = "1.0.0", features = ["serde"] }
+i3m-resource = "1.0.0"
+i3m-graph = "1.0.0"
+i3m-animation = "1.0.0"
 lazy_static = "1.4.0"
 copypasta = "0.10.1"
 fontdue = "0.9.2"

@@ -15,13 +15,13 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core-derive = { path = "../i3m-core-derive", version = "1.0.0" }
-i3m-core = { path = "../i3m-core", version = "1.0.0", features = ["serde"] }
-i3m-sound = { path = "../i3m-sound", version = "0.35.0" }
-i3m-ui = { path = "../i3m-ui", version = "1.0.0" }
-i3m-resource = { path = "../i3m-resource", version = "1.0.0" }
-i3m-animation = { path = "../i3m-animation", version = "1.0.0" }
-i3m-graph = { path = "../i3m-graph", version = "1.0.0" }
+i3m-core-derive = "1.0.0"
+i3m-core = { version = "1.0.0", features = ["serde"] }
+i3m-sound = "0.35.0"
+i3m-ui = "1.0.0"
+i3m-resource = "1.0.0"
+i3m-animation = "1.0.0"
+i3m-graph = "1.0.0"
 rapier2d = { version = "0.20", features = ["debug-render"] }
 rapier3d = { version = "0.20", features = ["debug-render"] }
 image = { version = "0.25.1", default-features = false, features = ["gif", "jpeg", "png", "tga", "tiff", "bmp"] }

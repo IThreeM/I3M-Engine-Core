@@ -15,8 +15,8 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core-derive = { path = "../i3m-core-derive", version = "1.0.0" }
-i3m-math = { path = "../i3m-math", version = "0.2.0" }
+i3m-core-derive = "1.0.0"
+i3m-math = "1.0.0"
 base64 = "0.22.1"
 byteorder = "1.4.3"
 rand = "0.8.4"

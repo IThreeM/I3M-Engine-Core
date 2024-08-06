@@ -14,5 +14,5 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-I3M-CLI-core = { version = "0.1.0", path = "../template-core" }
+I3M-CLI-core = "0.1.0"
 clap = { version = "4", features = ["derive"] }

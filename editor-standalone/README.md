@@ -1,12 +1,12 @@
 # I3M-Engine-Core (standalone)
 
 **WARNING:** Standalone version of the editor is not supported, use
-[project template generator](https://i3m-book.github.io/i3m/beginning/scripting.html) to utilize the full power
+[project template generator](https://IThreeM.github.io/i3m/beginning/scripting.html) to utilize the full power
 of the editor. Standalone version does not support plugins and scripts, it won't be update in next releases!
 
 A standalone version of I3M-Engine-Core - native editor of [IThreeM engine](https://github.com/IThreeM/I3M-Engine-Core). The standalone
 version allows you only to create and edit scenes, but **not run your game in the editor**. Please see
-[the book](https://i3m-book.github.io/) to learn how to use the editor in different ways.
+[the book](https://IThreeM.github.io/) to learn how to use the editor in different ways.
 
 ## How to install and run
 
