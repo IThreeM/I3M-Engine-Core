@@ -82,11 +82,15 @@ jobs:
       - name: Publish crates
         if: steps.version_check.outputs.success != 'false'
         run: |
-          while read -r crate; do
-            cd "$crate" || exit 1
-            cargo publish
-            cd - || exit 1
-          done < crates_to_update.txt
+          if [ -s crates_to_update.txt ]; then
+            while read -r crate; do
+              cd "$crate" || exit 1
+              cargo publish
+              cd - || exit 1
+            done < crates_to_update.txt
+          else
+            echo "No crates to update"
+          fi
         shell: bash
 
       - name: Update dependent crates
