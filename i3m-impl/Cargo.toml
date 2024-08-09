@@ -1,6 +1,6 @@
 [package]
 name = "i3m-impl"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Dedan Okware <softengdedan@gmail.com>", "IThreeM Engine Contributors"]
 edition = "2021"
 license = "MIT"
@@ -8,9 +8,7 @@ description = "Feature-rich, easy-to-use, 2D/3D game engine with a scene editor.
 keywords = ["sound", "game", "engine", "3d", "gui"]
 categories = ["game-engines", "graphics", "gui", "rendering", "wasm"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
-homepage = "https://"
 documentation = "https://docs.rs/i3m-impl"
-repository = "https://github.com/IThreeM/I3M-Engine-Core"
 readme = "README.md"
 rust-version = "1.72"
 

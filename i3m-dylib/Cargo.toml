@@ -23,4 +23,4 @@ mesh_analysis = ["i3m-impl/mesh_analysis"]
 gltf_blend_shapes = ["i3m-impl/gltf_blend_shapes"]
 
 [dependencies]
-i3m-impl = "0.1.0"
+i3m-impl = "0.1.1"
