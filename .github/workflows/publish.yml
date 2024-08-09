@@ -32,7 +32,7 @@ jobs:
         id: detect_changes
         run: |
           touch crates_to_publish.txt
-          for crate in crates/*; do
+          find crates/* -type d | while read -r crate; do
             if git diff --exit-code --quiet HEAD^..HEAD -- "$crate"; then
               echo "No changes in $crate"
             else
@@ -53,7 +53,7 @@ jobs:
           touch crates_to_update.txt
 
           while read -r crate; do
-            cd "$crate"
+            cd "$crate" || exit 1
             current_version=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].version')
             previous_version=$(git show HEAD^:$(basename "$crate")/Cargo.toml | grep '^version = ' | cut -d '"' -f 2)
 
@@ -63,7 +63,7 @@ jobs:
             else
               echo "No version change in $crate"
             fi
-            cd -
+            cd - || exit 1
           done < crates_to_publish.txt
         shell: bash
 
@@ -71,9 +71,9 @@ jobs:
         if: steps.version_check.outputs.success != 'false'
         run: |
           while read -r crate; do
-            cd "$crate"
+            cd "$crate" || exit 1
             cargo publish
-            cd -
+            cd - || exit 1
           done < crates_to_update.txt
         shell: bash
 
