@@ -1,6 +1,6 @@
 [package]
 name = "i3m-scripts"
-version = "1.0.0"
+version = "0.1.0"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
 license = "MIT"
@@ -8,9 +8,8 @@ description = "Standard scripts for the IThreeM engine"
 keywords = ["asset", "resource"]
 categories = ["game-development"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE"]
-homepage = "https://"
 documentation = "https://docs.rs/i3m-scripts"
-repository = "https://github.com/IThreeM/I3M-Engine-Core"
+readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]

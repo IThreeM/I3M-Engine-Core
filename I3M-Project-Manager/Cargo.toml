@@ -1,21 +1,19 @@
 [package]
 name = "I3M-Project-Manager"
 license = "MIT"
-version = "1.0.0"
+version = "0.1.0"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
 rust-version = "1.72"
 description = "A scene editor for IThreeM game engine"
-homepage = "https://github.com/IThreeM/I3M-Engine-Core"
 keywords = ["i3m", "editor", "rust"]
 categories = ["game-development"]
-repository = "https://github.com/IThreeM/I3M-Engine-Core"
 readme = "README.md"
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md", "/resources/**/*"]
 
 
 [dependencies]
-i3m = "0.34.0"
+i3m = "0.34.1"
 I3M-CLI-core = "0.1.0"
 serde = { version = "1", features = ["derive"] }
 ron = "0.8.1"
