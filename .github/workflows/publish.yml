@@ -32,12 +32,12 @@ jobs:
         id: detect_changes
         run: |
           touch crates_to_publish.txt
-          find crates/* -type d | while read -r crate; do
-            if git diff --exit-code --quiet HEAD^..HEAD -- "$crate"; then
-              echo "No changes in $crate"
+          for member in $(cargo metadata --format-version 1 | jq -r '.workspace_members[]' | cut -d ' ' -f 1); do
+            if git diff --exit-code --quiet HEAD^..HEAD -- "$member"; then
+              echo "No changes in $member"
             else
-              echo "Changes detected in $crate"
-              echo "$crate" >> crates_to_publish.txt
+              echo "Changes detected in $member"
+              echo "$member" >> crates_to_publish.txt
             fi
           done
         shell: bash
@@ -82,7 +82,7 @@ jobs:
         run: |
           while read -r crate; do
             current_version=$(cargo metadata --manifest-path "$crate/Cargo.toml" --no-deps --format-version 1 | jq -r '.packages[0].version')
-            dependents=$(rg -l "path = \"$crate\"" crates/)
+            dependents=$(rg -l "path = \"$crate\"" .)
 
             for dependent in $dependents; do
               echo "Updating $dependent to use $crate@$current_version"
