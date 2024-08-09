@@ -1,6 +1,6 @@
 [package]
 name = "i3m"
-version = "0.34.0"
+version = "0.34.1"
 authors = ["Dedan Okware <softengdedan@gmail.com>", "IThreeM Engine Contributors"]
 edition = "2021"
 license = "MIT"
@@ -8,7 +8,6 @@ description = "Feature-rich, easy-to-use, 2D/3D game engine with a scene editor.
 keywords = ["sound", "game", "engine", "3d", "gui"]
 categories = ["game-engines", "graphics", "gui", "rendering", "wasm"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
-homepage = "https://"
 documentation = "https://docs.rs/i3m"
 readme = "README.md"
 rust-version = "1.72"
@@ -19,7 +18,8 @@ dylib = ["i3m-dylib"]
 gltf = ["i3m-impl/gltf", "i3m-dylib/gltf"]
 mesh_analysis = ["i3m-impl/mesh_analysis", "i3m-dylib/mesh_analysis"]
 gltf_blend_shapes = ["i3m-impl/gltf_blend_shapes", "i3m-dylib/gltf_blend_shapes"]
+i3m-impl = ["dep:i3m-impl"]
 
 [dependencies]
 i3m-impl = { version = "0.1.1", optional = true }
-i3m-dylib = { version = "1.0.0", optional = true }
+i3m-dylib = { version = "0.1.0", optional = true }

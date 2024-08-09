@@ -1,6 +1,6 @@
 [package]
 name = "i3m-dylib"
-version = "1.0.0"
+version = "0.1.0"
 edition = "2021"
 authors = ["Dedan Okware <softengdedan@gmail.com>", "IThreeM Engine Contributors"]
 license = "MIT"
@@ -8,9 +8,7 @@ description = "Dynamic library for IThreeM Game Engine"
 keywords = ["sound", "game", "engine", "3d", "gui"]
 categories = ["game-engines", "graphics", "gui", "rendering", "wasm"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
-homepage = "https://"
 documentation = "https://docs.rs/i3m-dylib"
-repository = "https://github.com/IThreeM/I3M-Engine-Core"
 readme = "README.md"
 rust-version = "1.72"
 
