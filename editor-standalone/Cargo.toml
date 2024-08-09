@@ -14,5 +14,5 @@ include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
 
 [dependencies]
 i3m = "0.34.0"
-i3m_engine_core_base = "0.21.1"
+i3m_engine_core_base = "0.21.2"
 clap = { version = "4", features = ["derive"] }

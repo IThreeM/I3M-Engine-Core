@@ -70,8 +70,8 @@ i3m-ui uses a bit unusual way of styling - you have to replace entire sub-graphs
 ## Screenshots
 
 ![editor](https://raw.githubusercontent.com/IThreeM/IThreeM/master/pics/editor.png)
-![absm editor](https://ithreem.com/assets/absm_editor_full.png)
-![sound](https://ithreem.com/assets/reverb_properties.png)
+![absm editor](assets/absm_editor_full.png)
+![sound](assets/reverb_properties.png)
 
 ## Contributing
 
