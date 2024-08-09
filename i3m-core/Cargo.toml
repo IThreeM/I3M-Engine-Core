@@ -1,6 +1,6 @@
 [package]
 name = "i3m-core"
-version = "1.0.0"
+version = "0.1.0"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
 license = "MIT"
@@ -8,14 +8,12 @@ description = "Shared core for the IThreeM engine and its external crates."
 keywords = ["game", "engine", "3d"]
 categories = ["game-development", "graphics", "gui", "rendering", "wasm"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
-homepage = "https://"
 documentation = "https://docs.rs/i3m-core"
-repository = "https://github.com/IThreeM/I3M-Engine-Core"
 readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core-derive = "1.0.0"
+i3m-core-derive = "0.1.0"
 i3m-math = "1.0.0"
 base64 = "0.22.1"
 byteorder = "1.4.3"

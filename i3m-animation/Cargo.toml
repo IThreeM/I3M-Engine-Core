@@ -1,6 +1,6 @@
 [package]
 name = "i3m-animation"
-version = "1.0.0"
+version = "0.1.0"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
 license = "MIT"
@@ -8,14 +8,12 @@ description = "Flexible Animation System"
 keywords = ["animation", "game"]
 categories = ["game-development"]
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
-homepage = "https://"
 documentation = "https://docs.rs/i3m-animation"
-repository = "https://github.com/IThreeM/I3M-Engine-Core"
 readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core = "1.0.0"
+i3m-core = "0.1.0"
 strum = "0.26.1"
 strum_macros = "0.26.1"
 fxhash = "0.2.1"
