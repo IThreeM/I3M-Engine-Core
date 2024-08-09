@@ -18,7 +18,7 @@ rust-version = "1.72"
 i3m-core-derive = "1.0.0"
 i3m-core = { version = "1.0.0", features = ["serde"] }
 i3m-sound = "0.35.0"
-i3m-ui = "1.0.0"
+i3m-ui = "0.1.0"
 i3m-resource = "1.0.0"
 i3m-animation = "1.0.0"
 i3m-graph = "1.0.0"
