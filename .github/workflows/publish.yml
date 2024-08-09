@@ -25,14 +25,14 @@ jobs:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
         run: |
           mkdir -p ~/.cargo
-          echo "[registry]" > ~/.cargo/config
-          echo "token = \"$CARGO_REGISTRY_TOKEN\"" >> ~/.cargo/config
+          echo "[registry]" > ~/.cargo/config.toml
+          echo "token = \"$CARGO_REGISTRY_TOKEN\"" >> ~/.cargo/config.toml
 
       - name: Detect crate changes
         id: detect_changes
         run: |
           touch crates_to_publish.txt
-          for member in $(cargo metadata --format-version 1 | jq -r '.workspace_members[]' | cut -d ' ' -f 1); do
+          for member in $(cargo metadata --format-version 1 | jq -r '.workspace_members[]' | cut -d ' ' -f 1 | sed 's|path+file://||g' | cut -d '#' -f 1); do
             if git diff --exit-code --quiet HEAD^..HEAD -- "$member"; then
               echo "No changes in $member"
             else
@@ -54,8 +54,8 @@ jobs:
 
           while read -r crate; do
             cd "$crate" || exit 1
-            current_version=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].version')
-            previous_version=$(git show HEAD^:$(basename "$crate")/Cargo.toml | grep '^version = ' | cut -d '"' -f 2)
+            current_version=$(cargo metadata --manifest-path Cargo.toml --no-deps --format-version 1 | jq -r '.packages[0].version')
+            previous_version=$(git show HEAD^:"$crate"/Cargo.toml | grep '^version = ' | cut -d '"' -f 2)
 
             if [ "$current_version" != "$previous_version" ]; then
               echo "Version change detected in $crate: $previous_version -> $current_version"
