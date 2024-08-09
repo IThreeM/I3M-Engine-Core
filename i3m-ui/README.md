@@ -88,6 +88,5 @@ TODO.
 There are two projects using this UI library:
 
 - [I3M-Engine-Core](https://github.com/IThreeM/I3M-Engine-Core/)
-- [rusty-shooter](https://github.com/mrDIMAS/rusty-shooter)
 
 However, it can be too difficult to understand how to use the library from those projects, so standalone samples should be added. This is still a TODO.
