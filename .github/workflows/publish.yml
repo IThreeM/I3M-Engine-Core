@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Set up Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -32,14 +34,24 @@ jobs:
         id: detect_changes
         run: |
           touch crates_to_publish.txt
-          for member in $(cargo metadata --format-version 1 | jq -r '.workspace_members[]' | cut -d ' ' -f 1 | sed 's|path+file://||g' | cut -d '#' -f 1); do
-            if git diff --exit-code --quiet HEAD^..HEAD -- "$member"; then
-              echo "No changes in $member"
-            else
+          previous_commit=$(git rev-parse HEAD^ || echo "null")
+
+          if [ "$previous_commit" = "null" ]; then
+            echo "No previous commit, this is likely the first commit."
+            for member in $(cargo metadata --format-version 1 | jq -r '.workspace_members[]' | cut -d ' ' -f 1 | sed 's|path+file://||g' | cut -d '#' -f 1); do
               echo "Changes detected in $member"
               echo "$member" >> crates_to_publish.txt
-            fi
-          done
+            done
+          else
+            for member in $(cargo metadata --format-version 1 | jq -r '.workspace_members[]' | cut -d ' ' -f 1 | sed 's|path+file://||g' | cut -d '#' -f 1); do
+              if git diff --exit-code --quiet "$previous_commit"..HEAD -- "$member"; then
+                echo "No changes in $member"
+              else
+                echo "Changes detected in $member"
+                echo "$member" >> crates_to_publish.txt
+              fi
+            done
+          fi
         shell: bash
 
       - name: Check version changes and prepare publishing
