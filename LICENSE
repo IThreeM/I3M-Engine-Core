@@ -1,4 +1,4 @@
-**IThreeM License**
+# IThreeM License
 
 **Copyright (C) 2024 IThreeM Team**
 
@@ -39,4 +39,3 @@ IThreeM is licensed under a dual-license structure:
 ---
 
 **Summary**: IThreeM’s new code is covered by AGPLv3, while any parts derived from the Fyrox Engine are governed by the MIT License. This dual-license ensures that the software remains open and usable while respecting the original licensing of Fyrox Engine.
-
