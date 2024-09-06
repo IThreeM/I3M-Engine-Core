@@ -13,8 +13,8 @@ include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md", "/resources/**/
 
 
 [dependencies]
-i3m = "0.34.1"
-I3M-CLI-core = "0.1.0"
+i3m = { version = "0.34.1", path = "../i3m" }
+I3M-CLI-core = { version = "0.1.0", path = "../template-core" }
 serde = { version = "1", features = ["derive"] }
 ron = "0.8.1"
 open = "5.0.1"

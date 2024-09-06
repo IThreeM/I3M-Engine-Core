@@ -15,8 +15,8 @@ members = [
     "i3m-math",
     "i3m-dylib",
     "i3m",
-    "i3m-impl"
-, "I3M-Project-Manager"]
+    "i3m-impl",
+    "I3M-Project-Manager"]
 resolver = "2"
 
 [profile.dev]

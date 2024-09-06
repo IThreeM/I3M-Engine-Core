@@ -15,9 +15,7 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core = { version = "0.1.0", features = ["serde"] }
-i3m-resource = "1.0.0"
-i3m-graph = "0.1.0"
+i3m-graph = { version = "0.1.0", path = "../i3m-graph" }
 lazy_static = "1.4.0"
 copypasta = "0.10.1"
 fontdue = "0.9.2"
@@ -27,10 +25,12 @@ strum = "0.26.1"
 strum_macros = "0.26.1"
 serde = { version = "1", features = ["derive"] }
 bytemuck = { version = "1.16.1", features = ["derive"]}
-i3m-animation = "0.1.0"
+i3m-animation = { version = "0.1.0", path = "../i3m-animation" }
+i3m-resource = { version = "0.1.0", path = "../i3m-resource" }
+i3m-core = { version = "0.1.1", path = "../i3m-core" }
 
 [features]
-enable_profiler = ["i3m-core/enable_profiler"]
+enable_profiler = []
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 sysinfo = "0.29.0"

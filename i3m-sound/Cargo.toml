@@ -15,8 +15,6 @@ readme = "README.md"
 rust-version = "1.72"
 
 [dependencies]
-i3m-core = "0.1.0"
-i3m-resource = "1.0.0"
 lewton = "0.10.2"
 ogg = "0.8.0"
 hrtf = "0.8.0"
@@ -25,3 +23,6 @@ strum = "0.26.1"
 strum_macros = "0.26.1"
 tinyaudio = "0.1.2"
 serde = { version = "1", features = ["derive"] }
+i3m-resource = { version = "0.1.0", path = "../i3m-resource" }
+i3m-math = { version = "0.1.0", path = "../i3m-math" }
+i3m-core = { version = "0.1.1", path = "../i3m-core" }
