@@ -35,7 +35,7 @@ jobs:
 
       - name: Install linux deps
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        # Note that for running your IThreeM game on IThreeM-CI, you might need additinal deps like libxkbcommon-x11 and OpenGL
+        # Note that for running your IThreeM game on IThreeM-CI, you might need additional deps like libxkbcommon-x11 and OpenGL
         # and you might need to run it using xvfb-run even in headless mode.
         run: |
           sudo apt-get update # Run update first or install might start failing eventually.
@@ -188,3 +188,24 @@ jobs:
           I3M-CLI upgrade --version=latest --local
           cd executor-wasm
           wasm-pack build --target=web
+
+  release_pc:
+    name: Release Editor (PC)
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Build Editor
+        run: cargo build --release --package editor
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: editor-${{ matrix.os }}
+          path: target/release/editor
