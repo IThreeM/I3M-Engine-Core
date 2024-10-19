@@ -2,6 +2,8 @@ name: IThreeM CI
 
 on:
   push:
+    tags:
+      - 'v*.*.*'  # Triggers on version tags like v1.0.0
   pull_request:
   workflow_dispatch:
 
@@ -54,18 +56,6 @@ jobs:
           toolchain: ${{ matrix.rust }}
           targets: wasm32-unknown-unknown
       - uses: Swatinem/rust-cache@v2
-
-      - run: rustc --version && cargo --version
-      - name: Build
-        run: |
-          cargo build --verbose --target=wasm32-unknown-unknown --package i3m
-
-  format:
-    name: Rustfmt IThreeM-CI
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
 
       - run: cargo fmt --version
       - run: cargo fmt -- --check
@@ -188,14 +178,33 @@ jobs:
       - name: Build i3m_engine_core_base
         run: cargo build --release --package i3m_engine_core_base
 
-      - name: Upload I3M-Engine-Core Artifact
-        uses: actions/upload-artifact@v3
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: I3M-Engine-Core-${{ matrix.os }}
-          path: target/release/I3M-Engine-Core
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload I3M-Engine-Core Artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: target/release/I3M-Engine-Core
+          asset_name: I3M-Engine-Core-${{ matrix.os }}
+          asset_content_type: application/octet-stream
 
       - name: Upload i3m_engine_core_base Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: i3m_engine_core_base-${{ matrix.os }}
-          path: target/release/i3m_engine_core_base
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: target/release/i3m_engine_core_base
+          asset_name: i3m_engine_core_base-${{ matrix.os }}
+          asset_content_type: application/octet-stream
