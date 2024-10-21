@@ -1,0 +1,56 @@
+name: Release Editor for PC
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Triggers on version tags like v1.0.0
+
+jobs:
+  release_pc:
+    name: Release Editors (PC)
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Build I3M-Engine-Core
+        run: cargo build --release --package I3M-Engine-Core
+
+      - name: Build i3m_engine_core_base
+        run: cargo build --release --package i3m_engine_core_base
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_PERSONAL_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload I3M-Engine-Core Artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_PERSONAL_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: target/release/I3M-Engine-Core
+          asset_name: I3M-Engine-Core-${{ matrix.os }}
+          asset_content_type: application/octet-stream
+
+      - name: Upload i3m_engine_core_base Artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_PERSONAL_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: target/release/i3m_engine_core_base
+          asset_name: i3m_engine_core_base-${{ matrix.os }}
+          asset_content_type: application/octet-stream
