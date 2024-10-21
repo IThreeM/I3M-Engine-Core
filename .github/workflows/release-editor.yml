@@ -2,8 +2,8 @@ name: Release Editor for PC
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*.*.*'  # Triggers on version tags like v1.0.0
 
 jobs:
   version_check_and_tag:
