@@ -715,7 +715,7 @@ impl Model {
                 let mut scene = Scene::new();
                 if let Some(filename) = path.as_ref().file_name() {
                     let root = scene.graph.get_root();
-                    scene.graph[root].set_name(&filename.to_string_lossy());
+                    scene.graph[root].set_name(filename.to_string_lossy());
                 }
                 fbx::load_to_scene(
                     &mut scene,
@@ -725,30 +725,22 @@ impl Model {
                     &model_import_options,
                 )
                 .await?;
-                // Set NodeMapping::UseNames as mapping here because FBX does not have
-                // any persistent unique ids, and we have to use names.
                 (scene, NodeMapping::UseNames)
             }
-            // Scene can be used directly as model resource. Such scenes can be created in
-            // I3M-Engine-Core.
-            "i3m" => (
-                SceneLoader::from_file(
+            "rgs" | "i3m" => {
+                let loader = SceneLoader::from_file(
                     path.as_ref(),
                     io,
                     serialization_context,
                     resource_manager.clone(),
                 )
-                .await?
-                .0
-                .finish(&resource_manager)
-                .await,
-                NodeMapping::UseHandles,
-            ),
-            // TODO: Add more formats.
+                .await?;
+                let scene = loader.0.finish(&resource_manager).await;
+                (scene, NodeMapping::UseHandles)
+            }
             _ => {
                 return Err(ModelLoadError::NotSupported(format!(
-                    "Unsupported model resource format: {}",
-                    extension
+                    "Unsupported model resource format: {extension}"
                 )))
             }
         };

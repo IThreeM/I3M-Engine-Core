@@ -1,6 +1,6 @@
 [package]
 name = "i3m-impl"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Dedan Okware <softengdedan@gmail.com>", "IThreeM Engine Contributors"]
 edition = "2021"
 license = "MIT"

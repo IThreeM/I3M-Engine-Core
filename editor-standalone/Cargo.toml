@@ -1,6 +1,6 @@
 [package]
 name = "I3M-Engine-Core"
-version = "0.17.0"
+version = "0.17.1"
 license = "MIT"
 authors = ["Dedan Okware <softengdedan@gmail.com>"]
 edition = "2021"
@@ -12,5 +12,5 @@ include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
-i3m = { version = "0.34.1", path = "../i3m" }
-i3m_engine_core_base = { version = "0.21.2", path = "../editor" }
+i3m = { version = "0.34.2", path = "../i3m" }
+i3m_engine_core_base = { version = "0.21.3", path = "../editor" }

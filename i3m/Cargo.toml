@@ -1,6 +1,6 @@
 [package]
 name = "i3m"
-version = "0.34.1"
+version = "0.34.2"
 authors = ["Dedan Okware <softengdedan@gmail.com>", "IThreeM Engine Contributors"]
 edition = "2021"
 license = "MIT"
@@ -21,5 +21,5 @@ gltf_blend_shapes = ["i3m-impl/gltf_blend_shapes", "i3m-dylib/gltf_blend_shapes"
 i3m-impl = ["dep:i3m-impl"]
 
 [dependencies]
-i3m-impl = { version = "0.1.1", path = "../i3m-impl", optional = true }
+i3m-impl = { version = "0.1.2", path = "../i3m-impl", optional = true }
 i3m-dylib = { version = "0.1.0", path = "../i3m-dylib", optional = true }
