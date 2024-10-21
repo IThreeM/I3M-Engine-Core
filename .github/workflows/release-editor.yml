@@ -2,10 +2,41 @@ name: Release Editor for PC
 
 on:
   push:
-    tags:
-      - 'v*.*.*'  # Triggers on version tags like v1.0.0
+    branches:
+      - main
 
 jobs:
+  version_check_and_tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Get current version
+        id: get_version
+        run: echo "version=$(cargo metadata --format-version 1 | jq -r '.packages[] | select(.name == \"I3M-Engine-Core\").version')" >> $GITHUB_ENV
+
+      - name: Get latest tag
+        id: get_latest_tag
+        run: echo "latest_tag=$(git describe --tags --abbrev=0 || echo 'v0.0.0')" >> $GITHUB_ENV
+
+      - name: Compare versions and tag
+        run: |
+          if [ "$(printf '%s\n' "$version" "$latest_tag" | sort -V | head -n1)" != "$version" ]; then
+            git config user.name "GitHub Actions"
+            git config user.email "actions@github.com"
+            git tag "v$version"
+            git push origin "v$version"
+          fi
+        env:
+          version: ${{ env.version }}
+          latest_tag: ${{ env.latest_tag }}
+
   release_pc:
     name: Release Editors (PC)
     runs-on: ${{ matrix.os }}
