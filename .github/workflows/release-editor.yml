@@ -37,7 +37,6 @@ jobs:
           version: ${{ env.version }}
           latest_tag: ${{ env.latest_tag }}
 
-jobs:
   release_pc:
     name: Release Editors (PC)
     runs-on: ${{ matrix.os }}
